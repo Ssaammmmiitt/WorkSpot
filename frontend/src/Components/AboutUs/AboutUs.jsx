@@ -18,7 +18,7 @@ const AboutUs = () => {
 				<div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
 					<span className="text-sm font-semibold tracking-wider uppercase text-Primary">Step 1 - Aggregate</span>
 					<span className="text-xl font-bold md:text-2xl">Aggregating Job Listings</span>
-					<span className="mt-4 text-Text">WorkSpot uses advanced web-scraping technology to gather job listings from various sources, including major job boards like LinkedIn, Upwork, Glassdoor, and numerous company career pages. This comprehensive approach ensures that users have access to a diverse and extensive collection of job opportunities in one centralized location.</span>
+					<span className="mt-4 text-Text">WorkSpot uses advanced Web-scraping technology to gather job listings from various sources, including major job boards like LinkedIn, Upwork, Glassdoor, and numerous company career pages. This comprehensive approach ensures that users have access to a diverse and extensive collection of job opportunities in one centralized location.</span>
 				</div>
 			</div>
 			<div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
