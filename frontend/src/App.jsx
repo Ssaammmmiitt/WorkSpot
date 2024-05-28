@@ -13,6 +13,7 @@ import Faq from './Components/FAQ/Faq';
 import Login from './Components/Form/Login';
 import ContactUs from './Components/ContactUs/ContactUs';
 import AboutUs from './Components/AboutUs/AboutUs'; 
+import Try from './Components/try';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
       <Faq/>
       <ContactUs/>
       <AboutUs/>
+      <Try/>
     </div>
   )
 }
