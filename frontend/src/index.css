@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family:  'Noto Sans' , sans-serif;
+}
+
+body{
+  background: #BFBDC1;
+}
+
+li{
+  list-style: none;
+  cursor: pointer;
+  position:relative;
+}
+
+li:hover::before{
+  position:absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  bottom: -10px;
+  right:0;
+  color: #ffffff;
+}
+
+.icon{
+  cursor:pointer;
+}
+
+.card{
+  background: url(/src/Assets/card.jpg);
+}
