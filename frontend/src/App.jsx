@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import NavBar from "./Components/NavBar/NavBar"
 import Search from './Components/SearchDiv/Search'
 import Jobs from './Components/JobDiv/Jobs'
@@ -32,6 +33,11 @@ const App = () => {
       <ContactUs/>
       <AboutUs/>
     </div>
+    // <>
+    // <nav>Nav Bar</nav>
+    // <Outlet/>
+    // <footer>Footer</footer>
+    // </>
   )
 }
 
