@@ -46,12 +46,9 @@ li:hover::before{
 
 a {
   text-decoration: none;
-  color: rgb(97, 97, 97);
+  color: Primary;
 }
 
-li {
-  list-style: none;
-}
 
 .btns {
   padding: 10px 20px;
