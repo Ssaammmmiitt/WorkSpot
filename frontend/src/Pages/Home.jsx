@@ -3,7 +3,7 @@ import Banner from '../Components/SearchDiv/Banner'
 import {useState,useEffect} from 'react';
 import Jobs from './Jobs';
 import Card from '../Components/Card/Card';
-
+import Sidebar from '../Components/Sidebar/Sidebar';
 
 
 const Home = () => {
@@ -68,8 +68,16 @@ const Home = () => {
         <Banner query={query} handleInputChange={handleInputChange}/>
     {/* main conetent*/}
         <div className='bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
-            <div className='bg-white p-4 rounded'>Left</div>
+
+        {/* left side */}
+            <div className='bg-white p-4 rounded'>
+                <Sidebar handlechange={handleChange} handleCick={handleCick}/>
+            </div>
+
+        {/* job cards */}
             <div className='col-span-2 bg-white p-4 rounded'> <Jobs result={result}/></div>
+        
+        {/* right side */}
             <div className='bg-white p-4 rounded'>Right</div>
         </div>
     </div>
