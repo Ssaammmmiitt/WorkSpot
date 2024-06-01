@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  
+  "main": "web_scrapper.js",
+  "scripts": {
+    "start": "node web_scrapper.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.8.0"
+  }
+}
