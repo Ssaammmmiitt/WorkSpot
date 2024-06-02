@@ -17,23 +17,24 @@ import AboutUs from './Components/AboutUs/AboutUs';
 
 const App = () => {
   return (
-    // <div className='w-[90%] m-auto'>
-    //   <NavBar/>
-    //   <Search/>
-    //   <Jobs/>
-    //   <Value/>
-    //   <Footer/>
-    //   <Login/>
-    //   <SignUp1/>
-    //   <Reset/>
-    //   <Otp/>
-    //   <Update/>
-    //   <SignUp/>
-    //   <Faq/>
-    //   <ContactUs/>
-    //   <AboutUs/>
-    // </div>
     <>
+    {/* <div className='w-[90%] m-auto'>
+      <NavBar/>
+      <Search/>
+      <Jobs/>
+      <Value/>
+      <Footer/>
+      <Login/>
+      <SignUp1/>
+      <Reset/>
+      <Otp/>
+      <Update/>
+      <SignUp/>
+      <Faq/>
+      <ContactUs/>
+      <AboutUs/>
+    </div> */}
+    
     <NavBar/>
     <Outlet/>
     </>

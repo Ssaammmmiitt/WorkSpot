@@ -9,10 +9,15 @@ import Sidebar from '../Components/Sidebar/Sidebar';
 const Home = () => {
     const [selectedCategory,setSelectedCategory] =useState(null);
     const [jobs,setJobs]= useState([]);
+    const [isLoading,setIsLoading]=useState(true);
+    const [currentPage,setCurrentPage]=useState(1);
+    const itemsPerPage = 6;
 
     useEffect(()=>{
+        setIsLoading(true);
         fetch("/jobs.json").then( res => res.json()).then(data => {
             setJobs(data);
+            setIsLoading(false);
         })
     },[])
 
@@ -25,14 +30,35 @@ const Home = () => {
     const filteredItems = jobs.filter((job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1);
     
     //---radio filtering----
-    const handleChange=(event)=>{
+    const handleChange = (event) => {
         setSelectedCategory(event.target.value);
-    }
+    };
 
     //----button filtering----
-    const handleCick=(event)=>{
+    const handleClick = (event) => {
         setSelectedCategory(event.target.value);
-    }
+    };
+    
+    //calculate the index range
+    const calculatePageRange =() => {
+        const startIndex = (currentPage-1)*itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        return {startIndex, endIndex};
+    };
+
+    //function for the next page
+    const nextPage = () => {
+        if(currentPage<Math.ceil(filderedItems.length / itemsPerPage )){
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    //function for previous page
+    const prevPage =() => {
+        if(currentPage >1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
 
     //main function
     const filteredData=(jobs,selected,query)=>{
@@ -57,7 +83,7 @@ const Home = () => {
                 console.log(filteredJobs);
             }
     
-        return filteredJobs.map((data,i)=> <Card key={i} data={data}/>);
+        return filteredJobs.map((data,i)=> <Card key={i} data={data}/>)
     }
 
     const result= filteredData(jobs , selectedCategory , query);
@@ -71,11 +97,18 @@ const Home = () => {
 
         {/* left side */}
             <div className='bg-white p-4 rounded'>
-                <Sidebar handlechange={handleChange} handleCick={handleCick}/>
+            <Sidebar handleChange={handleChange} handleClick={handleClick} />
             </div>
 
         {/* job cards */}
-            <div className='col-span-2 bg-white p-4 rounded'> <Jobs result={result}/></div>
+            <div className='col-span-2 bg-white p-4 rounded'> 
+                {
+                  isLoading ? (<p className='font-medium'> Loading.... </p>) : result.length >0 ? (<Jobs result={result}/>) : <>
+                <h3 className='font-bold text-lg mb-2'>{result.length} Jobs</h3>
+                <p>No data found!</p>
+                </>
+                }
+            </div>
         
         {/* right side */}
             <div className='bg-white p-4 rounded'>Right</div>

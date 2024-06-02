@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink ,Link} from 'react-router-dom';
 import { FaBarsStaggered, FaXmark,  } from "react-icons/fa6";
-
-
+import search from "../../Assets/search.json";
+import Lottie from "lottie-react";
 
 // const NavBar = () => {
 //   return (
@@ -42,8 +42,9 @@ const NavBar=()=>{
   return (
   <header className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
     <nav className='flex justify-between items-center py-6'>
-  <div className=' '>
-      <h1 className='logo text-[35px] text-black hover:text-Primary'><strong>Work</strong>Spot</h1>
+  <div className='animate-bounce flex items-center justify-center'>
+    <Lottie animationData={search} style={{width: 100, height: 100}} />
+      <h1 className='logo text-[35px] text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1>
   </div>
 
   {/* nav items for large devices */}
