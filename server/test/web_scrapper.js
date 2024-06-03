@@ -23,6 +23,8 @@ async function scraper() {
     return extractedJobs;
 }
 
+scraper()
+
 module.exports = scraper;
 
 

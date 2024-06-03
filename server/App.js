@@ -129,7 +129,7 @@ app.get('/login', (req, res) => {
 // Handle POST requests to the '/login' URL
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    const filePath_to_send = path.join(__dirname, '..', 'frontend', 'dist', 'index.html');
+    let filePath_to_send = path.join(__dirname, '..', 'frontend', 'dist', 'index.html');
 
     // Perform the necessary database query to check for the person's entry
     /* db.collection('users').findOne({ username, password }, function (err, result) {
