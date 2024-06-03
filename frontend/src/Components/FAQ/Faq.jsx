@@ -10,7 +10,7 @@ const FAQ = () => {
 
             </p>
         </div>
-  <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary" open>
+  <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]" open>
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className=" font-bold">What is WorkSpot?</h2>
 
@@ -25,7 +25,7 @@ const FAQ = () => {
     WorkSpot is an innovative web application designed to simplify and enhance the job-searching process. By leveraging advanced web-scraping technologies, WorkSpot gathers job listings from a wide range of websites, including LinkedIn, Upwork, Glassdoor, and many individual company career pages. This allows job seekers to access a comprehensive database of job opportunities all in one place, saving them time and effort.    </p>
   </details>
 
-  <details className="group rounded-lg bg-gray-50 p-6 mt-7 hover:bg-Primary">
+  <details className="group rounded-lg bg-gray-50 p-6 mt-7 hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">How does WorkSpot work?</h2>
 
@@ -40,7 +40,7 @@ const FAQ = () => {
 </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">Is WorkSpot free to use?</h2>
 
@@ -55,7 +55,7 @@ const FAQ = () => {
     </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">How often are job listings updated on WorkSpot?</h2>
 
@@ -70,7 +70,7 @@ const FAQ = () => {
     </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">Do I need to create an account to use WorkSpot?</h2>
 
@@ -85,7 +85,7 @@ const FAQ = () => {
     </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">Can I filter job listings by location and job type?</h2>
 
@@ -100,7 +100,7 @@ const FAQ = () => {
     </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">Will WorkSpot share my personal information with employers?</h2>
 
@@ -115,7 +115,7 @@ const FAQ = () => {
     </p>
   </details>
 
-   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-Primary">
+   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]">
     <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-Text">
       <h2 className="font-bold">Is there a mobile app for WorkSpot?</h2>
 

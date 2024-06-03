@@ -11,7 +11,7 @@ import Reset_otp from "../Pages/Reset-Otp.jsx";
 import UpdatePass from "../Pages/UpdatePass.jsx";
 import ContactUsPage from "../Pages/ContactUs.jsx";
 import TermsAndConditions from "../Pages/TermsAndConditions.jsx";
-
+import FAQPage from "../Pages/FAQPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         {path:"/reset-otp",element:<Reset_otp/>},
         {path:"/update-password",element:<UpdatePass/>},
         {path:"/contact-us",element:<ContactUsPage/>},
+        {path:"/faq",element:<FAQPage/>},
         {path:"/terms-and-conditions",element:<TermsAndConditions/>}
       ]
     },

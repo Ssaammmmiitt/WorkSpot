@@ -14,9 +14,10 @@ const NavBar=()=>{
 
   const navItems = [
     {path:"/",title:"Start a search"},
-    {path:"/my-job",title:"My Jobs"},
+    // {path:"/my-job",title:"My Jobs"},
     {path:"/salary",title:"Estimated Salary"},
     {path:"/about",title:"About Us"},
+    {path:"/faq",title:"FAQ"},
     {path:"/contact-us",title:"Contact"},
   ]
 
