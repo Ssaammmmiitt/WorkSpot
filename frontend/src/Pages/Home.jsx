@@ -152,25 +152,32 @@ const Home = () => {
     const [fetchError, setFetchError] = useState(null);
 
     useEffect(() => {
-        setIsLoading(true);
-        fetch("/jobs.json")
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
-                return res.json();
-            })
-            .then(data => {
-                setJobs(data);
-                setIsLoading(false);
-                setFetchError(null);
-            })
-            .catch(error => {
-                console.error("Error fetching jobs:", error);
-                setFetchError("Failed to load jobs.");
-                setIsLoading(false);
-            });
+    setIsLoading(true);
+    fetch("/jobs.json")
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then(data => {
+            setJobs(data);
+            setIsLoading(false);
+            setFetchError(null);
+        })
+        .catch(async error => {
+    console.error("Error fetching jobs:", error);
+    try {
+        const errorText = await error.response.text();
+        console.error("Response text:", errorText);
+    } catch (err) {
+        console.error("Failed to read response text:", err);
+    }
+    setFetchError("Failed to load jobs.");
+    setIsLoading(false);
+         });
     }, []);
+
 
     const handleInputChange = (event) => {
         setQuery(event.target.value);
