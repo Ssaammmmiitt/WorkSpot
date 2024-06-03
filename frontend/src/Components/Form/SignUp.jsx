@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {  FaFacebookSquare} from 'react-icons/fa';
+import { FaFacebookSquare } from 'react-icons/fa';
 import { ImGithub,ImGoogle } from "react-icons/im";
 
 
@@ -98,7 +98,7 @@ return (
               <input id="remember-me" name="remember-me" type="checkbox" className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500"/>
             </div>
             <div className="ms-3">
-              <label htmlFor="remember-me" className="text-sm  ">I accept the <a className="text-blue-600 decoration-2 hover:underline font-medium  " href="#">Terms and Conditions</a></label>
+              <label htmlFor="remember-me" className="text-sm  ">I accept the <Link to="/terms-and-conditions" className="text-blue-600 decoration-2 hover:underline font-medium  " href="#">Terms and Conditions</Link></label>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink ,Link} from 'react-router-dom';
-import { FaBarsStaggered, FaXmark,  } from "react-icons/fa6";
+import { FaBarsStaggered, FaXmark  } from "react-icons/fa6";
 import search from "../../Assets/search.json";
 import Lottie from "lottie-react";
 

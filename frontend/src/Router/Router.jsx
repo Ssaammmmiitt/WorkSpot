@@ -9,6 +9,8 @@ import CompleteRegistraion from "../Pages/CompleteRegistraion.jsx";
 import ResetForm from "../Pages/Reset.jsx";
 import Reset_otp from "../Pages/Reset-Otp.jsx";
 import UpdatePass from "../Pages/UpdatePass.jsx";
+import ContactUsPage from "../Pages/ContactUs.jsx";
+import TermsAndConditions from "../Pages/TermsAndConditions.jsx";
 
 
 
@@ -24,7 +26,9 @@ const router = createBrowserRouter([
         {path:"/complete-registration",element:<CompleteRegistraion/>},
         {path:"/reset",element:<ResetForm/>},
         {path:"/reset-otp",element:<Reset_otp/>},
-        {path:"/update-password",element:<UpdatePass/>}
+        {path:"/update-password",element:<UpdatePass/>},
+        {path:"/contact-us",element:<ContactUsPage/>},
+        {path:"/terms-and-conditions",element:<TermsAndConditions/>}
       ]
     },
   ]);
