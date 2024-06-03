@@ -25,7 +25,7 @@ const NavBar=()=>{
     <nav className='flex justify-between items-center py-6'>
   <div className=' flex items-center justify-center'>
     <Lottie animationData={search} style={{width: 100, height: 100}} />
-      <h1 className='logo text-[35px] animate-bounce text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1>
+      <Link to="/" ><h1 className='logo text-[35px] animate-bounce text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1></Link>
   </div>
 
   {/* nav items for large devices */}
