@@ -4,6 +4,7 @@ import {useState,useEffect} from 'react';
 import Jobs from './Jobs';
 import Card from '../Components/Card/Card';
 import Sidebar from '../Components/Sidebar/Sidebar';
+import NewsLetter from '../Components/NewsLetter/NewsLetter';
 
 
 const Home = () => {
@@ -13,9 +14,9 @@ const Home = () => {
     const [currentPage,setCurrentPage]=useState(1);
     const itemsPerPage = 6;
 
-    useEffect(()=>{
+     useEffect(()=>{
         setIsLoading(true);
-        fetch("/jobs.json").then( res => res.json()).then(data => {
+         fetch("/jobs.json").then( res => res.json()).then(data => {
             setJobs(data);
             setIsLoading(false);
         })
@@ -48,7 +49,7 @@ const Home = () => {
 
     //function for the next page
     const nextPage = () => {
-        if(currentPage<Math.ceil(filderedItems.length / itemsPerPage )){
+        if(currentPage<Math.ceil(filteredItems.length / itemsPerPage )){
             setCurrentPage(currentPage + 1);
         }
     };
@@ -77,12 +78,16 @@ const Home = () => {
                 filteredJobs=filteredJobs.filter(({jobLocation, maxPrice, experienceLevel, salaryType, employmentType, postingDate}) => (
                     jobLocation.toLowerCase() === selected.toLowerCase() ||
                     parseInt(maxPrice) <= parseInt(selected) || 
+                    postingDate.toLowerCase() >= selected.toLowerCase() || 
+                    experienceLevel.toLowerCase() === selected.toLowerCase() ||
                     salaryType.toLowerCase() === selected.toLowerCase() ||
                     employmentType.toLowerCase() === selected.toLowerCase()
                 ));
                 console.log(filteredJobs);
             }
-    
+            //slice the data based on current page
+        const {startIndex, endIndex} = calculatePageRange();
+        filteredJobs = filteredJobs.slice(startIndex,endIndex);
         return filteredJobs.map((data,i)=> <Card key={i} data={data}/>)
     }
 
@@ -108,10 +113,20 @@ const Home = () => {
                 <p>No data found!</p>
                 </>
                 }
+
+                {/* pagination here */}
+                {
+                    result.length > 0 ? (
+                        <div className='flex justify-center mt-4 space-x-8'>
+                        <button onClick={prevPage} disabled={currentPage == 1} className='hover:underline'>Previous</button>
+                        <span className='mx-2'>Page {currentPage} of {Math.ceil(filteredItems.length / itemsPerPage)}</span>
+                        <button onClick={nextPage} disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage )} className='hover:underline'>Next</button>
+                        </div>) : ""
+                }
             </div>
         
         {/* right side */}
-            <div className='bg-white p-4 rounded'>Right</div>
+            <div className='bg-white p-4 rounded'><NewsLetter/></div>
         </div>
     </div>
   )

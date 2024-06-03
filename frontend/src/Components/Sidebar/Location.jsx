@@ -8,7 +8,7 @@ const Location = ({ handleChange }) => {
 
       <div>
         <label className="sidebar-label-container">
-        <input type="radio" name="location" id="all" value="" onChange={handleChange} />
+        <input type="radio" name="test" id="all" value="" onChange={handleChange} />
           <span className="checkmark"></span>All
         </label>
 

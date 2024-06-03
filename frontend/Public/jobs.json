@@ -166,6 +166,20 @@
       "experienceLevel": "Intership",
       "employmentType": "Temporary",
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
+    },
+    {
+      "id": 7,
+      "companyName": "Notion",
+      "jobTitle": "Web Developer",
+      "companyLogo": "/images/Notion.png",
+      "minPrice": "40",
+      "maxPrice": "50",
+      "salaryType": "Monthly",
+      "jobLocation": "San Francisco",
+      "postingDate": "2024-05-20",
+      "experienceLevel": "Internship",
+      "employmentType": "Temporary",
+      "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     }
   ]
   

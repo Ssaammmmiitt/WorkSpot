@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 
 const Banner = ({query,handleInputChange}) => {
   return (
-    <div className='max-w-screen-2xl container mx-auo xl:px-24 px-4 md:py-20 py-14'>
+    <div className='max-w-screen-2xl container mx-auto xl:px-24 px-4 md:py-20 py-14'>
             <h1 className='text-5xl font-bold text-Text mb-3'>Kickstart your <span className='text-Primary'>new job</span> search today.</h1>
             <p className='text-lg text-Text/70'> Unlock your potential with new job opportunities and begin your exciting career path today.</p>
 

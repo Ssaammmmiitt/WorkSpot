@@ -1,18 +1,19 @@
 import React from "react";
 import {  FaFacebookSquare} from 'react-icons/fa';
 import { ImGithub,ImGoogle } from "react-icons/im";
+import { Link } from 'react-router-dom';
 
 
 
 const Login =() =>{
     return(
         <div className="flex justify-center items-center h-[50rem]">
-<div className="w-full max-w-md p-4 rounded-[15px] shadow sm:p-8 bg-Primary text-Text ">
+<div className="w-full max-w-md p-4 rounded-[15px] shadow sm:p-8 mt-7 bg-white border-4 border-Primary  mx-auto  text-Text ">
 	<h2 className="mb-3 text-4xl font-extrabold text-center">Login to your Account</h2>
-	<p className="text-lg text-center text-Text">Dont have account?
-		<a href="#" rel="noopener noreferrer" className=" text-white focus:underline hover:underline"> Sign up here</a>
+	<p className=" mt-7 text-sm text-center text-Text">Dont have account?
+		<Link to="/sign-up"  className=" text-Primary focus:underline hover:underline"> Sign up here</Link>
 	</p>
-	<div className="my-6 space-y-4">
+	<div className="my-8 space-y-4">
     <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out"
           >
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
@@ -66,16 +67,19 @@ const Login =() =>{
 			</div>
 		</div>
         <div className=" flex items-center justify-center">
-		<button class="relative inline-block text-lg group">
-        <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-        <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-        <span class="relative">Login</span>
+		<button className="relative inline-block text-lg group">
+        <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+        <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+        <span className="relative">Login</span>
         </span>
-        <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+        <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
       </button>
         </div>
 	</form>
+	<p className=" mt-7 text-sm text-center text-Text">Forgot your password?
+		<Link to="/reset"  className=" text-Primary focus:underline hover:underline"> Reset here</Link>
+	</p>
 </div>
 </div>
 )

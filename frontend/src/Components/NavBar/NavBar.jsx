@@ -4,26 +4,7 @@ import { FaBarsStaggered, FaXmark,  } from "react-icons/fa6";
 import search from "../../Assets/search.json";
 import Lottie from "lottie-react";
 
-// const NavBar = () => {
-//   return (
-//     <div className='navBar flex justify-between items-center p-[3rem]'>
-//       <div className='logoDiv'>
-//         <h1 className='logo text-[35px] text-[#123346] hover:text-Secondary'><strong>Work</strong>Spot</h1>
-//       </div>
 
-//       <div className="menu flex gap-8">
-//         <li className='menuList text-Text hover:text-Secondary'>Jobs</li>
-//         <li className='menuList text-Text hover:text-Secondary'>Companies</li>
-//         <li className='menuList text-Text hover:text-Secondary'>About</li>
-//         <li className='menuList text-Text hover:text-Secondary'>Contact</li>
-//         <li className='menuList text-Text hover:text-Secondary'>Login</li>
-//         <li className='menuList text-Text hover:text-Secondary'>Signup</li>
-
-
-//       </div>
-//     </div>
-//   )
-// }
 
 const NavBar=()=>{
   const [isMenuOpen,setIsMenuOpen]=useState(false);
@@ -42,9 +23,9 @@ const NavBar=()=>{
   return (
   <header className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
     <nav className='flex justify-between items-center py-6'>
-  <div className='animate-bounce flex items-center justify-center'>
+  <div className=' flex items-center justify-center'>
     <Lottie animationData={search} style={{width: 100, height: 100}} />
-      <h1 className='logo text-[35px] text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1>
+      <h1 className='logo text-[35px] animate-bounce text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1>
   </div>
 
   {/* nav items for large devices */}

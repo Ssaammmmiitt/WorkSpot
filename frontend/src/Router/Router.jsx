@@ -3,6 +3,14 @@ import {createBrowserRouter,  RouterProvider,
 import App from "../App.jsx";
 import Home from "../Pages/Home.jsx";
 import About from "../Pages/About.jsx";
+import LoginPage from "../Pages/LoginPage.jsx";
+import SignUpPage from "../Pages/SignUpPage.jsx";
+import CompleteRegistraion from "../Pages/CompleteRegistraion.jsx";
+import ResetForm from "../Pages/Reset.jsx";
+import Reset_otp from "../Pages/Reset-Otp.jsx";
+import UpdatePass from "../Pages/UpdatePass.jsx";
+
+
 
 const router = createBrowserRouter([
     {
@@ -11,6 +19,12 @@ const router = createBrowserRouter([
       children:[
         { path:"/",element:<Home/>},
         { path:"/about",element:<About/>},
+        { path:"/login",element:<LoginPage/>},
+        { path:"/sign-up",element:<SignUpPage/>},
+        {path:"/complete-registration",element:<CompleteRegistraion/>},
+        {path:"/reset",element:<ResetForm/>},
+        {path:"/reset-otp",element:<Reset_otp/>},
+        {path:"/update-password",element:<UpdatePass/>}
       ]
     },
   ]);

@@ -4,9 +4,9 @@ import { AiOutlinePlusCircle,AiOutlineMinusCircle } from "react-icons/ai";
 const FAQ = () => {
   return (
 <div className=" mx-auto w-[90%] max-w px-8 py-10 mt-7 bg-white rounded-lg shadow-sm border-2 border-Primary"> 
-    <div class="flex flex-col items-center">
-            <h2 class="mt-5 text-center text-5xl font-bold text-Text">FAQ</h2>
-            <p class="mt-3 text-2xl text-Text ">Frequenty asked questions
+    <div className="flex flex-col items-center">
+            <h2 className="mt-5 text-center text-5xl font-bold text-Text">FAQ</h2>
+            <p className="mt-3 text-2xl text-Text ">Frequenty asked questions
 
             </p>
         </div>
