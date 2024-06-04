@@ -1,14 +1,5 @@
 const fs = require('fs');
 const { scrapeJobs } = require('./functions');
-async function extractTitlesFromFile() {
-    try {
-        const titles = fs.readFileSync('titles.txt', 'utf-8').split('\n');
-        return titles;
-    } catch (error) {
-        console.error('Error reading titles.txt:', error);
-        return [];
-    }
-}
 
 const scraperObject = {
 

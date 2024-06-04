@@ -55,14 +55,14 @@ const Login = () => {
           <div className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="email" className="block text-base font-bold">Email address</label>
-              <input type="email" name="email" id="email" placeholder="abcd@efgh.com" className="w-full px-3 py-2 border rounded-md " />
+              <input type="email" name="email" id="Login_email" placeholder="abcd@efgh.com" className="w-full px-3 py-2 border rounded-md " />
             </div>
             <div className="space-y-2">
               <div className="flex justify-between">
                 <label htmlFor="password" className="text-base font-bold">Password</label>
                 <a rel="noopener noreferrer" href="#" className="text-sm font-semibold hover:underline text-white">Forgot password?</a>
               </div>
-              <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md " />
+              <input type="password" name="password" id="Login_password" placeholder="*****" className="w-full px-3 py-2 border rounded-md " />
             </div>
           </div>
           <div className=" flex items-center justify-center">

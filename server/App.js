@@ -273,11 +273,12 @@ function sendHtmlFile(res, filePath) {
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+    
 });
+
 const Job_Scrapper = () => {
     console.log("Job is running");
     // web scraping code goes here 
-    scrappper();
 }
 
 
