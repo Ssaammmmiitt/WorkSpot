@@ -1,5 +1,5 @@
 const { token } = require('morgan');
-const  User = require('../models/userModel')
+const  {User, Detail} = require('../models/userModel')
 const jwt = require('jsonwebtoken');
 const path = require("path");
 //id is part of the payload
@@ -43,7 +43,23 @@ const signupUser = async (req, res) => {
     
 }
 
+//fillingdetail
+const filldetails = async (req, res) => {
+    const {firstname, lastname, phone_number, current_company, personal_information, 
+        linkedin_url, twitter_url, github_url, portfolio_url, other_links} = req.body
+
+    try {
+        const detail = await Detail.fillup(firstname, lastname, phone_number, current_company, 
+            personal_information, linkedin_url, twitter_url, github_url, portfolio_url, other_links)
 
 
+        res.status(200).json({firstname, lastname, phone_number, current_company, 
+            personal_information, linkedin_url, twitter_url, github_url, portfolio_url, other_links})
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
+    
+}
 
-module.exports = {loginUser, signupUser}
+
+module.exports = {loginUser, signupUser, filldetails}

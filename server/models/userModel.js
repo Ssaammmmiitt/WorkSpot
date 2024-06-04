@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcryptjs = require ('bcryptjs');
 const validator = require('validator');
-const multer = require('multer');
+
 
 const Schema = mongoose.Schema
 
@@ -14,27 +14,7 @@ const userSchema = new Schema ({
     password: {
         type: String,
         required: true
-    },
-    firstname: {
-        type: String,
-        required: true
-    },
-    lastname: {
-        type: String,
-        required: true
-    },
-    phone_number: {
-        type: String,
-        required:true
-    },
-    current_company: {
-        type: String,
-        required: true
-    },
-    personal_summary: {
-        type: String,
-        required: true
-    },   
+    },  
 })
 
 //static signup method
@@ -59,7 +39,6 @@ userSchema.statics.signup = async function (email, password)
 
     const salt = await bcryptjs.genSalt(10)
     const hash = await bcryptjs.hash(password, salt)
-
 
     const user= await this.create({email, password: hash})
     return user
@@ -88,5 +67,88 @@ userSchema.statics.login = async function (email, password)
 }
 
 
+const validateURL = (url) => {
+    const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    return urlRegex.test(url);
+}; 
+
+
+
+
+const profileSchema = new Schema ({
+    firstname: {
+        type: String,
+        required: true
+    },
+    lastname: {
+        type: String,
+        required: true
+    },
+    phone_number: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    current_company: {
+        type: String,
+    },
+    personal_information: {
+        type: String,
+        required: true
+    },
+    linkedin_url: {
+        type: String,
+        validate: {
+            validator: validateURL,
+            message: props => `${props.value} is not a Valid URL!`
+        }
+    },
+    twitter_url: {
+        type: String,
+        validate: {
+            validator: validateURL,
+            message: props => `${props.value} is not a Valid URL!`
+        }
+    },
+    github_url: {
+        type: String,
+        validate: {
+            validator: validateURL,
+            message: props => `${props.value} is not a Valid URL!`
+        }
+    },
+    portfolio_url: {
+        type: String,
+        validate: {
+            validator: validateURL,
+            message: props => `${props.value} is not a Valid URL!`
+        }
+    },
+    other_links: {
+        type: String,
+        validate: {
+            validator: validateURL,
+            message: props => `${props.value} is not a Valid URL!`
+        }
+    }
+}
+)
+
+//static filling of Profile Info
+profileSchema.statics.register = async function (firstname, lastname, phone_number, current_company, 
+    personal_information, linkedin_url, twitter_url, github_url, portfolio_url, other_links)
+    {
+        if (!firstname || !lastname || !phone_number || !personal_information) {
+             throw Error('Name, Phone Number and Personal Summary must be filled')}
+            
+            const detail = await this.create({firstname, lastname, phone_number, current_company, 
+                personal_information, linkedin_url, twitter_url, github_url, portfolio_url, other_links})
+    
+            return detail
+    
+    }
+
+
 
 module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Detail', profileSchema)
