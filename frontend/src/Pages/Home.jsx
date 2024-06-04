@@ -151,31 +151,61 @@ const Home = () => {
     const [query, setQuery] = useState('');
     const [fetchError, setFetchError] = useState(null);
 
+    // useEffect(() => {
+    //     async function fetchData() {
+    // setIsLoading(true);
+    // await fetch("/jobs.json")
+    //     .then(res => {
+    //         if (!res.ok) {
+    //             throw new Error(`HTTP error! status: ${res.status}`);
+    //         }
+    //         return res.json();
+    //     })
+    //     .then(data => {
+    //         setJobs(data);
+    //         setIsLoading(false);
+    //         setFetchError(null);
+    //     })
+    //     .catch(async error => {
+    // console.error("Error fetching jobs:", error);
+    // try {
+    //     const errorText = await error.response.text();
+    //     console.error("Response text:", errorText);
+    // } catch (err) {
+    //     console.error("Failed to read response text:", err);
+    // }
+    // setFetchError("Failed to load jobs.");
+    // setIsLoading(false);
+    //      });}
+    //     fetchData();
+    // }, []);
+
     useEffect(() => {
-    setIsLoading(true);
-    fetch("/jobs.json")
-        .then(res => {
-            if (!res.ok) {
-                throw new Error(`HTTP error! status: ${res.status}`);
+        async function fetchData() {
+            setIsLoading(true);
+            try {
+                const res = await fetch("./jobs.json"); // 1. Use async/await
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const data = await res.json();
+                setJobs(data); // 5. State management
+                setFetchError(null);
+            } catch (error) {
+                console.error("Error fetching jobs:", error); // 2. Error handling
+                try {
+                    const errorText = await error.response.text();
+                    console.error("Response text:", errorText); // 6. Enhanced error logging
+                } catch (err) {
+                    console.error("Failed to read response text:", err);
+                }
+                setFetchError("Failed to load jobs."); // 5. State management
+            } finally {
+                setIsLoading(false); // 3. Use of finally block
             }
-            return res.json();
-        })
-        .then(data => {
-            setJobs(data);
-            setIsLoading(false);
-            setFetchError(null);
-        })
-        .catch(async error => {
-    console.error("Error fetching jobs:", error);
-    try {
-        const errorText = await error.response.text();
-        console.error("Response text:", errorText);
-    } catch (err) {
-        console.error("Failed to read response text:", err);
-    }
-    setFetchError("Failed to load jobs.");
-    setIsLoading(false);
-         });
+        }
+
+        fetchData(); // 4. useEffect with dependency array
     }, []);
 
 
