@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const cors= require('cors');
 require("dotenv").config();
 const userRoutes = require('./routes/user');
+const feedbackRoute = require('./routes/feedback')
 
 //app
 const app = express();
@@ -30,6 +31,7 @@ app.use(cors({origin:true,
 
 //routes
 app.use('/user', userRoutes)
+app.use('/contact-us', feedbackRoute)
 
 
 //port
