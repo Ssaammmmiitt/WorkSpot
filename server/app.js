@@ -4,8 +4,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors= require('cors');
 require("dotenv").config();
-const userRoutes = require("../server/routes/user")
-const multer = require("multer");
+const userRoutes = require('./routes/user');
 
 //app
 const app = express();
@@ -30,7 +29,7 @@ app.use(cors({origin:true,
 
 
 //routes
-app.use("/user", userRoutes)
+app.use('/user', userRoutes)
 
 
 //port
