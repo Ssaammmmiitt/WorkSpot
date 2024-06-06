@@ -1,4 +1,4 @@
-const FeedBack = require('../models/feedback')
+const FeedBack = require('../models/feedbackModel')
 
 //addfeeback
 

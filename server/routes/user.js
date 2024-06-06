@@ -12,5 +12,7 @@ router.post('/login', loginUser)
 //signup route
 router.post('/signup', signupUser)
 
+//generate OTP
+
 
 module.exports = router
