@@ -315,7 +315,7 @@ const Home = () => {
     useEffect(() => {   
         const fetchJobs = async () => {
             try {
-                const response = await fetch("/message.json");
+                const response = await fetch("/jobs.json");
                 if (!response.ok) {
                     throw new Error("Failed to fetch jobs");
                 }
@@ -364,20 +364,34 @@ const Home = () => {
         }
     };
 
+    // const filteredItems = jobs.filter((job) => {
+    //     const matchesQuery = job.jobTitle.toLowerCase().includes(query.toLowerCase());
+    //     const matchesCategory = selectedCategory 
+    //         ? job.Location.toLowerCase() === selectedCategory.toLowerCase() ||
+    //           parseInt(job.maxPrice) <= parseInt(selectedCategory) ||
+    //           job.experienceLevel.toLowerCase() === selectedCategory.toLowerCase() ||
+    //           job.salaryType.toLowerCase() === selectedCategory.toLowerCase() ||
+    //           job.employmentType.toLowerCase() === selectedCategory.toLowerCase()
+    //         : true;
+
+    //     // const matchesDateFilter = dateFilter ? new Date(job.postingDate) >= new Date(dateFilter) : true;
+
+    //     return matchesQuery && matchesCategory ;
+    // });
+
     const filteredItems = jobs.filter((job) => {
-        const matchesQuery = job.jobTitle.toLowerCase().includes(query.toLowerCase());
+        const matchesQuery = job.jobTitle?.toLowerCase().includes(query.toLowerCase());
         const matchesCategory = selectedCategory 
-            ? job.jobLocation.toLowerCase() === selectedCategory.toLowerCase() ||
+            ? job.Location?.toLowerCase() === selectedCategory.toLowerCase() ||
               parseInt(job.maxPrice) <= parseInt(selectedCategory) ||
-              job.experienceLevel.toLowerCase() === selectedCategory.toLowerCase() ||
-              job.salaryType.toLowerCase() === selectedCategory.toLowerCase() ||
-              job.employmentType.toLowerCase() === selectedCategory.toLowerCase()
+              job.experienceLevel?.toLowerCase() === selectedCategory.toLowerCase() ||
+              job.salaryType?.toLowerCase() === selectedCategory.toLowerCase() ||
+              job.employmentType?.toLowerCase() === selectedCategory.toLowerCase()
             : true;
-
-        // const matchesDateFilter = dateFilter ? new Date(job.postingDate) >= new Date(dateFilter) : true;
-
-        return matchesQuery && matchesCategory ;
+    
+        return matchesQuery && matchesCategory;
     });
+    
 
     const { startIndex, endIndex } = calculatePageRange();
     const paginatedItems = filteredItems.slice(startIndex, endIndex);

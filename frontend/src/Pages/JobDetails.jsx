@@ -1,6 +1,6 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
-import jobs from '../../Public/message.json'
+import jobs from '../../Public/jobs.json'
 import { Link } from 'react-router-dom';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaRegClock } from "react-icons/fa";
@@ -16,7 +16,6 @@ const JobDetails = () => {
     const found = jobs.find (job => job.id === parseInt(id));
        console.log(found);
     const {companyName,jobTitle,availablePositions,requirements,companyLogo,minPrice,url,maxPrice,salaryType,jobLocation,responsibilities,postingDate,employmentType,description}= found;
-
     
 
      return (<>
@@ -64,10 +63,21 @@ const JobDetails = () => {
     <h2 className="text-xl font-semibold text-Text/90  ">Requirements</h2>
     <p className='text-Text/70'>{requirements}</p>
   </div>
-  <div className="mb-4">
+  {/* <div 
+        className='text-Text/70'
+        dangerouslySetInnerHTML={{ __html: requirements }}
+    ></div>
+    <div 
+        className='text-Text/70'
+        dangerouslySetInnerHTML={{ __html: responsibilities }}
+      ></div> */}
+  {
+    (responsibilities!=undefined)?(<div className="mb-4">
     <h2 className="text-xl font-semibold text-Text/90  ">Responsibility</h2>
    <p className='text-Text/70'>{responsibilities}</p>
-  </div>
+  </div>):(<></>)
+  }
+  
 </div>
         </>
         )}
