@@ -1,15 +1,15 @@
 const nodemailer = require('nodemailer');
+
 require("dotenv").config();
 
-
-const user=  process.env.MAIL
-const pass = process.env.PASSWORD
-
+const user = process.env.MAIL;
+const pass = process.env.PASSWORD;
 
 const sendEmail = async (recipient, subject, text) => {
   // Create a transporter for sending email
-  var transporter = nodemailer.createTransport({
-    service: "gmail",
+  let transporter = nodemailer.createTransport({
+    
+    service : 'Gmail',
     auth: {
       user,
       pass
@@ -20,7 +20,7 @@ const sendEmail = async (recipient, subject, text) => {
     from: user,
     to: recipient,
     subject,
-    text,
+    text 
   };
 
   try {
@@ -31,12 +31,8 @@ const sendEmail = async (recipient, subject, text) => {
   }
 };
 
-
 const sendOtp = (fullName, otp) => {
-  return `Dear ${fullName},
-  Your OTP code is ${otp}`;
+  return `Dear user,\nYour OTP code is ${otp}`;
 };
-
-
 
 module.exports = { sendEmail, sendOtp };

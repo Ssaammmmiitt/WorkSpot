@@ -64,7 +64,7 @@ const forgotPassword = async (req, res) => {
         return res.status(400).send("User not found");
       }
   
-      const otp = uuidv4().slice(0, 5); // Generate a simple 6-character OTP
+      const otp = uuidv4().slice(0, 5); // Generate a simple 5-character OTP
       const salt = await bcryptjs.genSalt(10)
       const hash = await bcryptjs.hash(otp, salt)
       user.resetPasswordOTP = hash
@@ -81,8 +81,76 @@ const forgotPassword = async (req, res) => {
       return res.status(200).json({ message: "OTP sent to email" });
     } catch (error) {
       console.error("Error in forgotPassword:", error);
-      return res.status(500).json({ error: errorHandler(error) });
+      return res.status(500).json({ error: error.message});
     }
 }
 
-module.exports ={signupUser, loginUser, forgotPassword}
+//verifyOTP
+const verifyOTP = async (req, res) => {
+    try {
+        const {email, otp} =req.body
+        const user= await User.findOne({ email});
+        const match1 = await bcryptjs.compare(otp, user.resetPasswordOTP)
+        const currenttime = new Date()
+        const resettime=new Date(user.resetPasswordOTPExpires)
+        const match2 = currenttime < resettime
+
+    
+
+    if (!match1 || !match2)
+        {
+            throw Error("Invalid or Expired OTP")
+        }
+
+    user.resetPasswordOTP=undefined
+    user.resetPasswordOTPExpires=undefined
+    await user.save();
+
+    res.status(200).send("OTP is verified")}
+    catch (error) {
+        return res.status(400).json({ error: error.message})
+    }
+}
+
+
+//reset password
+const resetpassword = async (req, res) => {
+    try {
+        const {email, otp, newpassword, confirmpassword} = req.body
+        const user = await User.findOne({email})
+
+        const match1 = await bcryptjs.compare(otp, user.resetPasswordOTP)
+        const currenttime = new Date()
+        const resettime=new Date(user.resetPasswordOTPExpires)
+        const match2 = currenttime < resettime
+
+    if (!match1 || !match2)
+        {
+            throw Error("Invalid or Expired OTP")
+        }
+    
+    const match3 = confirmpassword == newpassword
+
+    if (!match3) {
+        
+        throw Error ('Passwords do not match')
+    }
+        
+        const salt = await bcryptjs.genSalt(10)
+        const hashedpassword = await bcryptjs.hash(newpassword, salt)
+
+        user.password = hashedpassword
+        await user.save()
+        user.resetPasswordOTP=undefined
+        user.resetPasswordOTPExpires=undefined
+
+        res.status(200).send("Password changed successfully")
+    }
+    catch (error)
+    {
+        res.status(400).json({error: error.message})
+    }
+}
+
+
+module.exports ={signupUser, loginUser, forgotPassword, verifyOTP, resetpassword}

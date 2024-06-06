@@ -63,7 +63,7 @@ const userSchema = new Schema({
         type: String
     },
     resetPasswordOTP: {
-        type: String
+        type: String,
     },
     resetPasswordOTPExpires: {
         type: Date
