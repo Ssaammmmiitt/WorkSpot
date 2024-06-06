@@ -22,11 +22,22 @@ const WorkExperience = ({handleChange}) => {
 
       <InputField
         handleChange={handleChange}
-        value="Work remotely"
-        title="Work remotely"
+        value="Mid"
+        title="Medium"
         name="test"
       />
-
+      <InputField
+        handleChange={handleChange}
+        value="Junior"
+        title="Junior"
+        name="test"
+      />
+      <InputField
+        handleChange={handleChange}
+        value="Senior"
+        title="Senior"
+        name="test"
+      />
     </div>
   </div>  )
 }

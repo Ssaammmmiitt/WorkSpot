@@ -8,11 +8,11 @@ import { ImCalendar } from "react-icons/im";
  const url= "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75";
 const Card = ({data}) => {
 
-    const {companyName,jobTitle,companyLogo,minPrice,maxPrice,salaryType,jobLocation,postingDate,employmentType,description}= data;
+    const {id,companyName,jobTitle,companyLogo,minPrice,maxPrice,salaryType,jobLocation,postingDate,employmentType,frontendDescription}= data;
    
     return (
         <section className='card bg-[#eefffe] hover:bg-green-200 transition-colors duration-300 ease-out delay-120 transform motion-safe:hover:scale-105'>
-            <Link to={"/"} className="flex gap-4 flex-col sm:flex-row items-start">
+            <Link to={`/job/${id}`} className="flex gap-4 flex-col sm:flex-row items-start">
             {
                 companyName.toLowerCase() === "Talentsathi".toLowerCase() ? (
                     <img src={url} alt='' className='w-[72px] h-[72px]' />
@@ -29,7 +29,7 @@ const Card = ({data}) => {
                         <span className='flex items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}k</span>
                         <span className='flex items-center gap-2'><ImCalendar/>{postingDate}</span>
                     </div>
-                    <p className='text-base text-Text/70'>{description}</p>
+                    <p className='text-base text-Text/70'>{frontendDescription}</p>
                 </div>
             </Link>
         </section>

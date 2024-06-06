@@ -15,13 +15,13 @@ const EmploymentType = ({handleChange}) => {
 
       <InputField
         handleChange={handleChange}
-        value="full-time"
+        value="full time"
         title="Full-time"
         name="test"
       />
       <InputField
         handleChange={handleChange}
-        value="part-time"
+        value="part time"
         title="Part-time"
         name="test"
       />    

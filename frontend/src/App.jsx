@@ -34,7 +34,6 @@ const App = () => {
       <ContactUs/>
       <AboutUs/>
     </div> */}
-    
     <NavBar/>
     <Outlet/>
     </>

@@ -1,5 +1,4 @@
-import {createBrowserRouter,  RouterProvider,
-  } from "react-router-dom";
+import {createBrowserRouter,  RouterProvider } from "react-router-dom";
 import App from "../App.jsx";
 import Home from "../Pages/Home.jsx";
 import About from "../Pages/About.jsx";
@@ -12,7 +11,7 @@ import UpdatePass from "../Pages/UpdatePass.jsx";
 import ContactUsPage from "../Pages/ContactUs.jsx";
 import TermsAndConditions from "../Pages/TermsAndConditions.jsx";
 import FAQPage from "../Pages/FAQPage.jsx";
-
+import JobDetails from "../Pages/JobDetails.jsx";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +28,8 @@ const router = createBrowserRouter([
         {path:"/update-password",element:<UpdatePass/>},
         {path:"/contact-us",element:<ContactUsPage/>},
         {path:"/faq",element:<FAQPage/>},
-        {path:"/terms-and-conditions",element:<TermsAndConditions/>}
+        {path:"/terms-and-conditions",element:<TermsAndConditions/>},
+        {path:"/job/:id",element:<JobDetails/>}
       ]
     },
   ]);
