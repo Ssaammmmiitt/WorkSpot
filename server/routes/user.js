@@ -1,7 +1,7 @@
 const express = require('express')
 
 //controllers
-const {signupUser, loginUser} = require('../controllers/userController')
+const {signupUser, loginUser, forgotPassword} = require('../controllers/userController')
 
 const router = express.Router()
 
@@ -12,7 +12,9 @@ router.post('/login', loginUser)
 //signup route
 router.post('/signup', signupUser)
 
-//generate OTP
+//forgot password
+router.post('/forgotpassword', forgotPassword)
+
 
 
 module.exports = router

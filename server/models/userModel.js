@@ -61,6 +61,12 @@ const userSchema = new Schema({
     },
     other_links: {
         type: String
+    },
+    resetPasswordOTP: {
+        type: String
+    },
+    resetPasswordOTPExpires: {
+        type: Date
     }
 })
  
