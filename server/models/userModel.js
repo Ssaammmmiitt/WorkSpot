@@ -66,7 +66,7 @@ const userSchema = new Schema({
  
 
 //staticsignup
-userSchema.statics.signup = async function (email, password, firstname, lastname, phone_number, currentcompany, personal_summary, linkedin_url, twitter_url, github_url, portfolio_url, other_links)
+userSchema.statics.signup = async function (email, password, firstname, lastname, phone_number, currentcompany, personal_summary, current_job_title ,work_experience, job_location,linkedin_url, twitter_url, github_url, portfolio_url, other_links)
 {
     // validation
     if (!email || !password ||!firstname ||!lastname ||! phone_number ||! personal_summary)
@@ -93,7 +93,7 @@ userSchema.statics.signup = async function (email, password, firstname, lastname
     const salt = await bcryptjs.genSalt(10)
     const hash = await bcryptjs.hash(password, salt)
 
-    const user = await this.create({email, password: hash, firstname, lastname, phone_number,currentcompany,personal_summary, linkedin_url, twitter_url, github_url, portfolio_url, other_links })
+    const user = await this.create({email, password: hash, firstname, lastname, phone_number,currentcompany,personal_summary, current_job_title ,work_experience, job_location,linkedin_url, twitter_url, github_url, portfolio_url, other_links })
 
     return user
 }
