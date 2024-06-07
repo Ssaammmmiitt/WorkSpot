@@ -12,6 +12,11 @@ import ContactUsPage from "../Pages/ContactUs.jsx";
 import TermsAndConditions from "../Pages/TermsAndConditions.jsx";
 import FAQPage from "../Pages/FAQPage.jsx";
 import JobDetails from "../Pages/JobDetails.jsx";
+import Salary from "../Pages/EstSalary.jsx";
+
+
+
+
 
 const router = createBrowserRouter([
     {
@@ -29,7 +34,9 @@ const router = createBrowserRouter([
         {path:"/contact-us",element:<ContactUsPage/>},
         {path:"/faq",element:<FAQPage/>},
         {path:"/terms-and-conditions",element:<TermsAndConditions/>},
-        {path:"/job/:id",element:<JobDetails/>}
+        {path:"/job/:id",element:<JobDetails/>},
+        {path:"/salary",element:<Salary/>}
+
       ]
     },
   ]);

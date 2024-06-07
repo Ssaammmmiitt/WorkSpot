@@ -20,7 +20,7 @@ const NewsLetter = () => {
             </p>
             </div>
             <div className='w-full flex-row'>
-                <input type='email' name='email' id="email" placeholder='Enter your email' className='w-full block py-2 pl-3 border focus:outline-none '/>
+                <input type='email' name='email' id="email1" placeholder='Enter your email' className='w-full block py-2 pl-3 border focus:outline-none ' autoComplete='email' />
                 <div className='flex justify-center items-end'>
                 <button type='submit' value='Subscribe' className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                     <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">

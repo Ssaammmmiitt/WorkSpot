@@ -315,7 +315,7 @@ const Home = () => {
     useEffect(() => {   
         const fetchJobs = async () => {
             try {
-                const response = await fetch("/jobs.json");
+                const response = await fetch("/jobListings.json");
                 if (!response.ok) {
                     throw new Error("Failed to fetch jobs");
                 }

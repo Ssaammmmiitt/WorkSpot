@@ -14,7 +14,7 @@ const Salary = ({handleChange, handleClick}) => {
         </div>
         <div>
         <label className="sidebar-label-container">
-        <input type="radio" name="test2" id="all" value="" onChange={handleChange} />
+        <input type="radio" name="test" id="all2" value="" onChange={handleChange} />
           <span className="checkmark"></span>All
         </label>
 
@@ -22,25 +22,29 @@ const Salary = ({handleChange, handleClick}) => {
           handleChange={handleChange}
           value={30000}
           title="< 30000"
-          name="test2"
+          name="test"
+          id="111"
         />
          <InputField
           handleChange={handleChange}
           value={50000}
           title="< 50000"
-          name="test2"
+          name="test"
+          id="112"
         />
          <InputField
           handleChange={handleChange}
           value={80000}
           title="< 80000"
-          name="test2"
+          name="test"
+          id="113"
         />
          <InputField
           handleChange={handleChange}
           value={100000}
           title="< 100000"
-          name="test2"
+          name="test"
+          id="114"
         />
         </div>
     </div>

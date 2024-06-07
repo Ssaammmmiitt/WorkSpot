@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputField = ({handleChange, value, title, name }) => {
+const InputField = ({handleChange, value, title, name,id }) => {
   return (
     <label className='sidebar-label-container'>
     <input 
@@ -8,6 +8,7 @@ const InputField = ({handleChange, value, title, name }) => {
      name={name}
      value={value}
      onChange={handleChange}
+     id={id}
     />
     <span className="checkmark"></span>{title}
 </label>

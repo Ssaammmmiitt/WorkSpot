@@ -1,23 +1,22 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
-import jobs from '../../Public/jobs.json'
+import jobs from '../../Public/jobListings.json'
 import { Link } from 'react-router-dom';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaRegClock } from "react-icons/fa";
 import rupees from '../Assets/rupees.png';
 import { ImCalendar } from "react-icons/im";
 import { IoHome } from "react-icons/io5";
+import { BsFillPeopleFill } from "react-icons/bs";
 
-const imgurl= "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75";
 
 
 const JobDetails = () => {
     const {id} = useParams();
     const found = jobs.find (job => job.id === parseInt(id));
        console.log(found);
-    const {companyName,jobTitle,availablePositions,requirements,companyLogo,minPrice,url,maxPrice,salaryType,jobLocation,responsibilities,postingDate,employmentType,description}= found;
+    const {companyName,jobTitle,jobCategory,availablePositions,requirements,sector,image,expires,minPrice,url,maxPrice,salaryType,jobLocation,responsibilities,created,employmentType,description,experienceLevel}= found;
     
-
      return (<>
         <div className="max-w-4xl p-8 bg-white shadow-md w-[85%]  mx-auto mt-7   border-2  border-Primary rounded-lg">
   <div className="flex justify-between items-center mb-4">
@@ -25,19 +24,19 @@ const JobDetails = () => {
       <h1 className="text-3xl font-bold text-Text/90 ">{jobTitle}</h1>
       
       <div className="flex items-center space-x-2 text-Text/60 ">
-        <img src={imgurl} alt="Company Logo" className="w-[72px] h-[72px] rounded-full" />
+        <img src={image} alt="Company Logo" className="w-[96px] h-[96px] rounded-full" />
         <span>{companyName}</span>
         <span>•</span>
         <span>{jobLocation}</span>
       </div>
         <div className='text-Text/70 text-base flex flex-cols gap-2 mb-2'>
-            <span className='flex bg-Primary/85 p-2 rounded-lg items-center gap-2'><FaMapLocationDot/>{jobLocation}</span>
-            <span className='flex bg-Primary/85 p-2 rounded-lg items-center gap-2'><FaRegClock/>{employmentType}</span>
-            <span className='flex bg-Primary/85 p-2 rounded-lg items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}</span>
-            <span className='flex bg-Primary/85 p-2 rounded-lg items-center gap-2'><ImCalendar/>{postingDate}</span>
+            <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaMapLocationDot/>{jobLocation}</span>
+            <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaRegClock/>{employmentType}</span>
+            <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}</span>
         </div>
         <div className='text-Text/70 text-base flex flex-cols gap-2 mb-2'>
-            <span className='flex bg-Primary/85 p-2 rounded-lg items-center gap-2'>Vacancies: {availablePositions} </span>
+            <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><BsFillPeopleFill/>Vacancies: {availablePositions} </span>
+            <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><ImCalendar/>{created}</span>
         </div>
      
     </div>
@@ -54,27 +53,49 @@ const JobDetails = () => {
     </div>
   </div>
   <div className="mb-4">
-    <h2 className="text-xl font-semibold text-Text/90  ">About this role</h2>
+    <h2 className="text-xl font-semibold text-Text/90  ">Job Details</h2>
+    {
+        (sector!=undefined)?(<p className="text-Text/70">
+        Sector: {sector}</p>):(<></>)
+    }
+     <p className="text-Text/70  ">
+        Job Category: {jobCategory}
+    </p>
     <p className="text-Text/70  ">
-      {description}
+        Experience Level: {experienceLevel}
+    </p>
+    <p className="text-Text/70  ">
+        Posted on: {created}
+    </p>
+    <p className="text-Text/70  ">
+        Expires on:<span className='text-[#ff0000]'> {expires} </span>
+    </p>
+    <p className="text-Text/70  ">
+        Salary Type : {salaryType}
     </p>
   </div>
   <div className="mb-4">
-    <h2 className="text-xl font-semibold text-Text/90  ">Requirements</h2>
-    <p className='text-Text/70'>{requirements}</p>
+    <h2 className="text-xl font-semibold text-Text/90  ">About this role</h2>
+    <div 
+        className='text-Text/70'
+        dangerouslySetInnerHTML={{ __html: description }}
+    ></div>
   </div>
-  {/* <div 
+  <div className="mb-4">
+    <h2 className="text-xl font-semibold text-Text/90  ">Requirements</h2>
+    <div 
         className='text-Text/70'
         dangerouslySetInnerHTML={{ __html: requirements }}
     ></div>
-    <div 
-        className='text-Text/70'
-        dangerouslySetInnerHTML={{ __html: responsibilities }}
-      ></div> */}
+  </div>
+ 
   {
     (responsibilities!=undefined)?(<div className="mb-4">
     <h2 className="text-xl font-semibold text-Text/90  ">Responsibility</h2>
-   <p className='text-Text/70'>{responsibilities}</p>
+    <div
+        className='text-Text/70'
+        dangerouslySetInnerHTML={{ __html: responsibilities }}
+      ></div>
   </div>):(<></>)
   }
   
@@ -84,30 +105,3 @@ const JobDetails = () => {
 
 export default JobDetails
 
-{/* <div className='w-[80%]  mx-auto mt-7 bg-white shadow-sm border-2 px-2 border-Primary rounded-lg'>
-            <h1 className='text-Text text-2xl font-bold text-left '>{jobTitle}</h1>
-            <div className=''>
-            <span className=''>
-                <img src={url} alt='' className='w-[100px] h-[100px] rounded-full'/>
-                <h2 className='text-Text/70 text-lg font-semibold '> {companyName}</h2>
-            </span>
-                <div className='text-Text/70 text-base flex flex-cols gap-2 mb-2'>
-                        <span className='flex items-center gap-2'><FaMapLocationDot/>{jobLocation}</span>
-                        <span className='flex items-center gap-2'><FaRegClock/>{employmentType}</span>
-                        <span className='flex items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}k</span>
-                        <span className='flex items-center gap-2'><ImCalendar/>{postingDate}</span>
-                    </div>
-            </div>
-        </div> */}
-{/* <div className='bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
-            
-            
-            <p>IMG</p>
-            <div className='flex'>
-                <p className='text-Text text-2xl font-bold '>{jobTitle}</p>
-                <p className='text-Text/70 text-lg font-semibold'>{companyName}</p>
-            </div>
-    <div>JobDetails : {id} 
-    <p>Job Title: {jobTitle}</p>
-    <p>Company Name: {companyName}</p></div>
-    </div> */}

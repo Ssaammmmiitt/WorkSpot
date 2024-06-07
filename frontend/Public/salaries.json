@@ -1,0 +1,1479 @@
+[
+  {
+    "id": 1,
+    "title": "Graphic Designer",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 2,
+    "title": "Graphics Designer",
+    "salary": " Salary 47500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 3,
+    "title": "Software Developer ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 4,
+    "title": "Video Editor",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 5,
+    "title": "Graphics Designer & You Tube Thumbnail Creator/Videoeditor",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 6,
+    "title": "Software Engineer (Vue.js /Typescript) ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 7,
+    "title": "Software Developer (React Native/Typescript)",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 8,
+    "title": "Admin Officer/Associate Position ",
+    "salary": " Salary 21500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 9,
+    "title": "Graphic Designer (Female) ",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 10,
+    "title": "Flutter Developer ",
+    "salary": " Salary 135000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 11,
+    "title": "Associate Dev Ops Engineer ",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 12,
+    "title": "Associate UI/UX Designer ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 13,
+    "title": "Software Engineer (Node.js /Typescript)  ",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 14,
+    "title": "Software Engineer (React /Typescript)  ",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 15,
+    "title": "Software Engineer (React Native/Typescript)",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 16,
+    "title": " Software Engineer (Vue.js/Typescript) ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 17,
+    "title": "Area Business Manager",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 18,
+    "title": "Quality Assurance Engineer",
+    "salary": " Salary 85000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 19,
+    "title": "Frontend Developer ",
+    "salary": " Salary 75000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 20,
+    "title": "Graphics Designer",
+    "salary": " Salary 23500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 21,
+    "title": " Data Operations Analyst",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 22,
+    "title": "Junior Digital Marketing Executive ",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 23,
+    "title": "Web Developer ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 24,
+    "title": "AI/ML Engineer ",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 25,
+    "title": "Digital Marketer/Ads Media buyers",
+    "salary": " Salary 60000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 26,
+    "title": "Graphic Designer Junior",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 27,
+    "title": "Digital Marketing Officer (Trainee)",
+    "salary": " Salary 15000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 28,
+    "title": "CSR | Graphics Designer",
+    "salary": " Salary 23650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 29,
+    "title": "Video Editor",
+    "salary": " Salary 13600.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 30,
+    "title": "Interior desginer ",
+    "salary": " Salary 18650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 31,
+    "title": "Dev Ops Azure Engineer ",
+    "salary": " Salary 70000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 32,
+    "title": "AWS & Dev Ops Trainer ",
+    "salary": " Salary 30000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 33,
+    "title": "Word Press/Shopify/React Developer",
+    "salary": " Salary 105000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 34,
+    "title": "Real Estate Photo Editor (Photoshop Expert)",
+    "salary": " Salary 35000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 35,
+    "title": "Digital Marketer/ Ads Media buyers",
+    "salary": " Salary 55000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 36,
+    "title": "Recruiter / Information collector /Sales",
+    "salary": " Salary 17900.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 37,
+    "title": "UIUX Designer ",
+    "salary": " Salary 60000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 38,
+    "title": "CEO's Executive Assistant (Management trainee)",
+    "salary": " Salary 21148.50 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 39,
+    "title": "Receptionist",
+    "salary": " Salary 13500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 40,
+    "title": "Project manager ",
+    "salary": " Salary 35000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 41,
+    "title": "Full stack (Java + React) software developer ",
+    "salary": " Salary 65000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 42,
+    "title": "Content Creator",
+    "salary": " Salary 20000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 43,
+    "title": "Junior Shopify Developer ",
+    "salary": " Salary 75000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 44,
+    "title": "Junior Full Stack Developer (React + Django)",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 45,
+    "title": "Junior Digital Marketer",
+    "salary": " Salary 16000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 46,
+    "title": "Video Editor(Mid level)",
+    "salary": " Salary 42500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 47,
+    "title": "Mid",
+    "salary": " Salary 50000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 48,
+    "title": "Mid QA Engineer",
+    "salary": " Salary 55000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 49,
+    "title": "Customer Support Representative",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 50,
+    "title": "Mid level Video Editor",
+    "salary": " Salary 45000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 51,
+    "title": "Junior UI/UX Designer ",
+    "salary": " Salary 45000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 52,
+    "title": "Mid",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 53,
+    "title": "Jr MERN Stack Developer ",
+    "salary": " Salary 55000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 54,
+    "title": "Junior Python Developer ",
+    "salary": " Salary 32500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 55,
+    "title": "Copywriter Junior",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 56,
+    "title": "Junior Ruby on Rails Developer ID",
+    "salary": " Salary 90000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 57,
+    "title": "Jr Video Editor ",
+    "salary": " Salary 30000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 58,
+    "title": "Jr Copywriter ",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 59,
+    "title": "Field Technician",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 60,
+    "title": "Junior",
+    "salary": " Salary 32500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 61,
+    "title": "Junior Python Django Developer ",
+    "salary": " Salary 32500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 62,
+    "title": "Sales Representative",
+    "salary": " Salary 20500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 63,
+    "title": "Junior Django Developer ",
+    "salary": " Salary 21150.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 64,
+    "title": "Junior Marketing Officer ",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 65,
+    "title": "Junior Operations Officer ",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 66,
+    "title": "Jr Digital Marketing Assistant ",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 67,
+    "title": "Jr Sales Officer ",
+    "salary": " Salary 18650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 68,
+    "title": "Client Success Officer",
+    "salary": " Salary 32500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 69,
+    "title": "Flutter Developer ",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 70,
+    "title": "Flutter Developer (Mid",
+    "salary": " Salary 37500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 71,
+    "title": "Jr Frontend Developer",
+    "salary": " Salary 35000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 72,
+    "title": "Operations Officer",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 73,
+    "title": "Junior Video Editor",
+    "salary": " Salary 18650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 74,
+    "title": "Field Technician (GPS)",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 75,
+    "title": "Outlet Sales Executive ",
+    "salary": " Salary 47500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 76,
+    "title": "Night Shift Experience Sales and Support Staff",
+    "salary": " Salary 17500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 77,
+    "title": "Junior Customer Support Representative",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 78,
+    "title": "Front",
+    "salary": " Salary 90000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 79,
+    "title": "Motion Graphics Designer",
+    "salary": " Salary 18650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 80,
+    "title": "Field Technician",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 81,
+    "title": "Junior Digital Marketing Officer",
+    "salary": " Salary 22499.50 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 82,
+    "title": "Sales Officer",
+    "salary": " Salary 18649.50 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 83,
+    "title": "Content Writer",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 84,
+    "title": "Digital Marketing Executive",
+    "salary": " Salary 27500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 85,
+    "title": "Social Media Advertisment Assistant",
+    "salary": " Salary 17500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 86,
+    "title": "Marketing Officer",
+    "salary": " Salary 21500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 87,
+    "title": "Videographer",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 88,
+    "title": "Content Writer",
+    "salary": " Salary 17500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 89,
+    "title": "Graphics Designer",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 90,
+    "title": "Video Editor",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 91,
+    "title": "Junior Digital Marketing ",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 92,
+    "title": "Senior",
+    "salary": " Salary 64999.50 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 93,
+    "title": "Mid ",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 94,
+    "title": "Junior Graphics Designer",
+    "salary": " Salary 16000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 95,
+    "title": "Sales Marketing Executive",
+    "salary": " Salary 16000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 96,
+    "title": "Marketing Associate",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 97,
+    "title": "Telecaller",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 98,
+    "title": "MERN Stack Developer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 99,
+    "title": "Java Instructor",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 100,
+    "title": "Night Customer Service Representative",
+    "salary": " Salary 21800.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 101,
+    "title": "Accounts Assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 102,
+    "title": "Sale Executive",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 103,
+    "title": "UI/UX Designer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 104,
+    "title": "Branding and Marketing Executive",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 105,
+    "title": "DevOps Engineer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 106,
+    "title": "Senior Data Architect",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 107,
+    "title": "Technical Writer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 108,
+    "title": "Junior .NET Developer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 109,
+    "title": "Senior .NET Developer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 110,
+    "title": "JUnior Software Tester",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 111,
+    "title": "Senior Solution Architect",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 112,
+    "title": "Data Analyst",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 113,
+    "title": "Business Analyst",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 114,
+    "title": "Area Sales Representative (ASR)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 115,
+    "title": "Accounts Apprentice",
+    "salary": " Salary 19000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 116,
+    "title": "Customer Service Representative",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 117,
+    "title": "Help Desk",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 118,
+    "title": "Area Sales Representative (ASR)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 119,
+    "title": "Area Sales Representative (ASR)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 120,
+    "title": "Health Assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 121,
+    "title": "Account And Finance Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 122,
+    "title": "Social Media/IT Handling Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 123,
+    "title": "PHP Laravel Developer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 124,
+    "title": "Counselor - UK and Europe",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 125,
+    "title": "Backend Developer",
+    "salary": " Salary 70000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 126,
+    "title": "Assistant Accountant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 127,
+    "title": "Cook",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 128,
+    "title": "Content Creator (Intern)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 129,
+    "title": "Marketing Associates ( BBS )",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 130,
+    "title": "Pharmacist",
+    "salary": " Salary 22500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 131,
+    "title": "receptionist cum Cashier",
+    "salary": " Salary 17500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 132,
+    "title": "Office Assistant cum Data Entry Operator (Female)",
+    "salary": " Salary 7500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 133,
+    "title": "Accountant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 134,
+    "title": "SEO Intern",
+    "salary": " Salary 2500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 135,
+    "title": "SEO Content Writer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 136,
+    "title": "Content Editor and Proofreader",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 137,
+    "title": "Travel Consultant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 138,
+    "title": "Video Content Creator",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 139,
+    "title": "Admission officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 140,
+    "title": "Graphic Designer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 141,
+    "title": "Admin Manager",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 142,
+    "title": "Account Officer/ Godown Incarge",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 143,
+    "title": "Service Engineer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 144,
+    "title": "Admin Incharge",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 145,
+    "title": "Tour Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 146,
+    "title": "Senior Ticketing Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 147,
+    "title": "Tele-caller Executive (Female)",
+    "salary": " Salary 5000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 148,
+    "title": "Field Marketing Officer",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 149,
+    "title": "Chimney Technician",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 150,
+    "title": "Sales Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 151,
+    "title": "Sales Representative",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 152,
+    "title": "Marketing Executive",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 153,
+    "title": "Admin Assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 154,
+    "title": "Admin Assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 155,
+    "title": "Senior .NET Developer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 156,
+    "title": "Financial Planning & Analysis (FP&A) Specialist",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 157,
+    "title": "Accountant",
+    "salary": " Salary 17500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 158,
+    "title": "Marketing executive",
+    "salary": " Salary 16000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 159,
+    "title": "Sales and Marketing Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 160,
+    "title": "Digital marketing manager",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 161,
+    "title": "Technician/Jr. Technician",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 162,
+    "title": "Sales Associate",
+    "salary": " Salary 16500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 163,
+    "title": "Accountant",
+    "salary": " Salary 21500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 164,
+    "title": "Sales Head",
+    "salary": " Salary 42500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 165,
+    "title": "Fashion Designing Interns",
+    "salary": " Salary 2500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 166,
+    "title": "Graduate Engineer Trainee (Electrical)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 167,
+    "title": "Sr. Officer- Procurement",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 168,
+    "title": "Geologist",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 169,
+    "title": "Senior Sales Representative",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 170,
+    "title": "Sales and Marketing Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 171,
+    "title": "Graduate Trainee",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 172,
+    "title": "Super Stockiest",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 173,
+    "title": "Customer Service cum sales officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 174,
+    "title": "Accountant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 175,
+    "title": "Sales Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 176,
+    "title": "Receptionist",
+    "salary": " Salary 8650.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 177,
+    "title": "Delivery Rider",
+    "salary": " Salary 9000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 178,
+    "title": "Head Chef",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 179,
+    "title": "Operation Manager",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 180,
+    "title": "Shift Supervisor",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 181,
+    "title": "Sr. Officer- Sales (LCV)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 182,
+    "title": "Graphic Designer and Video Editor",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 183,
+    "title": "Sales / Public Relations",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 184,
+    "title": "Auditor",
+    "salary": " Salary 42500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 185,
+    "title": "Trainer",
+    "salary": " Salary 52500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 186,
+    "title": "Regional Manager",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 187,
+    "title": "Officer- Sales (Bus)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 188,
+    "title": "Sales Assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 189,
+    "title": "Musician",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 190,
+    "title": "Business Development Executive",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 191,
+    "title": "Web Design and SEO Executive",
+    "salary": " Salary 25000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 192,
+    "title": "Recruiting Coordinator",
+    "salary": " Salary 12500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 193,
+    "title": "English Teacher",
+    "salary": " Salary 10000.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 194,
+    "title": "Hostel Warden",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 195,
+    "title": "Door to Door Sales Marketing",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 196,
+    "title": "Assistant Teacher- Pre-primary",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 197,
+    "title": "Front Desk Officer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 198,
+    "title": "Teacher-Preschool",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 199,
+    "title": "Service Technicians/Engineers/Coordinator",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 200,
+    "title": "Sales & marketing Executive",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 201,
+    "title": "Customer Care Specialist",
+    "salary": " Salary 20900.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 202,
+    "title": "UI/UX Designer",
+    "salary": " Salary 32500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 203,
+    "title": "Business Development Intern (Logistics)",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 204,
+    "title": "Operation Associate-Internship",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 205,
+    "title": "Marketing Executive",
+    "salary": " Salary 7500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 206,
+    "title": "Marketing Intern",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 207,
+    "title": "Operations Assistant",
+    "salary": " Salary 7500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 208,
+    "title": "Content Writer",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 209,
+    "title": "Accounts Intern",
+    "salary": " Salary 2500.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 210,
+    "title": "HR cum Account assistant",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  },
+  {
+    "id": 211,
+    "title": "Marketing representative",
+    "salary": " Salary 0.00 per month",
+    "status": "Job Openings",
+    "skills": "N/A"
+  }
+]
