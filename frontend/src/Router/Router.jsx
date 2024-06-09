@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         {path:"/faq",element:<FAQPage/>},
         {path:"/terms-and-conditions",element:<TermsAndConditions/>},
         {path:"/job/:id",element:<JobDetails/>},
-        {path:"/salary",element:<Salary/>}
+        {path:"/salary",element:<Salary/>} 
 
       ]
     },
