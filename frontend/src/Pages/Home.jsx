@@ -273,7 +273,7 @@ const Home = () =>
             <div className='bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12'>
                 <div className='bg-white p-4 rounded'>
                     <Sidebar handleChange={handleChange} handleClick={handleClick} />
-                    <input type="file" accept=".json" onChange={handleFileChange} className="mt-4" />
+                    {/* <input type="file" accept=".json" onChange={handleFileChange} className="mt-4" /> */}
                 </div>
                 <div className='col-span-2 bg-white p-4 rounded'>
                     {isLoading ? (
