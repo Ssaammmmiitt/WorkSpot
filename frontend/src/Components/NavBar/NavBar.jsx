@@ -90,7 +90,7 @@ const NavBar=()=>{
     <ul className='flex-col items-center'>
     {
       navItems.map(({path,title}) => (
-        <li key={path} className='text-base text-white first:text-white py-1'>
+        <li key={path} className='text-base text-white first:text-white py-1  text-center'>
           <NavLink
               to={path}
               className={({ isActive}) =>
@@ -104,7 +104,7 @@ const NavBar=()=>{
     ))
     }
     <li className='text-white'>
-      <Link to="/login" className="text-white">Login</Link>
+      <Link to="/login" className="text-white block text-center md:text-left">Login</Link>
     </li>
     </ul>
   </div>
