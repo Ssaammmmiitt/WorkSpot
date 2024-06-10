@@ -155,16 +155,20 @@
 // }
 
 // export default Home;
+
+
 import React, { useState, useEffect } from 'react';
 import Banner from '../Components/SearchDiv/Banner';
 import Jobs from './Jobs';
 import Card from '../Components/Card/Card';
 import Sidebar from '../Components/Sidebar/Sidebar';
 import NewsLetter from '../Components/NewsLetter/NewsLetter';
+import jobsdata from '../../Public/jobListings.json';
 
-const Home = () => {
+const Home = () => 
+    {
+    const [jobs, setJobs] = useState(jobsdata);
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const [jobs, setJobs] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [fetchError, setFetchError] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
@@ -197,21 +201,20 @@ const Home = () => {
         }
     };
 
-    useEffect(() => {
-        const fetchJobListings = async () => {
-          try {
-            const response = await fetch('/jobListings.json');
-            const data = await response.json();
-            setJobs(data);
-          } catch (error) {
-            console.error('Error fetching job listings:', error);
-          }
-        };
+    // useEffect(() => {
+    //     const fetchJobListings = async () => {
+    //       try {
+    //         const response = await fetch('/jobListings.json');
+    //         const data = await response.json();
+    //         setJobs(data);
+    //       } catch (error) {
+    //         console.error('Error fetching job listings:', error);
+    //       }
+    //     };
       
-        fetchJobListings();
-      }, []);
+    //     fetchJobListings();
+    //   }, []);
 
-      
     const handleInputChange = (event) => {
         setQuery(event.target.value);
     };
