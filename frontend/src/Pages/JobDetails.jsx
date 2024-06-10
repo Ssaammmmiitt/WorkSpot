@@ -8,7 +8,7 @@ import rupees from '../Assets/rupees.png';
 import { ImCalendar } from "react-icons/im";
 import { IoHome } from "react-icons/io5";
 import { BsFillPeopleFill } from "react-icons/bs";
-
+import Swal from 'sweetalert2'
 
 
 const JobDetails = () => {
@@ -16,7 +16,24 @@ const JobDetails = () => {
     const found = jobs.find (job => job.id === parseInt(id));
        console.log(found);
     const {companyName,jobTitle,jobCategory,availablePositions,requirements,sector,image,expires,minPrice,url,maxPrice,salaryType,jobLocation,responsibilities,created,employmentType,description,experienceLevel}= found;
-    
+ 
+    const redirect = (url) => {
+      Swal.fire({
+          title: 'Do you want to apply to the job',
+          text: "You will be redirected to the application page.",
+          icon: 'info',
+          showCancelButton: true,
+          confirmButtonColor: '#008a8a',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, apply now!'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              window.location.assign(url);
+          }
+      });
+  }
+
+
      return (<>
         <div className="max-w-4xl p-8 bg-white shadow-md w-[85%]  mx-auto mt-7   border-2  border-Primary rounded-lg">
   <div className="flex justify-between items-center mb-4">
@@ -42,14 +59,14 @@ const JobDetails = () => {
     </div>
     <div className='inline '>
     <Link to="/home"><IoHome className='text-Primary w-6 h-6 mx-auto'/></Link>
-    <a href={url} className="relative inline-block text-lg  pt-4 group" >
+    <button className="relative inline-block text-lg  pt-4 group" onClick={() => redirect(url)}>
         <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
             <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
         <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
         <span className="relative">Apply Now </span>
         </span>
         <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-      </a>
+      </button>
     </div>
   </div>
   <div className="mb-4">
