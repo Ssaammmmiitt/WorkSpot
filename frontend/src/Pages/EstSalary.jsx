@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../Components/Header/PageHeader'
-
+import salaries from '../../Public/salaries.json'
 const Salary = () => {
     const [searchText,setSearchText]=useState("");
-    const [salary,setSalary]=useState([]);
+    const [salary,setSalary]=useState(salaries);
     
-    useEffect(()=>{
-        fetch("/salaries.json").then(res => res.json()).then(data => setSalary(data))
-    },[])
+    // useEffect(()=>{
+    //     fetch("/salaries.json").then(res => res.json()).then(data => setSalary(data))
+    // },[])
     const handleSearch=()=>{
         const filter =salary.filter(
             (job)=>
