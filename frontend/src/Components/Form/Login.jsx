@@ -8,7 +8,7 @@ import { FaEye , FaEyeSlash } from "react-icons/fa";
 const Login =() =>{
   const [showPassword,setShowPassword]=useState(false);
   const [email,setEmail]=useState("");
-  
+
     return(
       <>
         <div className="flex justify-center items-center h-[50rem]">
