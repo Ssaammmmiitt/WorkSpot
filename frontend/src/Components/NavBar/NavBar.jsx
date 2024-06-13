@@ -256,7 +256,7 @@ import Lottie from "lottie-react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Set initial state to false for demonstration
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Set initial state to false for demonstration
 
   const handleMenuToggler = () => {
     setIsMenuOpen(!isMenuOpen);

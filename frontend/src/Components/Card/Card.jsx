@@ -20,7 +20,7 @@ const Card = ({data}) => {
                     <div className='text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
                         <span className='flex items-center gap-2'><FaMapLocationDot/>{jobLocation}</span>
                         <span className='flex items-center gap-2'><FaRegClock/>{employmentType}</span>
-                        <span className='flex items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}k</span>
+                        <span className='flex items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]'/>{minPrice}-{maxPrice}</span>
                         <span className='flex items-center gap-2 text-[#FF0000]'><ImCalendar/>{expires}</span>
                     </div>
                     <p className='text-base text-Text/70'>{frontendDescription}</p>
