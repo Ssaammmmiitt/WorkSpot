@@ -263,7 +263,7 @@ const NavBar = () => {
   };
 
   const handleLogin = () => {
-    
+    // implement login logic
     setIsLoggedIn(!isLoggedIn);
   };
 
@@ -409,7 +409,7 @@ const NavBar = () => {
             </li>
           ))} */}
           {navItems.map(({ path, title }) => (
-            <li key={path} cclassName="text-base text-white py-1 text-center">
+            <li key={path} className="text-base text-white py-1 text-center">
               {title == "Start a search" || title == "Estimated Salary" ? (
                 <NavLink
                   to={path}

@@ -235,6 +235,9 @@ import { ImCalendar } from "react-icons/im";
 import { IoHome } from "react-icons/io5";
 import { BsFillPeopleFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
+import 'animate.css';
+
+
 
 const JobDetails = () => {
     const { id } = useParams();
@@ -270,24 +273,24 @@ const JobDetails = () => {
                             <span>•</span>
                             <span>{jobLocation}</span>
                         </div>
-                        <div className='text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
+                        <div className='animate__animated animate__backInLeft text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaMapLocationDot />{jobLocation}</span>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaRegClock />{employmentType}</span>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]' />{minPrice}-{maxPrice}</span>
                         </div>
-                        <div className='text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
+                        <div className='animate__animated animate__backInRight text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><BsFillPeopleFill />Vacancies: {availablePositions} </span>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><ImCalendar />{created}</span>
                         </div>
                     </div>
                     <div className='hidden md:inline'>
                         <Link to="/home"><IoHome className='text-Primary w-6 h-6 mx-auto' /></Link>
-                        <button className="px-6 py-2 mt-2 mx-auto font-medium bg-Primary text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"  onClick={() => redirect(url)}>
+                        <button className=" animate__animated animate__shakeY px-6 py-2 mt-2 mx-auto font-medium bg-Primary text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"  onClick={() => redirect(url)}>
                           Apply Now
                           </button> 
                     </div>
                 </div>
-                <div className="mb-4">
+                <div className="animate__animated animate__tada mb-4">
                     <h2 className="text-xl font-semibold text-Text/90">Job Details</h2>
                     {sector && <p className="text-Text/70">Sector: {sector}</p>}
                     <p className="text-Text/70">Job Category: {jobCategory}</p>
@@ -296,16 +299,16 @@ const JobDetails = () => {
                     <p className="text-Text/70">Expires on:<span className='text-[#ff0000]'> {expires} </span></p>
                     <p className="text-Text/70">Salary Type : {salaryType}</p>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 animate__animated animate__tada">
                     <h2 className="text-xl font-semibold text-Text/90">About this role</h2>
                     <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: description }}></div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 animate__animated animate__tada">
                     <h2 className="text-xl font-semibold text-Text/90">Requirements</h2>
                     <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: requirements }}></div>
                 </div>
                 {responsibilities && (
-                    <div className="mb-4">
+                    <div className="animate__animated animate__tada mb-4">
                         <h2 className="text-xl font-semibold text-Text/90">Responsibility</h2>
                         <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: responsibilities }}></div>
                     </div>

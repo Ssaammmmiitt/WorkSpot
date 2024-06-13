@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {  FaFacebookSquare} from 'react-icons/fa';
 import { ImGithub,ImGoogle } from "react-icons/im";
 import { Link } from 'react-router-dom';
+import { FaEye , FaEyeSlash } from "react-icons/fa";
 
 
 const Login =() =>{
+  const [showPassword,setShowPassword]=useState(false);
+  const [email,setEmail]=useState("");
+  
     return(
       <>
         <div className="flex justify-center items-center h-[50rem]">
@@ -61,9 +65,16 @@ const Login =() =>{
 			<div className="space-y-2">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-base font-bold">Password</label>
-					<a rel="noopener noreferrer" href="#" className="text-sm font-semibold hover:underline text-white">Forgot password?</a>
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md " />
+        <div className="flex justify-center items-center">
+          <div className="relative w-full max-w-sm">
+
+				<input type={(!showPassword)?"password":"text"} name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md pr-10 " />
+        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">{showPassword ? <FaEye onClick={()=>setShowPassword(!showPassword)} size={20} className="cursor-pointer"/> : <FaEyeSlash onClick={()=>setShowPassword(!showPassword)} size={20} className="cursor-pointer"/>}
+        </span>
+        </div>
+        </div>
+
 			</div>
 		</div>
         <div className=" flex items-center justify-center">
