@@ -183,7 +183,12 @@ a {
   border-color: #f7f7f7;
 }
 
-
+.divider{
+  height: 12px;
+  color: #000000;
+  border: #000000;
+  width: auto;
+}
 
 /* create a job page */
 

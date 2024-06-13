@@ -1,13 +1,14 @@
 import { AiOutlinePlusCircle,AiOutlineMinusCircle } from "react-icons/ai";
+import 'animate.css';
 
 
 const FAQ = () => {
   return (
-<div className=" mx-auto w-[90%] max-w px-8 py-10 mt-7 bg-white rounded-lg shadow-sm border-2 border-Primary"> 
+<div className="animate__animated animate__fadeInDownBig mx-auto w-[90%] max-w px-8 py-10 mt-7 bg-white rounded-lg shadow-sm border-2 border-Primary"> 
     <div className="flex flex-col items-center">
             <h2 className="mt-5 text-center text-5xl font-bold text-Text">FAQ</h2>
             <p className="mt-3 text-2xl text-Text ">Frequenty asked questions
-
+          
             </p>
         </div>
   <details className="group rounded-lg bg-gray-50 p-6 mt-7  hover:bg-[#eefffe]" open>
