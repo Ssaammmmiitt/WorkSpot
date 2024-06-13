@@ -13,6 +13,7 @@ import TermsAndConditions from "../Pages/TermsAndConditions.jsx";
 import FAQPage from "../Pages/FAQPage.jsx";
 import JobDetails from "../Pages/JobDetails.jsx";
 import Salary from "../Pages/EstSalary.jsx";
+import MyJobs from "../Pages/MyJobs.jsx";
 
 
 
@@ -35,8 +36,8 @@ const router = createBrowserRouter([
       {path:"/faq",element:<FAQPage/>},
       {path:"/terms-and-conditions",element:<TermsAndConditions/>},
       {path:"/job/:id",element:<JobDetails/>},
-      {path:"/salary",element:<Salary/>} 
-
+      {path:"/salary",element:<Salary/>},
+      {path:"my-jobs",element:<MyJobs/>}
     ]
   },
 ]);

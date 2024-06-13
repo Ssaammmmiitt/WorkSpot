@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from "./Components/NavBar/NavBar"
 import Search from './Components/SearchDiv/Search'
-import Jobs from './Components/JobDiv/Jobs'
 import Footer from './Components/FooterDiv/Footer'
 import SignUp from './Components/Form/SignUp';
 import SignUp1 from './Components/Form/SignUpFull';
