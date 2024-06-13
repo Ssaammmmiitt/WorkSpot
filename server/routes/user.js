@@ -1,7 +1,7 @@
 const express = require('express')
 
 //controllers
-const {signupUser, loginUser, forgotPassword, verifyOTP, resetpassword} = require('../controllers/userController')
+const {signupUser, loginUser, forgotPassword, verifyOTP, resetpassword, applied_jobs} = require('../controllers/userController')
 
 const router = express.Router()
 
@@ -20,5 +20,8 @@ router.post('/verifyotp', verifyOTP)
 
 //resetpassword
 router.post('/resetpassword', resetpassword)
+
+//myjobs
+router.post('/myjobs', applied_jobs)
 
 module.exports = router

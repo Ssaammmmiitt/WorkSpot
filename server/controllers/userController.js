@@ -152,5 +152,29 @@ const resetpassword = async (req, res) => {
     }
 }
 
+//jobs applied
+const applied_jobs = async (req,res) => {
+    try 
+    {
+        const {email ,jobs_id} = req.body
+        const user = await User.findOne({email})
 
-module.exports ={signupUser, loginUser, forgotPassword, verifyOTP, resetpassword}
+        if(!user)
+        {
+            throw Error('User not Found')
+        }
+    
+        user.jobs_applied = jobs_id
+        await user.save()
+
+        res.status(200).send("Jobs added successfully")
+        
+    } 
+    catch (error) 
+    {
+        res.status(400).json({error: error.message})
+    }
+}
+
+
+module.exports ={signupUser, loginUser, forgotPassword, verifyOTP, resetpassword, applied_jobs}

@@ -67,7 +67,10 @@ const userSchema = new Schema({
     },
     resetPasswordOTPExpires: {
         type: Date
-    }
+    },
+    jobs_applied: {
+        type: [Number]
+    },
 })
  
 
