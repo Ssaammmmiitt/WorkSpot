@@ -15,6 +15,10 @@ import JobDetails from "../Pages/JobDetails.jsx";
 import Salary from "../Pages/EstSalary.jsx";
 import MyJobs from "../Pages/MyJobs.jsx";
 import { Children } from "react";
+import NavBar from "../Components/NavBar/NavBar.jsx";
+
+
+
 const router = createBrowserRouter([
   {
     path: "/app",
@@ -24,12 +28,13 @@ const router = createBrowserRouter([
       { path: "contact-us", element: <ContactUsPage /> },
       { path: "faq", element: <FAQPage /> },
       { path: "terms-and-conditions", element: <TermsAndConditions /> },
-      { path: "job/:id", element: <JobDetails /> },
       { path: "salary", element: <Salary /> },
       { path: "my-jobs", element: <MyJobs /> },
-      { path: "about", element: <About /> }
+      { path: "about", element: <About /> },
+      
     ]
   },
+  { path: "job/:id", element:<><NavBar/> <JobDetails /> </>},
   { path: "/login", element: <LoginPage /> },
   { path: "/sign-up", element: <SignUpPage /> },
   { path: "/complete-registration", element: <CompleteRegistraion /> },
