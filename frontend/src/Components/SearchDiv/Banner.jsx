@@ -12,8 +12,8 @@ const Banner = ({query,handleInputChange}) => {
             <p className='text-lg text-Text/70  animate__animated animate__slideInUp'> Unlock your potential with new job opportunities and begin your exciting career path today.</p>
 
             <form>
-                <div className='flex justify-start md:flex-row flex-col md:gap-0 gap-4'>
-                    <div className='flex mt-2 md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-ring-inset focus-within:ring-Primary md:w-1/2 w-full'>
+                <div className='flex justify-start md:flex-row flex-col md:gap-0 gap-4 animate__animated animate__wobble'>
+                    <div className='flex mt-2 md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-ring-inset focus-within:ring-Primary md:w-1/2 w-full  '>
                         <input type='text' name="title" id="title" className='block flex-1 border-0 bg-transparent py-1.5 pl-8 text-Text/80 placeholder-Text/40 focus:right-0 sm:text-sm sm:leading-6' placeholder='Job title, keywords or company' onChange={handleInputChange} value={query}/>
                         <IoSearch className='absolute mt-2.5 ml-2 text-Text/40'/>
                     </div>

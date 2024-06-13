@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../Components/Header/PageHeader'
 import salaries from '../../Public/salaries.json'
+import 'animate.css';
+
 const Salary = () => {
     const [searchText,setSearchText]=useState("");
     const [salary,setSalary]=useState(salaries);
@@ -30,7 +32,7 @@ const Salary = () => {
         </div>
 
         {/* salary display card */}
-        <div className='grid lg:grid-cols-3 sm:gid-col-2 grid-cols-1 gap-12 my-12 items-center'> 
+        <div className='grid lg:grid-cols-3 sm:gid-col-2 grid-cols-1 gap-12 my-12 items-center  animate__animated animate__slideInLeft'> 
             {
                 salary.map((data)=>( (data.salary!==" Salary 0.00 per month")?(
                     <div key={data.id} className='shadow px-4 py-8 '>

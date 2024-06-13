@@ -10,7 +10,7 @@ const Card = ({data}) => {
     const {id,companyName,jobTitle,image,companyLogo,minPrice,maxPrice,salaryType,jobLocation,expires,employmentType,frontendDescription}= data;
    
     return (
-        <section className='card bg-[#eefffe] hover:bg-green-200 hover:border-[#000000] rounded-lg transition-colors duration-300 ease-out delay-120 transform motion-safe:hover:scale-105'>
+        <section className='card bg-[#eefffe] hover:bg-green-200 hover:border-[#000000] rounded-lg transition-colors duration-300 ease-out delay-120 transform motion-safe:hover:scale-105 animate__animated animate__slideInLeft'>
             <Link to={`/job/${id}`} className="flex gap-4 flex-col sm:flex-row items-start">
                     <img src={image} alt='' className='w-[72px] h-[72px]' />
                
