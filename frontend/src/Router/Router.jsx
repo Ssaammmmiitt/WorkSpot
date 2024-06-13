@@ -1,4 +1,4 @@
-import {createBrowserRouter,  RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App.jsx";
 import Home from "../Pages/Home.jsx";
 import About from "../Pages/About.jsx";
@@ -14,37 +14,32 @@ import FAQPage from "../Pages/FAQPage.jsx";
 import JobDetails from "../Pages/JobDetails.jsx";
 import Salary from "../Pages/EstSalary.jsx";
 import MyJobs from "../Pages/MyJobs.jsx";
-
-
-
-
-
+import { Children } from "react";
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App/>,
-    children:[
-      { path:"/",element:<Home/>},
-      { path:"/about",element:<About/>},
-      { path:"/login",element:<LoginPage/>},
-      { path:"/sign-up",element:<SignUpPage/>},
-      {path:"/complete-registration",element:<CompleteRegistraion/>},
-      {path:"/reset",element:<ResetForm/>},
-      {path:"/reset-otp",element:<Reset_otp/>},
-      {path:"/update-password",element:<UpdatePass/>},
-      {path:"/contact-us",element:<ContactUsPage/>},
-      {path:"/faq",element:<FAQPage/>},
-      {path:"/terms-and-conditions",element:<TermsAndConditions/>},
-      {path:"/job/:id",element:<JobDetails/>},
-      {path:"/salary",element:<Salary/>},
-      {path:"my-jobs",element:<MyJobs/>}
+    path: "/app",
+    element: <App />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "contact-us", element: <ContactUsPage /> },
+      { path: "faq", element: <FAQPage /> },
+      { path: "terms-and-conditions", element: <TermsAndConditions /> },
+      { path: "job/:id", element: <JobDetails /> },
+      { path: "salary", element: <Salary /> },
+      { path: "my-jobs", element: <MyJobs /> },
+      { path: "about", element: <About /> }
     ]
   },
+  { path: "/login", element: <LoginPage /> },
+  { path: "/sign-up", element: <SignUpPage /> },
+  { path: "/complete-registration", element: <CompleteRegistraion /> },
+  { path: "/reset", element: <ResetForm /> },
+  { path: "/reset-otp", element: <Reset_otp /> },
+  { path: "/update-password", element: <UpdatePass /> },
+  { path: "/*", element: <LoginPage /> }
 ]);
 
-  export default router;
-
-
+export default router;
 // import {createBrowserRouter,  RouterProvider } from "react-router-dom";
 // import App from "../App.jsx";
 // import Home from "../Pages/Home.jsx";

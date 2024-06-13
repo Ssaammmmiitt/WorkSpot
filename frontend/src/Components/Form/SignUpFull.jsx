@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { json, useNavigate } from "react-router-dom";
 
 // type FormFields = {
 //     firstName:string;
@@ -22,13 +24,15 @@ import { useForm } from "react-hook-form";
 // };
 
 const SignUp1 = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit =async (data) => {
     console.log(data);
     const formData = new FormData();
     formData.append("firstname", data.firstname);
@@ -48,13 +52,20 @@ const SignUp1 = () => {
     formData.append("githubUrl", data.githubUrl);
     formData.append("portfolioUrl", data.portfolioUrl);
     formData.append("otherWebsite", data.otherWebsite);
-    fetch("http://localhost:5000/api/v1/users", {
-      method: "POST",
-      body: formData,
+    await axios.post("/user/signup", formData, {
+      headers: {
+      }
+    }
+    ).then((res) => {
+      console.log(res);
+      navigate("/login");
+    }
+    ).catch((err) => {
+      console.log(err);
+      navigate("/sign-up");
     });
   };
 
-  console.log(watch("example"));
 
   return (
     <>
