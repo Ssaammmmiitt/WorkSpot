@@ -12,13 +12,23 @@ body{
   background-color: #EAEBE7;
 }
 
-li{
+li1{
   list-style: none;
   cursor: pointer;
   position:relative;
 }
 
-li:hover::before{
+.custom-li:hover::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background: #000000;
+  bottom: -10px;
+  right: 0;
+}
+
+li1:hover::before{
   position:absolute;
   content: '';
   height: 4px;
@@ -40,7 +50,7 @@ li:hover::before{
 
 
 .active{
-  color: #3575E2;
+  color: #008a8a;
   font-weight: 500;
 }
 

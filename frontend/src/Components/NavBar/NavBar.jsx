@@ -8,10 +8,15 @@ import Lottie from "lottie-react";
 
 const NavBar=()=>{
   const [isMenuOpen,setIsMenuOpen]=useState(false);
+  const [isLoggedIn,setIsLoggedIn]=useState(false);
   const handleMenuToggler=()=>{
     setIsMenuOpen(!isMenuOpen);
   };
-
+  
+  const handleLogin=() =>{
+    //implement login logic
+    setIsLoggedIn(!isLoggedIn);
+  }
   const navItems = [
     {path:"/",title:"Start a search"},
     // {path:"/my-job",title:"My Jobs"},
@@ -33,7 +38,7 @@ const NavBar=()=>{
   <ul className='hidden md:flex gap-12'>
     {
       navItems.map(({path,title}) => (
-        <li key={path} className='text-lg text-Text '>
+        <li key={path} className='text-lg text-Text no-underline hover:underline '>
           <NavLink
               to={path}
               className={({ isActive}) =>
@@ -49,6 +54,13 @@ const NavBar=()=>{
   </ul>
 
   {/*signup and login button*/}
+  {isLoggedIn? (
+    <Link to="/sign-up" className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+        Sign Out
+        </span>
+      </Link>
+  ):(
     <div className='text-lg text-Text font-medium space-x-5 hidden lg:block'>
       <Link to="/login" className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -61,7 +73,7 @@ const NavBar=()=>{
         </span>
       </Link>
     </div>
-
+  )}
   {/*mobile menu for small devices*/}
   <div className='md:hidden block'>
     <button onClick={handleMenuToggler}>
@@ -78,7 +90,7 @@ const NavBar=()=>{
     <ul className='flex-col items-center'>
     {
       navItems.map(({path,title}) => (
-        <li key={path} className='text-base text-white first:text-white py-1'>
+        <li key={path} className='text-base text-white first:text-white py-1  text-center'>
           <NavLink
               to={path}
               className={({ isActive}) =>
@@ -92,7 +104,7 @@ const NavBar=()=>{
     ))
     }
     <li className='text-white'>
-      <Link to="/login" className="text-white">Login</Link>
+      <Link to="/login" className="text-white block text-center md:text-left">Login</Link>
     </li>
     </ul>
   </div>
