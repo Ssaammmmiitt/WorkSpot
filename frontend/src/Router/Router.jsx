@@ -35,9 +35,9 @@ const router = createBrowserRouter([
     ]
   },
   { path: "job/:id", element:<><NavBar/> <JobDetails /> </>},
-  { path: "/login", element: <LoginPage /> },
-  { path: "/sign-up", element: <SignUpPage /> },
-  { path: "/complete-registration", element: <CompleteRegistraion /> },
+  { path: "/login", element:<><NavBar/> <LoginPage /></>},
+  { path: "/sign-up", element:<><NavBar/> <SignUpPage /></>  },
+  { path: "/complete-registration", element: <><NavBar/> <CompleteRegistraion /></>  },
   { path: "/reset", element: <ResetForm /> },
   { path: "/reset-otp", element: <Reset_otp /> },
   { path: "/update-password", element: <UpdatePass /> },

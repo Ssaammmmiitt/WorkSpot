@@ -273,7 +273,7 @@ const JobDetails = () => {
                             <span>•</span>
                             <span>{jobLocation}</span>
                         </div>
-                        <div className='animate__animated animate__backInLeft text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
+                        <div className='animate__animated animate__fadeInUp text-Text/70 text-base flex flex-wrap gap-2 mb-2'>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaMapLocationDot />{jobLocation}</span>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><FaRegClock />{employmentType}</span>
                             <span className='flex bg-[#99d0d0] p-2 rounded-lg items-center gap-2'><img src={rupees} alt="" className='w-[16px] h-[16px]' />{minPrice}-{maxPrice}</span>
@@ -290,7 +290,7 @@ const JobDetails = () => {
                           </button> 
                     </div>
                 </div>
-                <div className="animate__animated animate__tada mb-4">
+                <div className="animate__animated animate__fadeInUp mb-4">
                     <h2 className="text-xl font-semibold text-Text/90">Job Details</h2>
                     {sector && <p className="text-Text/70">Sector: {sector}</p>}
                     <p className="text-Text/70">Job Category: {jobCategory}</p>
@@ -299,16 +299,16 @@ const JobDetails = () => {
                     <p className="text-Text/70">Expires on:<span className='text-[#ff0000]'> {expires} </span></p>
                     <p className="text-Text/70">Salary Type : {salaryType}</p>
                 </div>
-                <div className="mb-4 animate__animated animate__tada">
+                <div className="mb-4 animate__animated animate__fadeInUp">
                     <h2 className="text-xl font-semibold text-Text/90">About this role</h2>
                     <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: description }}></div>
                 </div>
-                <div className="mb-4 animate__animated animate__tada">
+                <div className="mb-4 animate__animated animate__fadeInUp">
                     <h2 className="text-xl font-semibold text-Text/90">Requirements</h2>
                     <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: requirements }}></div>
                 </div>
                 {responsibilities && (
-                    <div className="animate__animated animate__tada mb-4">
+                    <div className="animate__animated animate__fadeInUp mb-4">
                         <h2 className="text-xl font-semibold text-Text/90">Responsibility</h2>
                         <div className='text-Text/70' dangerouslySetInnerHTML={{ __html: responsibilities }}></div>
                     </div>

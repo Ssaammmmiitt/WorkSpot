@@ -77,7 +77,7 @@ const SignUp = () => {
         </div>
 
         <div className="mt-5 gap-3 p-4">
-          <button className="group relative inli</div>ne-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out"
+          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out"
           >
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
               <ImGoogle size={30} />

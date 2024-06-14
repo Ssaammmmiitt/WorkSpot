@@ -6,13 +6,34 @@ import { MdEmail } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 
 const Login = () => {
+
+  const googleProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
 
+
   const handleSubmit = async (e) => {
+    signInWithPopup(auth, googleProvider) .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user;
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+
+
     e.preventDefault();
     const data = new FormData(e.target);
     const value = {
@@ -190,3 +211,4 @@ const Login = () => {
 };
 
 export default Login;
+
