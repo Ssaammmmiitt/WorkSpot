@@ -156,7 +156,7 @@ const resetpassword = async (req, res) => {
 const applied_jobs = async (req,res) => {
     try 
     {
-        const {email ,jobs_id} = req.body
+        const {email ,job_id} = req.body
         const user = await User.findOne({email})
 
         if(!user)
@@ -164,7 +164,14 @@ const applied_jobs = async (req,res) => {
             throw Error('User not Found')
         }
     
-        user.jobs_applied = jobs_id
+        const match = user.jobs_applied.some(job => job.job_id === job_id)
+
+        if (match) {
+            throw Error (' Same Job ID instantiated')
+        }
+
+
+        user.jobs_applied.push({job_applied_id:job_id, date: new Date()})
         await user.save()
 
         res.status(200).send("Jobs added successfully")
@@ -176,5 +183,54 @@ const applied_jobs = async (req,res) => {
     }
 }
 
+const list_applied_jobs = async (req, res) => {
+    try {
+        const {email} = req.body
 
-module.exports ={signupUser, loginUser, forgotPassword, verifyOTP, resetpassword, applied_jobs}
+        const user= await User.findOne({email})
+        
+        if(!user)
+            {
+                throw Error('User not Found')
+            }
+
+        res.status(200).json('Jobs pulled successfully')
+    }
+    catch (error)
+    {
+        res.status(400).json({error: error.message}) 
+    }
+}
+const delete_applied_jobs = async (req, res) => {
+    try 
+    {
+        const {email, jobid} = req.body
+        const jobidnumber= Number(jobid)
+        
+        const user= await User.findOne({email})
+
+        if(!user)
+            {
+                throw Error('User not Found')
+            }
+
+        const jobIndex = user.jobs_applied.findIndex(job => job.job_applied_id === jobidnumber )
+        
+
+        if (jobIndex === -1)
+            {
+                throw Error('Job Index Not found')
+            }
+
+        user.jobs_applied.splice(jobIndex, 1)
+
+        await user.save()
+
+        res.status(200).json("Job deleted successfully")
+    } catch (error) 
+    {
+        res.status(400).json({error: error.message})
+    }
+}
+
+module.exports ={signupUser, loginUser, forgotPassword, verifyOTP, resetpassword, applied_jobs, list_applied_jobs,delete_applied_jobs}
