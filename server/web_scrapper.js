@@ -116,30 +116,32 @@ async function VocalPanda() {
         // console.log(response);
         let jobListingsData = await response.json();
         jobListingsData = jobListingsData.response.job_list;
-        console.log(jobListingsData);
-        const jobData = jobListingsData.map(job => ({
-            id: id++,
-            companyName: job.first_name,
-            jobTitle: job.job_title,
-            jobCategory: job.is_remote === 0 ? "ONSITE" : "REMOTE",
-            jobLocation: job.job_location,
-            Location: job.job_location.split(', ')[2], // Assumes last part is the city
-            employmentType: job.job_type_name,
-            minPrice: job.salary_from,
-            maxPrice: job.salary_to,
-            salaryType: job.offered_salary.toUpperCase(),
-            experienceLevel: (job.experience),
-            availablePositions: (job.req_no_of_employes),
-            description: job.job_description,
-            requirements: (job.job_description),
-            expires: job.deadline,
-            created: job.created_date.split(' ')[0], // Assuming you want just the date
-            sector: (job.job_category),
-            responsibilities: (job.job_description),
-            frontendDescription: (job.job_description),
-            url: `https://www.vocalpanda.com/job-details/${job.job_title}-${job.job_id}`,
-            image: `https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/${job.logo.replace(' ', '%20')}`
-        }));
+        console.log(jobListingsData[0].logo);
+        const jobData = jobListingsData.map(job => (
+            console.log(job.logo),
+            {
+                id: id++,
+                companyName: job.first_name,
+                jobTitle: job.job_title,
+                jobCategory: job.is_remote === 0 ? "ONSITE" : "REMOTE",
+                jobLocation: job.job_location,
+                Location: job.job_location.split(', ')[2],
+                employmentType: job.job_type_name,
+                minPrice: job.salary_from,
+                maxPrice: job.salary_to,
+                salaryType: job.offered_salary.toUpperCase(),
+                experienceLevel: (job.experience),
+                availablePositions: (job.req_no_of_employes),
+                description: job.job_description,
+                requirements: (job.job_description),
+                expires: job.deadline,
+                created: job.created_date.split(' ')[0],
+                sector: (job.job_category),
+                responsibilities: (job.job_description),
+                frontendDescription: (job.job_description.split('.').slice(0, 2).join('.')),
+                url: `https://www.vocalpanda.com/job-details/${job.job_title}-${job.job_id}`,
+                image: (`https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/${job.logo}`).replace(' ', '%20')
+            }));
         return jobData;
     }).catch(error => {
         console.error('Error:', error);
@@ -147,6 +149,7 @@ async function VocalPanda() {
 
 }
 
+scraperJob();
 
 module.exports = scraperJob;
 
