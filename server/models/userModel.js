@@ -28,7 +28,7 @@ const userSchema = new Schema({
     phone: {
         type: String,
         required: true,
-        //unique: true
+        unique: true
     },
     currentCompany: {
         type: String
@@ -134,28 +134,15 @@ userSchema.statics.signup = async function (firstname,
 }
 
 //staticlogin
-userSchema.statics.login = async function (email, password) {
-    if (!email || !password) {
+userSchema.statics.login = function (email) {
+    if (!email) {
         throw Error('Email and Password must be filled')
     }
-
-    const user = await this.findOne({ email })
-
+    const user = this.findOne({ email })
+    console.log(user);
     if (!user) {
         throw Error('Incorrect Email')
     }
-
-    const match = await bcryptjs.compare(password, user.password)
-
-    if (!match) {
-        throw Error('Incorrect Pasword')
-    }
-
     return user
 }
-
-
-
-
-
 module.exports = mongoose.model('User', userSchema)

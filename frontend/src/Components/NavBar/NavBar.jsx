@@ -72,21 +72,21 @@ const NavBar = () => {
   //     )
   //   };
 
-    const onSignOut = (e) => {
-      e.preventDefault();
-      Swal.fire({
-        title: "Do you want to SignOut? This will take you to the login page",
-        showCancelButton: true,
-        confirmButtonText: "SignOut",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          logout();
-          setIsLoggedIn(false);
-          NavBar();  // This may not be necessary as the state change should re-render the component
-        }
-      });
-    };
-    
+  const onSignOut = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      title: "Do you want to SignOut? This will take you to the login page",
+      showCancelButton: true,
+      confirmButtonText: "SignOut",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logout();
+        setIsLoggedIn(false);
+        NavBar();  // This may not be necessary as the state change should re-render the component
+      }
+    });
+  };
+
   // const handleSignout = () => {
   //   logout();
   //   setIsLoggedIn(false);
@@ -94,285 +94,285 @@ const NavBar = () => {
   // };
 
 
-//   return (<>
-//     {/*handleLogin*/}
-//     < header className="max-w-screen-2xl container mx-auto xl:px-24 px-4" >
-//       <nav className="flex justify-between items-center py-6">
-//         <div className="flex items-center justify-center">
-//           <Lottie animationData={search} style={{ width: 100, height: 100 }} />
-//           {/* <Link to={isLoggedIn ? "/" : ""}> <h1 className='logo text-[35px] animate-bounce text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1></Link> */}
-//           {isLoggedIn ? (
-//             <Link to="/">
-//               <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
-//                 <strong>Work</strong>Spot
-//               </h1>
-//             </Link>
-//           ) : (
-//             <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
-//               <strong>Work</strong>Spot
-//             </h1>
-//           )}
-//         </div>
+  //   return (<>
+  //     {/*handleLogin*/}
+  //     < header className="max-w-screen-2xl container mx-auto xl:px-24 px-4" >
+  //       <nav className="flex justify-between items-center py-6">
+  //         <div className="flex items-center justify-center">
+  //           <Lottie animationData={search} style={{ width: 100, height: 100 }} />
+  //           {/* <Link to={isLoggedIn ? "/" : ""}> <h1 className='logo text-[35px] animate-bounce text-black font-bold hover:text-Primary'><strong>Work</strong>Spot</h1></Link> */}
+  //           {isLoggedIn ? (
+  //             <Link to="/">
+  //               <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
+  //                 <strong>Work</strong>Spot
+  //               </h1>
+  //             </Link>
+  //           ) : (
+  //             <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
+  //               <strong>Work</strong>Spot
+  //             </h1>
+  //           )}
+  //         </div>
 
-//         {/* nav items for large devices */}
-//         <ul className="hidden md:flex gap-8">
-//           {navItems.map(({ path, title }) => (
-//             <li
-//               key={path}
-//               className="text-lg font-medium text-Text no-underline hover:underline"
-//             >
-//               {title == "Start a search" || title == "Estimated Salary" ? (
-//                 <NavLink
-//                   to={path}
-//                   className={({ isActive }) => (isActive ? "active" : "")}
-//                   onClick={(e) => handleProtectedNavClick(e, path)}
-//                 >
-//                   {title}
-//                 </NavLink>
-//               ) : (
-//                 <Link to={path}>{title}</Link>
-//               )}
-//             </li>
-//           ))}
-//         </ul>
+  //         {/* nav items for large devices */}
+  //         <ul className="hidden md:flex gap-8">
+  //           {navItems.map(({ path, title }) => (
+  //             <li
+  //               key={path}
+  //               className="text-lg font-medium text-Text no-underline hover:underline"
+  //             >
+  //               {title == "Start a search" || title == "Estimated Salary" ? (
+  //                 <NavLink
+  //                   to={path}
+  //                   className={({ isActive }) => (isActive ? "active" : "")}
+  //                   onClick={(e) => handleProtectedNavClick(e, path)}
+  //                 >
+  //                   {title}
+  //                 </NavLink>
+  //               ) : (
+  //                 <Link to={path}>{title}</Link>
+  //               )}
+  //             </li>
+  //           ))}
+  //         </ul>
 
-//         {/* signup and login button */}
-//         <div className="hidden md:flex items-center space-x-4">
-//           {isLoggedIn ? (
-//             <>
-//               <Link
-//                 to="/app/my-jobs"
-//                 className="text-lg font-medium text-Text no-underline hover:underline"
-//               >
-//                 My Jobs
-//               </Link>
-//               <Link
-//                 onClick={(e)=> onSignOut(e,path)}
-//                 to="/login"
-//                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-//               >
+  //         {/* signup and login button */}
+  //         <div className="hidden md:flex items-center space-x-4">
+  //           {isLoggedIn ? (
+  //             <>
+  //               <Link
+  //                 to="/app/my-jobs"
+  //                 className="text-lg font-medium text-Text no-underline hover:underline"
+  //               >
+  //                 My Jobs
+  //               </Link>
+  //               <Link
+  //                 onClick={(e)=> onSignOut(e,path)}
+  //                 to="/login"
+  //                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+  //               >
 
-//                 <button className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-//                   Sign Out
-//                 </button>
-//               </Link>
-//             </>
-//           ) : (
-//             <>
-//               <Link
-//                 to="/login"
-//                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
-//               >
-//                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-//                   Login
-//                 </span>
-//               </Link>
-//               <Link
-//                 to="/sign-up"
-//                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-//               >
-//                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-//                   Sign Up
-//                 </span>
-//               </Link>
-//             </>
-//           )}
-//         </div>
+  //                 <button className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+  //                   Sign Out
+  //                 </button>
+  //               </Link>
+  //             </>
+  //           ) : (
+  //             <>
+  //               <Link
+  //                 to="/login"
+  //                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
+  //               >
+  //                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+  //                   Login
+  //                 </span>
+  //               </Link>
+  //               <Link
+  //                 to="/sign-up"
+  //                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+  //               >
+  //                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+  //                   Sign Up
+  //                 </span>
+  //               </Link>
+  //             </>
+  //           )}
+  //         </div>
 
-//         {/* mobile menu button */}
-//         <div className="md:hidden block">
-//           <button onClick={handleMenuToggler}>
-//             {isMenuOpen ? (
-//               <FaXmark className="h-5 w-5" />
-//             ) : (
-//               <FaBarsStaggered className="w-5 h-5 text-Text" />
-//             )}
-//           </button>
-//         </div>
-//       </nav>
+  //         {/* mobile menu button */}
+  //         <div className="md:hidden block">
+  //           <button onClick={handleMenuToggler}>
+  //             {isMenuOpen ? (
+  //               <FaXmark className="h-5 w-5" />
+  //             ) : (
+  //               <FaBarsStaggered className="w-5 h-5 text-Text" />
+  //             )}
+  //           </button>
+  //         </div>
+  //       </nav>
 
-//       {/* nav items for mobile */}
-//       <div
-//         className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"
-//           }`}
-//       >
-//         <ul className="flex flex-col items-center space-y-4">
-//           {/* {navItems.map(({ path, title }) => (
-//             <li key={path} className='text-base text-white py-1 text-center'>
-//               <NavLink
-//                 to={path}
-//                 className={({ isActive }) => isActive ? "active" : ""}
-//                 onClick={(e) => handleProtectedNavClick(e, path)}
-//               >
-//                 {title}
-//               </NavLink>
-//             </li>
-//           ))} */}
-//           {navItems.map(({ path, title }) => (
-//             <li key={path} className="text-base text-white py-1 text-center">
-//               {title == "Start a search" || title == "Estimated Salary" ? (
-//                 <NavLink
-//                   to={path}
-//                   className={({ isActive }) => (isActive ? "active" : "")}
-//                   onClick={(e) => handleProtectedNavClick(e, path)}
-//                 >
-//                   {title}
-//                 </NavLink>
-//               ) : (
-//                 <Link to={path}>{title}</Link>
-//               )}
-//             </li>
-//           ))}
-//           <li className="text-white">
-//             <Link
-//               to="/login"
-//               className="text-white block text-center md:text-left"
-//             >
-//               Login
-//             </Link>
-//           </li>
-//           <li className="text-white">
-//             <Link
-//               to="/sign-up"
-//               className="text-white block text-center md:text-left"
-//             >
-//               Sign Up
-//             </Link>
-//           </li>
-//         </ul>
-//       </div>
-//     </header >
-//   </>
-//   );
-// };
+  //       {/* nav items for mobile */}
+  //       <div
+  //         className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"
+  //           }`}
+  //       >
+  //         <ul className="flex flex-col items-center space-y-4">
+  //           {/* {navItems.map(({ path, title }) => (
+  //             <li key={path} className='text-base text-white py-1 text-center'>
+  //               <NavLink
+  //                 to={path}
+  //                 className={({ isActive }) => isActive ? "active" : ""}
+  //                 onClick={(e) => handleProtectedNavClick(e, path)}
+  //               >
+  //                 {title}
+  //               </NavLink>
+  //             </li>
+  //           ))} */}
+  //           {navItems.map(({ path, title }) => (
+  //             <li key={path} className="text-base text-white py-1 text-center">
+  //               {title == "Start a search" || title == "Estimated Salary" ? (
+  //                 <NavLink
+  //                   to={path}
+  //                   className={({ isActive }) => (isActive ? "active" : "")}
+  //                   onClick={(e) => handleProtectedNavClick(e, path)}
+  //                 >
+  //                   {title}
+  //                 </NavLink>
+  //               ) : (
+  //                 <Link to={path}>{title}</Link>
+  //               )}
+  //             </li>
+  //           ))}
+  //           <li className="text-white">
+  //             <Link
+  //               to="/login"
+  //               className="text-white block text-center md:text-left"
+  //             >
+  //               Login
+  //             </Link>
+  //           </li>
+  //           <li className="text-white">
+  //             <Link
+  //               to="/sign-up"
+  //               className="text-white block text-center md:text-left"
+  //             >
+  //               Sign Up
+  //             </Link>
+  //           </li>
+  //         </ul>
+  //       </div>
+  //     </header >
+  //   </>
+  //   );
+  // };
 
-// export default NavBar;
+  // export default NavBar;
 
 
-return (
-  <>
-    <header className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
-      <nav className="flex justify-between items-center py-6">
-        <div className="flex items-center justify-center">
-          <Lottie animationData={search} style={{ width: 100, height: 100 }} />
-          {isLoggedIn ? (
-            <Link to="/">
+  return (
+    <>
+      <header className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
+        <nav className="flex justify-between items-center py-6">
+          <div className="flex items-center justify-center">
+            <Lottie animationData={search} style={{ width: 100, height: 100 }} />
+            {isLoggedIn ? (
+              <Link to="/app">
+                <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
+                  <strong>Work</strong>Spot
+                </h1>
+              </Link>
+            ) : (
               <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
                 <strong>Work</strong>Spot
               </h1>
-            </Link>
-          ) : (
-            <h1 className="logo text-[35px] animate-bounce text-black font-bold hover:text-Primary">
-              <strong>Work</strong>Spot
-            </h1>
-          )}
-        </div>
+            )}
+          </div>
 
-        <ul className="hidden md:flex gap-8">
-          {navItems.map(({ path, title }) => (
-            <li
-              key={path}
-              className="text-lg font-medium text-Text no-underline hover:underline"
-            >
-              {title === "Start a search" || title === "Estimated Salary" ? (
-                <NavLink
-                  to={path}
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={(e) => handleProtectedNavClick(e, path)}
-                >
-                  {title}
-                </NavLink>
-              ) : (
-                <Link to={path}>{title}</Link>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        <div className="hidden md:flex items-center space-x-4">
-          {isLoggedIn ? (
-            <>
-              <Link
-                to="/app/my-jobs"
+          <ul className="hidden md:flex gap-8">
+            {navItems.map(({ path, title }) => (
+              <li
+                key={path}
                 className="text-lg font-medium text-Text no-underline hover:underline"
               >
-                My Jobs
-              </Link>
-              <Link
-                onClick={(e) => onSignOut(e)}
-                to="/login"
-                className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-              >
-                <button className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Sign Out
-                </button>
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link
-                to="/login"
-                className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
-              >
-                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Login
-                </span>
-              </Link>
-              <Link
-                to="/sign-up"
-                className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-              >
-                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Sign Up
-                </span>
-              </Link>
-            </>
-          )}
-        </div>
+                {title === "Start a search" || title === "Estimated Salary" ? (
+                  <NavLink
+                    to={path}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    onClick={(e) => handleProtectedNavClick(e, path)}
+                  >
+                    {title}
+                  </NavLink>
+                ) : (
+                  <Link to={path}>{title}</Link>
+                )}
+              </li>
+            ))}
+          </ul>
 
-        <div className="md:hidden block">
-          <button onClick={handleMenuToggler}>
-            {isMenuOpen ? (
-              <FaXmark className="h-5 w-5" />
-            ) : (
-              <FaBarsStaggered className="w-5 h-5 text-Text" />
-            )}
-          </button>
-        </div>
-      </nav>
-
-      <div className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"}`}>
-        <ul className="flex flex-col items-center space-y-4">
-          {navItems.map(({ path, title }) => (
-            <li key={path} className="text-base text-white py-1 text-center">
-              {title === "Start a search" || title === "Estimated Salary" ? (
-                <NavLink
-                  to={path}
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={(e) => handleProtectedNavClick(e, path)}
+          <div className="hidden md:flex items-center space-x-4">
+            {isLoggedIn ? (
+              <>
+                <Link
+                  to="/app/my-jobs"
+                  className="text-lg font-medium text-Text no-underline hover:underline"
                 >
-                  {title}
-                </NavLink>
+                  My Jobs
+                </Link>
+                <Link
+                  onClick={(e) => onSignOut(e)}
+                  to="/login"
+                  className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                >
+                  <button className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Sign Out
+                  </button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
+                >
+                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Login
+                  </span>
+                </Link>
+                <Link
+                  to="/sign-up"
+                  className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                >
+                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Sign Up
+                  </span>
+                </Link>
+              </>
+            )}
+          </div>
+
+          <div className="md:hidden block">
+            <button onClick={handleMenuToggler}>
+              {isMenuOpen ? (
+                <FaXmark className="h-5 w-5" />
               ) : (
-                <Link to={path}>{title}</Link>
+                <FaBarsStaggered className="w-5 h-5 text-Text" />
               )}
+            </button>
+          </div>
+        </nav>
+
+        <div className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"}`}>
+          <ul className="flex flex-col items-center space-y-4">
+            {navItems.map(({ path, title }) => (
+              <li key={path} className="text-base text-white py-1 text-center">
+                {title === "Start a search" || title === "Estimated Salary" ? (
+                  <NavLink
+                    to={path}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    onClick={(e) => handleProtectedNavClick(e, path)}
+                  >
+                    {title}
+                  </NavLink>
+                ) : (
+                  <Link to={path}>{title}</Link>
+                )}
+              </li>
+            ))}
+            <li className="text-white">
+              <Link to="/login" className="text-white block text-center md:text-left">
+                Login
+              </Link>
             </li>
-          ))}
-          <li className="text-white">
-            <Link to="/login" className="text-white block text-center md:text-left">
-              Login
-            </Link>
-          </li>
-          <li className="text-white">
-            <Link to="/sign-up" className="text-white block text-center md:text-left">
-              Sign Up
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </header>
-  </>
-);
+            <li className="text-white">
+              <Link to="/sign-up" className="text-white block text-center md:text-left">
+                Sign Up
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </>
+  );
 };
 
 export default NavBar;

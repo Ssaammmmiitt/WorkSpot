@@ -7,6 +7,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import app from "../../firebase/firebase.config";
 import { useAuth } from "../../firebase/AuthProvider";
 import Swal from "sweetalert2";
+import axios from "axios";
+
 
 
 
@@ -15,21 +17,46 @@ const Login = () => {
   const { login, signUpWithGoogle, signUpWithGithub } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-
+  let idToken = {};
   const handleSocialLogin = async (provider) => {
     try {
       let result;
       if (provider === "Google") {
-        result = await signUpWithGoogle();
+        result = await signUpWithGoogle().then(async (result) => {
+          //console.log(result);
+          idToken = result.user.accessToken;
+          //console.log(result.user.email);
+          await axios.post("/user/login", {
+            email: result.user.email
+          }).then(
+            (response) => {
+              console.log(response);
+            },
+            (error) => {
+              console.log(error);
+              return;
+            }
+          );
+          return result;
+        })
       } else if (provider === "Github") {
-        result = await signUpWithGithub();
+        result = await signUpWithGithub().then((result) => {
+          idToken = result.user.accessToken;
+          return result;
+        });
       }
       // Handle new or existing user login
-      console.log(result);
+      //console.log(result);
       const isNewUser = result.user.metadata.createdAt === result.user.metadata.lastLoginAt;
       if (isNewUser) {
         navigate("/complete-registration");
       } else {
+        const expirationTime = new Date().getTime() + 5 * 60 * 1000;
+        localStorage.setItem('idToken', idToken);
+        localStorage.setItem('tokenExpiration', expirationTime);
+        //console.log(idToken, expirationTime)
+
+        // console.log(localStorage.getItem('idToken'), localStorage.getItem('tokenExpiration'));
         navigate("/app");
       }
     } catch (error) {
@@ -50,13 +77,17 @@ const Login = () => {
     };
     try {
       await login(value.email, value.password);
+      const expirationTime = new Date().getTime() + sessionExpirationMinutes * 60 * 1000;
+      localStorage.setItem('idToken', idToken);
+      localStorage.setItem('tokenExpiration', expirationTime);
+      console.log(idToken, expirationTime)
       navigate("/app");
     } catch (error) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: error.message,
-      });      if (error.code === "auth/invalid-credential") {
+      }); if (error.code === "auth/invalid-credential") {
         navigate("/sign-up");
       }
     }

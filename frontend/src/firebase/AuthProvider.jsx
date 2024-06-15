@@ -14,7 +14,7 @@ import {
 import { useState, useEffect, useContext } from "react";
 
 export const AuthContext = createContext();
-const auth = getAuth(app);
+const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 

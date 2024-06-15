@@ -2,6 +2,8 @@ const fs = require('fs');
 
 const axios = require('axios');
 const { populate } = require('./models/userModel');
+const { get } = require('http');
+const getEstimatedSalary = require('./estimated_salary');
 async function extractTitlesFromFile() {
     try {
         const titles = fs.readFileSync(__dirname, 'titles.txt', 'utf-8').split('\n');
@@ -21,18 +23,16 @@ async function scraperJob() {
 
     let dataInternsathi = await Internsathi();
     let dataVocalPanda = await VocalPanda();
-
     finalData = [dataInternsathi, dataVocalPanda];
-
     fs.writeFileSync('jobListings.json', JSON.stringify(finalData.flat(), null, 2), 'utf-8');
 
-
-
+    getEstimatedSalary();
 
 }
 
 
 async function Internsathi() {
+
 
     let data = await fetch("https://api.internsathi.com/graphql", {
         "headers": {
@@ -58,12 +58,15 @@ async function Internsathi() {
         let jobListingsData = jobListings.data.getJobs.result;
         //console.log(jobListingsData);
 
+
         let data = jobListingsData.map(job => ({
             id: id++,
             companyName: job.Creator ? job.Creator.companyName : "N/A",
-            jobTitle: job.title.replace(/-?ID\d+/g, '').trim(),
+            jobTitle: job.title.split('-').join(' ').replace(/ID\d+/g, '').trim(),
+            jobSector: job.sector,
             jobCategory: job.opportunityType || "N/A",
             jobLocation: job.jobLocation,
+            jobSector: job.sectorName || "N/A",
             Location: job.Address ? job.Address.cityName : "N/A",
             employmentType: job.jobType,
             minPrice: job.salaryMin || "N/A",
@@ -77,10 +80,11 @@ async function Internsathi() {
             created: job.createdAt.split('T')[0] || "N/A",
             sector: job.sectorName || "N/A",
             responsibilities: job.responsibilities.replace('class', 'className') || "N/A",
-            frontendDescription: job.description.replace('class', 'className') || "N/A",
+            frontendDescription: job.description.replace(/<\/?[^>]+(>|$)/g, "").replace('class', 'className').split('.').slice(0, 2).join('.') || "N/A",
             url: `https://internsathi.com/internships/${job.slug}`,
             image: `https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F${job.Creator ? job.Creator.profilePic.split('/')[2] : "N/A"}&w=256&q=75`
         }));
+
         return data;
     });
 
@@ -93,6 +97,38 @@ async function Internsathi() {
 
 async function VocalPanda() {
 
+    let data = await fetch("https://vocalpanda-prod-gvshg-a006ddd577b0.herokuapp.com/dashboard/getCategoryListWithJobCount", {
+        "headers": {
+            "accept": "application/json",
+            "accept-language": "en-US,en;q=0.7",
+            "sec-ch-ua": "\"Brave\";v=\"125\", \"Chromium\";v=\"125\", \"Not.A/Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "sec-gpc": "1"
+        },
+        "referrer": "https://www.vocalpanda.com/",
+        "referrerPolicy": "strict-origin-when-cross-origin",
+        "body": null,
+        "method": "GET",
+        "mode": "cors",
+        "credentials": "omit"
+    }).then(response => {
+        return response.json();
+    })
+        .catch(error => {
+            console.error('Error fetching category list:', error);
+            return [];
+        });
+    const getSector = (category) => {
+        let sector = data.category_list.flat();
+        const data_to_find = sector.find(item => String(item.id) === category);
+        console.log(data_to_find);
+        console.log(category);
+        return data_to_find ? data_to_find.job_category_title : "N/A";
+    }
 
     return await fetch("https://vocalpanda-prod-gvshg-a006ddd577b0.herokuapp.com/api/getFindAJobMultipleSearchCriteria", {
         "headers": {
@@ -116,9 +152,9 @@ async function VocalPanda() {
         // console.log(response);
         let jobListingsData = await response.json();
         jobListingsData = jobListingsData.response.job_list;
+        // console.log(jobListingsData);
         //console.log(jobListingsData[0].logo);
-        //console.log(jobListingsData[0].logo);
-        const jobData = jobListingsData.map(job => (
+        const jobData = await jobListingsData.map(job => (
             //console.log(job.logo),
             {
                 id: id++,
@@ -126,6 +162,7 @@ async function VocalPanda() {
                 jobTitle: job.job_title,
                 jobCategory: job.is_remote === 0 ? "ONSITE" : "REMOTE",
                 jobLocation: job.job_location,
+                jobSector: `${getSector(job.job_category)}`,
                 Location: job.job_location.split(', ')[2],
                 employmentType: job.job_type_name,
                 minPrice: job.salary_from,
@@ -137,9 +174,8 @@ async function VocalPanda() {
                 requirements: (job.job_description),
                 expires: job.deadline,
                 created: job.created_date.split(' ')[0],
-                sector: (job.job_category),
                 responsibilities: (job.job_description),
-                frontendDescription: (job.job_description.split('.').slice(0, 2).join('.')),
+                frontendDescription: (job.job_description.replace(/<\/?[^>]+(>|$)/g, "").split('.').slice(0, 2).join('.')),
                 url: `https://www.vocalpanda.com/${job.job_title.toLowerCase()}-${job.job_id}`.replace(/ /g, '-'),
                 image: `https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/${job.logo}`.replace(/ /g, '%20')
             }));

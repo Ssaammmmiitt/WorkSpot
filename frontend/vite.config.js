@@ -22,7 +22,7 @@ export default defineConfig({
   server: {
 
     proxy: {
-      '/user': 'http://localhost:3000',
+      '/user': 'http://localhost:3000/',
     },
   },
 });

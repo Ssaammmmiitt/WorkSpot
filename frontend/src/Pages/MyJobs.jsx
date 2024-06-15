@@ -150,6 +150,7 @@
 import React, { useState } from 'react';
 import jobsdata from '../../Public/jobListings.json';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const MyJobs = () => {
     const email = "abcd@gmail.com";
@@ -207,6 +208,7 @@ const MyJobs = () => {
     // Handle job deletion
     const handleDelete = (id) => {
         setJobs(jobs.filter(job => job.id !== id));
+        
     };
 
     return (

@@ -15,16 +15,15 @@ const createToken = (_id) => {
 //login user
 const loginUser = async (req, res) => {
     console.log(req.body)
-    const { email, password } = req.body
+    const { email } = req.body
 
     try {
-        const user = await User.login(email, password)
-        const token = createToken(user._id)
-        res.status(200).json({ email, token })
+        const user = await User.login(email)
+        res.status(200).json({ email })
     } catch (error) {
         console.log(error)
         if (error.message === 'Incorrect Email' || error.message === 'Incorrect Pasword') {
-            return res.status(401).json({ error: 'Invalid Email' })
+            return res.status(401).json({ error: 'Email not found' })
         }
         res.status(400).json({ error: error.message })
     }
@@ -233,19 +232,21 @@ const resetpassword = async (req, res) => {
 const applied_jobs = async (req, res) => {
     try {
         const { email, jobs_id } = req.body
+        console.log(req);
         const user = await User.findOne({ email })
 
         if (!user) {
             throw Error('User not Found')
         }
 
-        user.jobs_applied = jobs_id
+        user.jobsApplied = jobs_id
         await user.save()
-
+        console.log("Jobs added successfully")
         res.status(200).send("Jobs added successfully")
 
     }
     catch (error) {
+        console.log(error)
         res.status(400).json({ error: error.message })
     }
 }

@@ -35,8 +35,7 @@ const SignUp = () => {
     if (provider === "Google") {
       await signInWithPopup(auth, googleProvider).then((userCredential) => {
         localStorage.setItem("user", JSON.stringify({
-          user: userCredential.user,
-          password: password
+          userCredential
         }));
       }
       );

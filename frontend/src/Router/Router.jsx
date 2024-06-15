@@ -16,12 +16,12 @@ import Salary from "../Pages/EstSalary.jsx";
 import MyJobs from "../Pages/MyJobs.jsx";
 import { Children } from "react";
 import NavBar from "../Components/NavBar/NavBar.jsx";
-import { ProtectedRoute } from "../Components/protected.jsx";
+import { ProtectedRoute } from "../firebase/protected.jsx";
 
 
 const router = createBrowserRouter([
   {
-    path: "/app",
+    path: "/app/*",
     element: <><ProtectedRoute><App /></ProtectedRoute></>,
     children: [
       { path: "", element: < Home /> },
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
   { path: "/login", element: <><NavBar /> <LoginPage /></> },
   { path: "/sign-up", element: <><NavBar /> <SignUpPage /></> },
   { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /></> },
-  { path: "/reset", element: <ResetForm /> },
+  { path: "/reset", element: <><NavBar /><ResetForm /> </> },
   { path: "/reset-otp", element: <Reset_otp /> },
   { path: "/update-password", element: <UpdatePass /> },
   { path: "/*", element: <Navigate to="/login" /> },
