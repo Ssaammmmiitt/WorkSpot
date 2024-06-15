@@ -15,6 +15,7 @@ import { FaFacebookSquare, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { ImGithub, ImGoogle } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import Swal from 'sweetalert2';
 
 
 const SignUp = () => {
@@ -92,8 +93,11 @@ const SignUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        alert(errorMessage);
+        Swal.fire({                                                                                                        // Sweet alert     
+          icon: 'error',
+          title: errorCode,
+          text: errorMessage,
+        });
         returnValue = true;
 
       });

@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import app from "../../firebase/firebase.config";
 import { useAuth } from "../../firebase/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
@@ -32,8 +33,11 @@ const Login = () => {
         navigate("/app");
       }
     } catch (error) {
-      console.error(error);
-      alert("Login failed");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error.message,
+      });
     }
   };
 
@@ -48,8 +52,11 @@ const Login = () => {
       await login(value.email, value.password);
       navigate("/app");
     } catch (error) {
-      alert(error.message);
-      if (error.code === "auth/invalid-credential") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error.message,
+      });      if (error.code === "auth/invalid-credential") {
         navigate("/sign-up");
       }
     }
