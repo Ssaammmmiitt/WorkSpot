@@ -93,7 +93,7 @@ const Login = () => {
               <span className="invisible relative">Button</span>
             </button>
 
-            <button id="Facebook" onClick={() => handleSocialLogin("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE</button>6] shadow-md transition duration-300 ease-out">
+            {/* <button id="Facebook" onClick={() => handleSocialLogin("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE</button>6] shadow-md transition duration-300 ease-out">
               <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
                 <FaFacebookSquare size={30} />
               </span>
@@ -104,7 +104,7 @@ const Login = () => {
                 </p>
               </span>
               <span className="invisible relative">Button</span>
-            </button>
+            </button> */}
           </div>
           <div className="flex items-center w-full my-4">
             <hr className="w-full text-Text" />

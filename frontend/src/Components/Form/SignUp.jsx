@@ -132,7 +132,7 @@ const SignUp = () => {
             <span className="invisible relative">Button</span>
           </button>
 
-          <button id="Google" onClick={() => handleSocialSignUp("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+          {/* <button id="Google" onClick={() => handleSocialSignUp("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
               <FaFacebookSquare size={30} />
             </span>
@@ -140,7 +140,7 @@ const SignUp = () => {
               <FaFacebookSquare size={20} /> <p className="flex items-center justify-center">Sign Up With Facebook</p>
             </span>
             <span className="invisible relative">Button</span>
-          </button>
+          </button> */}
 
           <div className="py-3 flex items-center text-xs text-Text font-semibold uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">OR</div>
 
