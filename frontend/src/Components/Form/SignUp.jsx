@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { ImGithub, ImGoogle } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 
 const SignUp = () => {
@@ -77,16 +77,23 @@ const SignUp = () => {
       alert("Please accept the terms and conditions");
       return;
     }
-    createUserWithEmailAndPassword(auth, value.email, value.password)
+    let returnValue = false;
+    await createUserWithEmailAndPassword(auth, value.email, value.password)
       .then((userCredential) => {
         localStorage.setItem("user", JSON.stringify(userCredential));
+        returnValue = false;
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
-        return alert(errorMessage);
+        alert(errorMessage);
+        returnValue = true;
+
       });
+    if (returnValue) {
+      return;
+    }
     console.log(localStorage.getItem("user"));
     navigate("/complete-registration");
   };
