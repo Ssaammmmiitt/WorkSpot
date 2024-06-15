@@ -25,19 +25,35 @@ import { json, useNavigate } from "react-router-dom";
 
 const SignUp1 = () => {
   const navigate = useNavigate();
-
+  let id=100;
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = async (data) => {
+
+
+  const onSubmit =async (data) => {
     console.log(data);
     const formData = new FormData();
     data.remoteWorking = data.remoteWorking ? "Yes" : "No";
-    data.phone = data.phone ? data.phone : (9999999999);
-    console.log(localStorage.getItem("user"));
+    data.firstname= data.firstname? data.firstname : `User${id}`;
+    data.lastname = data.lastname? data.lastname : "";
+    data.email = data.email? data.email : `email${id}@gmail.com`;
+    data.phone = data.phone? data.phone : (9999999999);
+    data.currentCompany = data.currentCompany? data.currentCompany : "None";
+    data.resumeCV = data.resumeCV? data.resumeCV : "None";
+    data.bio = data.bio? data.bio : "None";
+    data.jobTitle = data.jobTitle? data.jobTitle : "None";
+    data.workExperience = data.workExperience? data.workExperience : "None";
+    data.jobTypes = data.jobTypes? data.jobTypes : "None";
+    data.jobLocation = data.jobLocation? data.jobLocation : "None";
+    data.linkedinUrl = data.linkedinUrl? data.linkedinUrl : "None";
+    data.twitterUrl = data.twitterUrl? data.twitterUrl : "None";
+    data.githubUrl = data.githubUrl? data.githubUrl : "None";
+    data.portfolioUrl = data.portfolioUrl? data.portfolioUrl : "None";
+    data.otherWebsite = data.otherWebsite? data.otherWebsite : "None";
 
     formData.append("firstname", data.firstname);
     formData.append("lastname", data.lastname);

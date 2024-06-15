@@ -130,13 +130,6 @@ const Login = () => {
                   <label htmlFor="password" className="text-base font-bold">
                     Password
                   </label>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="text-sm font-semibold hover:underline text-white"
-                  >
-                    Forgot password?
-                  </a>
                 </div>
                 <div className="relative w-full max-w-sm">
                   <input
