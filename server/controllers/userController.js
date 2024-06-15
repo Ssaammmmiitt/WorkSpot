@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken')
 const { sendEmail, sendOtp } = require('../utilities/sendEmailutility')
 const { v4: uuidv4 } = require('uuid')
 const bcryptjs = require('bcryptjs')
+const multer = require('multer')
+const { upload } = multer()
 
 
 
@@ -29,50 +31,107 @@ const loginUser = async (req, res) => {
 
 }
 
-///signup user
+// ///signup user
+// async function signupUser(none = upload.none(), req, res) {
+//     console.log(req.body)
+//     const {
+//         firstname,
+//         lastname,
+//         email,
+//         phone,
+//         currentCompany,
+//         bio,
+//         jobTitle,
+//         workExperience,
+//         jobTypes,
+//         jobLocation,
+//         remoteWorking,
+//         linkedinUrl,
+//         twitterUrl,
+//         githubUrl,
+//         portfolioUrl,
+//         otherWebsite
+//     } = req.body;
+//     try {
+//         const user = await User.signup(firstname,
+//             lastname,
+//             email,
+//             phone,
+//             currentCompany,
+//             bio,
+//             jobTitle,
+//             workExperience,
+//             jobTypes,
+//             jobLocation,
+//             remoteWorking,
+//             linkedinUrl,
+//             twitterUrl,
+//             githubUrl,
+//             portfolioUrl,
+//             otherWebsite)
+
+
+//         const token = createToken(user._id)
+//         console.log(token);
+//         res.status(200).json({ email, token })
+//     } catch (error) {
+//         console.log(error)
+//         res.status(400).json({ error: error.message })
+//     }
+// }
+
+//signup user
+
 const signupUser = async (req, res) => {
-    const { email,
-        password,
+    console.log(req.body)
+    const {
         firstname,
         lastname,
-        phone_number,
-        currentcompany,
-        personal_summary,
-        current_job_title,
-        work_experience,
-        job_location,
-        linkedin_url,
-        twitter_url,
-        github_url,
-        portfolio_url,
-        other_links } = req.body
-    console.log(req.body);
+        email,
+        phone,
+        currentCompany,
+        bio,
+        jobTitle,
+        workExperience,
+        jobTypes,
+        jobLocation,
+        remoteWorking,
+        linkedinUrl,
+        twitterUrl,
+        githubUrl,
+        portfolioUrl,
+        otherWebsite
+    } = req.body;
+
     try {
-        const user = await User.signup(email,
-            password,
+
+        const user = await User.signup(
             firstname,
             lastname,
-            phone_number,
-            currentcompany,
-            personal_summary,
-            current_job_title,
-            work_experience,
-            job_location,
-            linkedin_url,
-            twitter_url,
-            github_url,
-            portfolio_url,
-            other_links)
-
+            email,
+            phone,
+            currentCompany,
+            bio,
+            jobTitle,
+            workExperience,
+            jobTypes,
+            jobLocation,
+            remoteWorking,
+            linkedinUrl,
+            twitterUrl,
+            githubUrl,
+            portfolioUrl,
+            otherWebsite
+        )
 
         const token = createToken(user._id)
+        console.log(token);
         res.status(200).json({ email, token })
     } catch (error) {
         console.log(error)
         res.status(400).json({ error: error.message })
     }
 }
-
 
 //forgot password
 const forgotPassword = async (req, res) => {

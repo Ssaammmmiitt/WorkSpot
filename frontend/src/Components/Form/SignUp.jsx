@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { ImGithub, ImGoogle } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 
 
 const SignUp = () => {
@@ -32,14 +32,20 @@ const SignUp = () => {
 
   const handleSocialSignUp = async (provider) => {
     if (provider === "Google") {
-
-
+      await signInWithPopup(auth, googleProvider).then((userCredential) => {
+        localStorage.setItem("user", JSON.stringify({
+          user: userCredential.user,
+          password: password
+        }));
+      }
+      );
     } else if (provider === "Github") {
-
-    } else if (provider === "Facebook") {
-
+      await signInWithPopup(auth, githubProvider).then((userCredential) => {
+        localStorage.setItem("user", JSON.stringify(userCredential));
+      }
+      );
     }
-
+    navigate("/complete-registration");
   };
 
   const handlePasswordChange = (e) => {
