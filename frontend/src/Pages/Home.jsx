@@ -267,7 +267,7 @@ const Home = () =>
     const paginatedItems = filteredItems.slice(startIndex, endIndex);
 
     const result = paginatedItems.map((data, i) => <Card key={i} data={data} />);
-
+    
     return (
         <div>
             <Banner query={query} handleInputChange={handleInputChange} />

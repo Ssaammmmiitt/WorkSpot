@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { ImGithub, ImGoogle } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth } from 'firebase/auth';
+
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,7 +25,23 @@ const SignUp = () => {
   const [passwordMatchError, setPasswordMatchError] = useState('');
 
   const navigate = useNavigate();
-  
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
+  const auth = getAuth();
+
+  const handleSocialSignUp = async (provider) => {
+    if (provider === "Google") {
+
+
+    } else if (provider === "Github") {
+
+    } else if (provider === "Facebook") {
+
+    }
+
+  };
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
     validatePasswords(e.target.value, confirmPassword);
@@ -59,8 +77,17 @@ const SignUp = () => {
       alert("Please accept the terms and conditions");
       return;
     }
-    localStorage.setItem("token", JSON.stringify(value));
-    alert(localStorage.getItem("token"));
+    createUserWithEmailAndPassword(auth, value.email, value.password)
+      .then((userCredential) => {
+        localStorage.setItem("user", JSON.stringify(userCredential));
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        return alert(errorMessage);
+      });
+    console.log(localStorage.getItem("user"));
     navigate("/complete-registration");
   };
   return (
@@ -77,7 +104,7 @@ const SignUp = () => {
         </div>
 
         <div className="mt-5 gap-3 p-4">
-          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out"
+          <button id="Google" onClick={() => handleSocialSignUp("Google")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out"
           >
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
               <ImGoogle size={30} />
@@ -88,7 +115,7 @@ const SignUp = () => {
             <span className="invisible relative">Button</span>
           </button>
 
-          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+          <button id="Google" onClick={() => handleSocialSignUp("Github")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
               <ImGithub size={30} />
             </span>
@@ -98,7 +125,7 @@ const SignUp = () => {
             <span className="invisible relative">Button</span>
           </button>
 
-          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+          <button id="Google" onClick={() => handleSocialSignUp("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
             <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
               <FaFacebookSquare size={30} />
             </span>
@@ -110,7 +137,7 @@ const SignUp = () => {
 
           <div className="py-3 flex items-center text-xs text-Text font-semibold uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">OR</div>
 
-          <form  onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <div className="grid gap-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm mb-2">Email Address</label>

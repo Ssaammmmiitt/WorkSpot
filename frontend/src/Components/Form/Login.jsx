@@ -1,39 +1,43 @@
-import React from "react";
-import { useState } from "react";
+import { React, useContext, useEffect, useState } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { ImGithub, ImGoogle } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
+import { useAuth } from "../../firebase/AuthProvider";
+
 
 
 const Login = () => {
 
-  const googleProvider = new GoogleAuthProvider();
+  const { login, signUpWithGoogle, signUpWithGithub } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
 
+  const handleSocialLogin = async (provider) => {
+    try {
+      let result;
+      if (provider === "Google") {
+        result = await signUpWithGoogle();
+      } else if (provider === "Github") {
+        result = await signUpWithGithub();
+      }
+      // Handle new or existing user login
+      console.log(result);
+      const isNewUser = result.user.metadata.creationTime === result.user.metadata.lastSignInTime && result.user.metadata.createdAt === result.user.metadata.lastLoginAt;
+      if (isNewUser) {
+        navigate("/complete-registration");
+      } else {
+        navigate("/app");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Login failed");
+    }
+  };
 
   const handleSubmit = async (e) => {
-    signInWithPopup(auth, googleProvider) .then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      const user = result.user;
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-    });
-
-
     e.preventDefault();
     const data = new FormData(e.target);
     const value = {
@@ -41,30 +45,10 @@ const Login = () => {
       password: data.get("password"),
     };
     try {
-      const res = await axios.post("/user/login", value, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      });
-      const data = res.data;
-      console.log(data);
-      if (data.error) {
-        alert(data.error);
-        console.log(data.error);
-      } else {
-        alert(data.message);
-        navigate("/app");
-      }
+      await login(value.email, value.password);
+      navigate("/app");
     } catch (error) {
-      console.error("Error:", error);
-      if (error.response.status === 401) {
-        alert("Invalid email or password");
-        navigate("/sign-up");
-      } else {
-        alert("An error occurred. Please try again.");
-        console.log(error);
-      }
+      alert(error.message);
     }
   };
   return (
@@ -85,7 +69,7 @@ const Login = () => {
             </Link>
           </p>
           <div className="my-8 space-y-4">
-            <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+            <button id="Google" onClick={() => handleSocialLogin("Google")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
               <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
                 <ImGoogle size={30} />
               </span>
@@ -95,7 +79,7 @@ const Login = () => {
               </span>
               <span className="invisible relative">Button</span>
             </button>
-            <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+            <button id="Github" onClick={() => handleSocialLogin("Github")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
               <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
                 <ImGithub size={30} />
               </span>
@@ -106,7 +90,7 @@ const Login = () => {
               <span className="invisible relative">Button</span>
             </button>
 
-            <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
+            <button id="Facebook" onClick={() => handleSocialLogin("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-white p-4 w-full font-medium text-[#C4DFE</button>6] shadow-md transition duration-300 ease-out">
               <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
                 <FaFacebookSquare size={30} />
               </span>
@@ -121,7 +105,7 @@ const Login = () => {
           </div>
           <div className="flex items-center w-full my-4">
             <hr className="w-full text-Text" />
-            <p className="px-3 text-Text text-base">OR</p>
+            <p className="px-3</button> text-Text text-base">OR</p>
             <hr className="w-full text-Text" />
           </div>
           <form noValidate="" className="space-y-8" onSubmit={handleSubmit}>

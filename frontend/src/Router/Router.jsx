@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import App from "../App.jsx";
 import Home from "../Pages/Home.jsx";
 import About from "../Pages/About.jsx";
@@ -16,32 +16,31 @@ import Salary from "../Pages/EstSalary.jsx";
 import MyJobs from "../Pages/MyJobs.jsx";
 import { Children } from "react";
 import NavBar from "../Components/NavBar/NavBar.jsx";
-
+import { ProtectedRoute } from "../Components/protected.jsx";
 
 
 const router = createBrowserRouter([
   {
     path: "/app",
-    element: <App />,
+    element: <><ProtectedRoute ><App /></ProtectedRoute></>,
     children: [
-      { path: "", element: <Home /> },
-      { path: "contact-us", element: <ContactUsPage /> },
-      { path: "faq", element: <FAQPage /> },
-      { path: "terms-and-conditions", element: <TermsAndConditions /> },
+      { path: "", element: < Home /> },
       { path: "salary", element: <Salary /> },
       { path: "my-jobs", element: <MyJobs /> },
-      { path: "about", element: <About /> },
-      
+      { path: "job/:id", element: <JobDetails /> },
     ]
   },
-  { path: "job/:id", element:<><NavBar/> <JobDetails /> </>},
-  { path: "/login", element:<><NavBar/> <LoginPage /></>},
-  { path: "/sign-up", element:<><NavBar/> <SignUpPage /></>  },
-  { path: "/complete-registration", element: <><NavBar/> <CompleteRegistraion /></>  },
+  { path: "/login", element: <><NavBar /> <LoginPage /></> },
+  { path: "/sign-up", element: <><NavBar /> <SignUpPage /></> },
+  { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /></> },
   { path: "/reset", element: <ResetForm /> },
   { path: "/reset-otp", element: <Reset_otp /> },
   { path: "/update-password", element: <UpdatePass /> },
-  { path: "/*", element: <LoginPage /> }
+  { path: "/*", element: <Navigate to="/login" /> },
+  { path: "/contact-us", element: <><NavBar /><ContactUsPage /></> },
+  { path: "/about", element: <><NavBar /><About /></> },
+  { path: "terms-and-conditions", element: <><NavBar /><TermsAndConditions /></> },
+  { path: "faq", element: <><NavBar /><FAQPage /> </> },
 ]);
 
 export default router;
