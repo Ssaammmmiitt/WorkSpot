@@ -10,6 +10,7 @@ import {
     signInWithPopup,
     signOut
 } from "firebase/auth";
+
 import { useState, useEffect, useContext } from "react";
 
 export const AuthContext = createContext();
@@ -47,6 +48,7 @@ export const AuthProvider = ({ children }) => {
 
     // logout
     const logout = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -56,7 +58,7 @@ export const AuthProvider = ({ children }) => {
             setLoading(false);
         });
 
-        return () => unsubscribe;
+        return () => unsubscribe();
     }, []);
 
     const authValues = {

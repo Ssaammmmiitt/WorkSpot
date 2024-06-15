@@ -8,7 +8,6 @@ import router from './Router/Router';
 import { useLocation } from 'react-router-dom';
 
 
-
 // const App = () => {
 //   return (
 //     <>
@@ -29,7 +28,7 @@ function App({ children }) {
     return <div>Loading...</div>;
   }
 
-  if (user && Location.pathname === "/app") {
+  if (user) {
     return (
       <AuthProvider>
         <RouterProvider router={router}>

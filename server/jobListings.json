@@ -2,6 +2,52 @@
   {
     "id": 1,
     "companyName": "Talentsathi",
+    "jobTitle": "WordPress Designer-",
+    "jobCategory": "JOB",
+    "jobLocation": "ONSITE",
+    "Location": "N/A",
+    "employmentType": "FULL_TIME",
+    "minPrice": 15000,
+    "maxPrice": 30000,
+    "salaryType": "MONTHLY",
+    "experienceLevel": "JUNIOR",
+    "availablePositions": 1,
+    "description": "<p>Our client is seeking a talented Junior-Level WordPress Designer to join their team. They are looking for the ideal candidate who has a strong understanding of WordPress design and customization, as well as experience working with plugins and themes.</p><p><br></p><p><br></p><p>The recruitment process is managed by the TalentSathi team (Sister Venture of InternSathi for recruitment), ensuring a thorough and fair selection process.</p><p><br></p><p><br></p>",
+    "requirements": "<ul><li>1+ years of experience in WordPress design/development.</li><li>Experience with WordPress Page builders such as Elementor and WP Bakery</li><li>Strong understanding of WordPress architecture and best practices.</li><li>Ability to work both independently and as part of a team.</li><li>Excellent communication and problem-solving skills.</li><li>Knowledge of PHP, HTML, CSS, and JavaScript is preferred.</li><li><span style=\"color: rgb(78, 94, 106);\">Knowledge of the frontend library, React is preferable but not compulsory.</span></li></ul><p><span style=\"color: rgb(78, 94, 106);\"><span className=\"ql-cursor\">﻿</span></span></p><p><span style=\"color: rgb(78, 94, 106);\">Apply: You can send your resume with your portfolio to career@talentsathi.com.</span></p><p><br></p><p><br></p>",
+    "expires": "2024-06-28",
+    "created": "2024-06-14",
+    "sector": "Information Technology",
+    "responsibilities": "<p><br></p><ul><li>Design WordPress websites ensuring a responsive and user-friendly design</li><li>Customize WordPress themes to meet specific needs (layout, color schemes, functionality)</li><li>Regularly update and manage website content</li><li>Implement basic SEO practices to improve website visibility and search engine ranking</li><li>Work closely with senior designers, developers, and other team members to complete projects on time</li></ul><p><br></p>",
+    "frontendDescription": "<p>Our client is seeking a talented Junior-Level WordPress Designer to join their team. They are looking for the ideal candidate who has a strong understanding of WordPress design and customization, as well as experience working with plugins and themes.</p><p><br></p><p><br></p><p>The recruitment process is managed by the TalentSathi team (Sister Venture of InternSathi for recruitment), ensuring a thorough and fair selection process.</p><p><br></p><p><br></p>",
+    "url": "https://internsathi.com/internships/wordpress-designer-id172-juniorlevel-fulltime-onsite",
+    "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
+  },
+  {
+    "id": 2,
+    "companyName": "Talentsathi",
+    "jobTitle": "Graphic Designer",
+    "jobCategory": "JOB",
+    "jobLocation": "ONSITE",
+    "Location": "N/A",
+    "employmentType": "FULL_TIME",
+    "minPrice": 30000,
+    "maxPrice": 40000,
+    "salaryType": "MONTHLY",
+    "experienceLevel": "MID",
+    "availablePositions": 1,
+    "description": "<p>We are seeking a talented and experienced Graphic Designer to join our client's creative team. The ideal candidate will have a minimum of 2.4 years of professional experience in graphic design and a strong portfolio that demonstrates their skills and creativity. This role offers a competitive salary of 30,000 to 40,000 per month and the opportunity to work on a variety of exciting projects in a dynamic and collaborative environment.</p><p>-Luch will be provided</p><p>-Petrol will be provided</p><p><br></p><p>Location: Kadaghari</p>",
+    "requirements": "<p><br></p><ol><li>Minimum 2.4 years of proven graphic designing experience.</li><li>Proficiency in design software such as Adobe Creative Suite (Illustrator, Photoshop, InDesign, etc.).</li><li>Strong portfolio showcasing previous design work.</li><li>Excellent visual design skills with a keen eye for aesthetics and details.</li><li>Ability to work methodically and meet deadlines.</li><li>Strong communication skills and the ability to collaborate effectively with team members.</li></ol><p><br></p>",
+    "expires": "2024-06-21",
+    "created": "2024-06-14",
+    "sector": "Graphic Design",
+    "responsibilities": "<p><br></p><ol><li>Create visually appealing designs for various media including websites, social media, print, and more.</li><li>Develop graphics, logos, illustrations, and layouts for product illustrations, company logos, and websites.</li><li>Collaborate with the marketing team to produce and finalize designs that align with the brand's visual identity.</li><li>Edit and enhance images, ensuring high-quality visuals for digital and print mediums.</li><li>Stay updated with the latest design trends, tools, and technologies.</li></ol><p><br></p>",
+    "frontendDescription": "<p>We are seeking a talented and experienced Graphic Designer to join our client's creative team. The ideal candidate will have a minimum of 2.4 years of professional experience in graphic design and a strong portfolio that demonstrates their skills and creativity. This role offers a competitive salary of 30,000 to 40,000 per month and the opportunity to work on a variety of exciting projects in a dynamic and collaborative environment.</p><p>-Luch will be provided</p><p>-Petrol will be provided</p><p><br></p><p>Location: Kadaghari</p>",
+    "url": "https://internsathi.com/internships/graphic-designer-id171-midlevel-fulltime-onsite-1",
+    "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
+  },
+  {
+    "id": 3,
+    "companyName": "Talentsathi",
     "jobTitle": "WordPress Developer-",
     "jobCategory": "JOB",
     "jobLocation": "ONSITE",
@@ -23,7 +69,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 2,
+    "id": 4,
     "companyName": "Rstca Investment Fund ",
     "jobTitle": "sales Assist/Sales manager",
     "jobCategory": "JOB",
@@ -46,7 +92,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1718261566427-415127206.jpg&w=256&q=75"
   },
   {
-    "id": 3,
+    "id": 5,
     "companyName": "Talentsathi",
     "jobTitle": "Graphic Designer -",
     "jobCategory": "JOB",
@@ -69,7 +115,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 4,
+    "id": 6,
     "companyName": "Talentsathi",
     "jobTitle": "Content Creator",
     "jobCategory": "JOB",
@@ -92,7 +138,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 5,
+    "id": 7,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Project manager -",
     "jobCategory": "JOB",
@@ -115,7 +161,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 6,
+    "id": 8,
     "companyName": "Talentsathi",
     "jobTitle": "Graphics Designer",
     "jobCategory": "JOB",
@@ -138,7 +184,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 7,
+    "id": 9,
     "companyName": "Talentsathi",
     "jobTitle": "Admin Officer/Associate Position -155ID",
     "jobCategory": "JOB",
@@ -161,7 +207,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 8,
+    "id": 10,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Video Editor",
     "jobCategory": "JOB",
@@ -184,7 +230,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 9,
+    "id": 11,
     "companyName": "Talentsathi",
     "jobTitle": "PHP Developer-",
     "jobCategory": "JOB",
@@ -207,7 +253,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 10,
+    "id": 12,
     "companyName": "Talentsathi",
     "jobTitle": "Facebook and Google Ads Manager",
     "jobCategory": "JOB",
@@ -230,7 +276,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 11,
+    "id": 13,
     "companyName": "Talentsathi",
     "jobTitle": "Jr PHP Developer-",
     "jobCategory": "JOB",
@@ -253,7 +299,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 12,
+    "id": 14,
     "companyName": "Talentsathi",
     "jobTitle": "Graphic Designer",
     "jobCategory": "JOB",
@@ -276,7 +322,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 13,
+    "id": 15,
     "companyName": "Talentsathi",
     "jobTitle": "Graphics Designer",
     "jobCategory": "JOB",
@@ -299,7 +345,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 14,
+    "id": 16,
     "companyName": "Talentsathi",
     "jobTitle": "Software Developer -Id115",
     "jobCategory": "JOB",
@@ -322,7 +368,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 15,
+    "id": 17,
     "companyName": "Talentsathi",
     "jobTitle": "Video Editor",
     "jobCategory": "JOB",
@@ -345,7 +391,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 16,
+    "id": 18,
     "companyName": "Talentsathi",
     "jobTitle": "Graphics Designer & YouTube Thumbnail Creator/Videoeditor-",
     "jobCategory": "JOB",
@@ -368,7 +414,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 17,
+    "id": 19,
     "companyName": "Talentsathi",
     "jobTitle": "Software Engineer (Vue.js /Typescript)",
     "jobCategory": "JOB",
@@ -391,7 +437,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 18,
+    "id": 20,
     "companyName": "Talentsathi",
     "jobTitle": "Software Developer (React Native/Typescript)-",
     "jobCategory": "JOB",
@@ -414,7 +460,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 19,
+    "id": 21,
     "companyName": "Talentsathi",
     "jobTitle": "Graphic Designer (Female) -",
     "jobCategory": "JOB",
@@ -437,7 +483,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 20,
+    "id": 22,
     "companyName": "Talentsathi",
     "jobTitle": "Flutter Developer",
     "jobCategory": "JOB",
@@ -460,7 +506,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 21,
+    "id": 23,
     "companyName": "Talentsathi",
     "jobTitle": "Associate DevOps Engineer",
     "jobCategory": "JOB",
@@ -483,7 +529,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 22,
+    "id": 24,
     "companyName": "Talentsathi",
     "jobTitle": "Associate UI/UX Designer",
     "jobCategory": "JOB",
@@ -506,7 +552,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 23,
+    "id": 25,
     "companyName": "Talentsathi",
     "jobTitle": "Software Engineer (Node.js /Typescript)  -",
     "jobCategory": "JOB",
@@ -529,7 +575,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 24,
+    "id": 26,
     "companyName": "Talentsathi",
     "jobTitle": "Software Engineer (React /Typescript)",
     "jobCategory": "JOB",
@@ -552,7 +598,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 25,
+    "id": 27,
     "companyName": "Talentsathi",
     "jobTitle": "Software Engineer (React Native/Typescript)-",
     "jobCategory": "JOB",
@@ -575,7 +621,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 26,
+    "id": 28,
     "companyName": "Talentsathi",
     "jobTitle": "Software Engineer (Vue.js/Typescript)",
     "jobCategory": "JOB",
@@ -598,7 +644,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 27,
+    "id": 29,
     "companyName": "Talentsathi",
     "jobTitle": "Area Business Manager",
     "jobCategory": "JOB",
@@ -621,7 +667,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 28,
+    "id": 30,
     "companyName": "Talentsathi",
     "jobTitle": "Quality Assurance Engineer",
     "jobCategory": "JOB",
@@ -644,7 +690,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 29,
+    "id": 31,
     "companyName": "Talentsathi",
     "jobTitle": "Frontend Developer",
     "jobCategory": "JOB",
@@ -667,7 +713,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 30,
+    "id": 32,
     "companyName": "Talentsathi",
     "jobTitle": "Graphics Designer",
     "jobCategory": "JOB",
@@ -690,7 +736,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 31,
+    "id": 33,
     "companyName": "Talentsathi",
     "jobTitle": "Data Operations Analyst",
     "jobCategory": "JOB",
@@ -713,7 +759,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 32,
+    "id": 34,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Digital Marketing Executive -",
     "jobCategory": "JOB",
@@ -736,7 +782,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 33,
+    "id": 35,
     "companyName": "Talentsathi",
     "jobTitle": "Web Developer",
     "jobCategory": "JOB",
@@ -759,7 +805,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 34,
+    "id": 36,
     "companyName": "Talentsathi",
     "jobTitle": "AI/ML Engineer",
     "jobCategory": "JOB",
@@ -782,7 +828,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 35,
+    "id": 37,
     "companyName": "Talentsathi",
     "jobTitle": "Digital Marketer/Ads Media buyers",
     "jobCategory": "JOB",
@@ -805,7 +851,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 36,
+    "id": 38,
     "companyName": "Talentsathi",
     "jobTitle": "Graphic Designer Junior",
     "jobCategory": "JOB",
@@ -828,7 +874,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 37,
+    "id": 39,
     "companyName": "Annapurna Aroma Pvt. Ltd.",
     "jobTitle": "Digital Marketing Officer (Trainee)",
     "jobCategory": "JOB",
@@ -851,7 +897,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1702884601118-172054315.png&w=256&q=75"
   },
   {
-    "id": 38,
+    "id": 40,
     "companyName": "Wrapsy Tech Nepal Pvt. Ltd.",
     "jobTitle": "CSR | Graphics Designer",
     "jobCategory": "JOB",
@@ -874,7 +920,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1715495505417-492892669.png&w=256&q=75"
   },
   {
-    "id": 39,
+    "id": 41,
     "companyName": "Ziva Productions",
     "jobTitle": "Video Editor",
     "jobCategory": "JOB",
@@ -897,7 +943,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1715329187716-44604295.jpeg&w=256&q=75"
   },
   {
-    "id": 40,
+    "id": 42,
     "companyName": "Talentsathi",
     "jobTitle": "Interior desginer",
     "jobCategory": "JOB",
@@ -920,7 +966,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 41,
+    "id": 43,
     "companyName": "Talentsathi",
     "jobTitle": "DevOps Azure Engineer -",
     "jobCategory": "JOB",
@@ -943,7 +989,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 42,
+    "id": 44,
     "companyName": "Talentsathi",
     "jobTitle": "AWS & DevOps Trainer -",
     "jobCategory": "JOB",
@@ -966,7 +1012,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 43,
+    "id": 45,
     "companyName": "Talentsathi",
     "jobTitle": "WordPress/Shopify/React Developer-",
     "jobCategory": "JOB",
@@ -989,7 +1035,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 44,
+    "id": 46,
     "companyName": "Talentsathi",
     "jobTitle": "Real Estate Photo Editor (Photoshop Expert)",
     "jobCategory": "JOB",
@@ -1012,7 +1058,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 45,
+    "id": 47,
     "companyName": "Talentsathi",
     "jobTitle": "Digital Marketer/ Ads Media buyers",
     "jobCategory": "JOB",
@@ -1035,7 +1081,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 46,
+    "id": 48,
     "companyName": "Talentsathi",
     "jobTitle": "Recruiter / Information collector /Sales",
     "jobCategory": "JOB",
@@ -1058,7 +1104,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 47,
+    "id": 49,
     "companyName": "Talentsathi",
     "jobTitle": "UIUX Designer -",
     "jobCategory": "JOB",
@@ -1081,7 +1127,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 48,
+    "id": 50,
     "companyName": "Niraksa Company Pvt Ltd",
     "jobTitle": "CEO's Executive Assistant (Management trainee)",
     "jobCategory": "JOB",
@@ -1104,7 +1150,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1709197805630-119758486.jpg&w=256&q=75"
   },
   {
-    "id": 49,
+    "id": 51,
     "companyName": "Talentsathi",
     "jobTitle": "Receptionist-",
     "jobCategory": "JOB",
@@ -1127,7 +1173,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 50,
+    "id": 52,
     "companyName": "Talentsathi",
     "jobTitle": "Project manager -",
     "jobCategory": "JOB",
@@ -1150,7 +1196,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 51,
+    "id": 53,
     "companyName": "Talentsathi",
     "jobTitle": "Full stack (Java + React) software developer -",
     "jobCategory": "JOB",
@@ -1173,7 +1219,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 52,
+    "id": 54,
     "companyName": "Talentsathi",
     "jobTitle": "Content Creator",
     "jobCategory": "JOB",
@@ -1196,7 +1242,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 53,
+    "id": 55,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Shopify Developer -",
     "jobCategory": "JOB",
@@ -1219,7 +1265,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 54,
+    "id": 56,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Full Stack Developer (React + Django)",
     "jobCategory": "JOB",
@@ -1242,7 +1288,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 55,
+    "id": 57,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Digital Marketer",
     "jobCategory": "JOB",
@@ -1265,7 +1311,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 56,
+    "id": 58,
     "companyName": "Talentsathi",
     "jobTitle": "Video Editor(Mid level)",
     "jobCategory": "JOB",
@@ -1288,7 +1334,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 57,
+    "id": 59,
     "companyName": "Propertystack Software ",
     "jobTitle": "Mid-Level UX/UI Designer",
     "jobCategory": "JOB",
@@ -1311,7 +1357,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1706244055234-646778357.png&w=256&q=75"
   },
   {
-    "id": 58,
+    "id": 60,
     "companyName": "Propertystack Software ",
     "jobTitle": "Mid QA Engineer",
     "jobCategory": "JOB",
@@ -1334,7 +1380,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1706244055234-646778357.png&w=256&q=75"
   },
   {
-    "id": 59,
+    "id": 61,
     "companyName": "Talentsathi",
     "jobTitle": "Customer Support Representative-Jr",
     "jobCategory": "JOB",
@@ -1357,7 +1403,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 60,
+    "id": 62,
     "companyName": "Talentsathi",
     "jobTitle": "Mid level Video Editor",
     "jobCategory": "JOB",
@@ -1380,7 +1426,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 61,
+    "id": 63,
     "companyName": "Talentsathi",
     "jobTitle": "Junior UI/UX Designer -",
     "jobCategory": "JOB",
@@ -1403,7 +1449,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 62,
+    "id": 64,
     "companyName": "Talentsathi",
     "jobTitle": "Mid-Level Flutter Developer -",
     "jobCategory": "JOB",
@@ -1426,7 +1472,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 63,
+    "id": 65,
     "companyName": "Talentsathi",
     "jobTitle": "Jr MERN Stack Developer -",
     "jobCategory": "JOB",
@@ -1449,7 +1495,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 64,
+    "id": 66,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Python Developer -",
     "jobCategory": "JOB",
@@ -1472,7 +1518,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 65,
+    "id": 67,
     "companyName": "Talentsathi",
     "jobTitle": "Copywriter Junior",
     "jobCategory": "JOB",
@@ -1495,7 +1541,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 66,
+    "id": 68,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Ruby on Rails Developer ID-66",
     "jobCategory": "JOB",
@@ -1518,7 +1564,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 67,
+    "id": 69,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Video Editor -",
     "jobCategory": "JOB",
@@ -1541,7 +1587,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 68,
+    "id": 70,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Copywriter",
     "jobCategory": "JOB",
@@ -1564,7 +1610,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 69,
+    "id": 71,
     "companyName": "Talentsathi",
     "jobTitle": "Field Technician-Fresher",
     "jobCategory": "JOB",
@@ -1587,7 +1633,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 70,
+    "id": 72,
     "companyName": "Talentsathi",
     "jobTitle": "Junior-Level Frontend Developer",
     "jobCategory": "JOB",
@@ -1610,7 +1656,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 71,
+    "id": 73,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Python Django Developer -",
     "jobCategory": "JOB",
@@ -1633,7 +1679,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 72,
+    "id": 74,
     "companyName": "Talentsathi",
     "jobTitle": "Sales Representative-Id52",
     "jobCategory": "JOB",
@@ -1656,7 +1702,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 73,
+    "id": 75,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Django Developer",
     "jobCategory": "JOB",
@@ -1679,7 +1725,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 74,
+    "id": 76,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Marketing Officer",
     "jobCategory": "JOB",
@@ -1702,7 +1748,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 75,
+    "id": 77,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Operations Officer",
     "jobCategory": "JOB",
@@ -1725,7 +1771,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 76,
+    "id": 78,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Digital Marketing Assistant -",
     "jobCategory": "JOB",
@@ -1748,7 +1794,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 77,
+    "id": 79,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Sales Officer",
     "jobCategory": "JOB",
@@ -1771,7 +1817,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 78,
+    "id": 80,
     "companyName": "Talentsathi",
     "jobTitle": "Client Success Officer",
     "jobCategory": "JOB",
@@ -1794,7 +1840,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 79,
+    "id": 81,
     "companyName": "Talentsathi",
     "jobTitle": "Flutter Developer - Junior",
     "jobCategory": "JOB",
@@ -1817,7 +1863,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 80,
+    "id": 82,
     "companyName": "Talentsathi",
     "jobTitle": "Flutter Developer (Mid-Level) -",
     "jobCategory": "JOB",
@@ -1840,7 +1886,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 81,
+    "id": 83,
     "companyName": "Talentsathi",
     "jobTitle": "Jr Frontend Developer",
     "jobCategory": "JOB",
@@ -1863,7 +1909,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 82,
+    "id": 84,
     "companyName": "Talentsathi",
     "jobTitle": "Operations Officer",
     "jobCategory": "JOB",
@@ -1886,7 +1932,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 83,
+    "id": 85,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Video Editor",
     "jobCategory": "JOB",
@@ -1909,7 +1955,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 84,
+    "id": 86,
     "companyName": "Talentsathi",
     "jobTitle": "Field Technician (GPS)",
     "jobCategory": "JOB",
@@ -1932,7 +1978,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 85,
+    "id": 87,
     "companyName": "Talentsathi",
     "jobTitle": "Outlet Sales Executive - Junior",
     "jobCategory": "JOB",
@@ -1955,7 +2001,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 86,
+    "id": 88,
     "companyName": "Noble Idea Solution Pvt. Ltd.",
     "jobTitle": "Night Shift Experience Sales and Support Staff",
     "jobCategory": "JOB",
@@ -1978,7 +2024,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1706528291928-10185077.png&w=256&q=75"
   },
   {
-    "id": 87,
+    "id": 89,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Customer Support Representative",
     "jobCategory": "JOB",
@@ -2001,7 +2047,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 88,
+    "id": 90,
     "companyName": "Talentsathi",
     "jobTitle": "Front-end Engineer – Junior",
     "jobCategory": "JOB",
@@ -2024,7 +2070,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 89,
+    "id": 91,
     "companyName": "Ocs Group",
     "jobTitle": "Motion Graphics Designer",
     "jobCategory": "JOB",
@@ -2047,7 +2093,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1709025824826-767491182.jpg&w=256&q=75"
   },
   {
-    "id": 90,
+    "id": 92,
     "companyName": "Talentsathi",
     "jobTitle": "Field Technician",
     "jobCategory": "JOB",
@@ -2070,7 +2116,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 91,
+    "id": 93,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Digital Marketing Officer",
     "jobCategory": "JOB",
@@ -2093,7 +2139,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 92,
+    "id": 94,
     "companyName": "Talentsathi",
     "jobTitle": "Sales Officer",
     "jobCategory": "JOB",
@@ -2116,7 +2162,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 93,
+    "id": 95,
     "companyName": "Marching Ants",
     "jobTitle": "Content Writer",
     "jobCategory": "JOB",
@@ -2139,7 +2185,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1707627764251-989353459.png&w=256&q=75"
   },
   {
-    "id": 94,
+    "id": 96,
     "companyName": "Dharabijuli Services Pvt Ltd",
     "jobTitle": "Digital Marketing Executive",
     "jobCategory": "JOB",
@@ -2162,7 +2208,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1707408921411-107573414.png&w=256&q=75"
   },
   {
-    "id": 95,
+    "id": 97,
     "companyName": "Social Ambience",
     "jobTitle": "Social Media Advertisment Assistant",
     "jobCategory": "JOB",
@@ -2185,7 +2231,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1702200166434-288933727.jpg&w=256&q=75"
   },
   {
-    "id": 96,
+    "id": 98,
     "companyName": "Ektukra",
     "jobTitle": "Marketing Officer",
     "jobCategory": "JOB",
@@ -2208,7 +2254,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1705206509058-938777029.png&w=256&q=75"
   },
   {
-    "id": 97,
+    "id": 99,
     "companyName": "Ektukra",
     "jobTitle": "Videographer",
     "jobCategory": "JOB",
@@ -2231,7 +2277,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1705206509058-938777029.png&w=256&q=75"
   },
   {
-    "id": 98,
+    "id": 100,
     "companyName": "Ektukra",
     "jobTitle": "Content Writer",
     "jobCategory": "JOB",
@@ -2254,7 +2300,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1705206509058-938777029.png&w=256&q=75"
   },
   {
-    "id": 99,
+    "id": 101,
     "companyName": "Ektukra",
     "jobTitle": "Graphics Designer",
     "jobCategory": "JOB",
@@ -2277,7 +2323,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1705206509058-938777029.png&w=256&q=75"
   },
   {
-    "id": 100,
+    "id": 102,
     "companyName": "Ektukra",
     "jobTitle": "Video Editor",
     "jobCategory": "JOB",
@@ -2300,7 +2346,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1705206509058-938777029.png&w=256&q=75"
   },
   {
-    "id": 101,
+    "id": 103,
     "companyName": "Talentsathi",
     "jobTitle": "Junior Digital Marketing",
     "jobCategory": "JOB",
@@ -2323,7 +2369,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 102,
+    "id": 104,
     "companyName": "Talentsathi",
     "jobTitle": "Senior- level Video Editor",
     "jobCategory": "JOB",
@@ -2346,7 +2392,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 103,
+    "id": 105,
     "companyName": "Talentsathi",
     "jobTitle": "Mid - level Accountant",
     "jobCategory": "JOB",
@@ -2369,7 +2415,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1704219829366-277175250.png&w=256&q=75"
   },
   {
-    "id": 104,
+    "id": 106,
     "companyName": "Nest Nepal Business Solution Pvt. Ltd.",
     "jobTitle": "Junior Graphics Designer",
     "jobCategory": "JOB",
@@ -2392,7 +2438,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1701951394491-119650278.jpg&w=256&q=75"
   },
   {
-    "id": 105,
+    "id": 107,
     "companyName": "Creative Designers Nepal",
     "jobTitle": "Sales Marketing Executive",
     "jobCategory": "JOB",
@@ -2415,7 +2461,7 @@
     "image": "https://internsathi.com/_next/image?url=https%3A%2F%2Fapi.internsathi.com%2Fuploads%2F1702974451622-812695128.png&w=256&q=75"
   },
   {
-    "id": 106,
+    "id": 108,
     "companyName": "Muncha.com",
     "jobTitle": "Night Customer Service Representative",
     "jobCategory": "ONSITE",
@@ -2438,29 +2484,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/8D3B7B_Muncha.jpg"
   },
   {
-    "id": 107,
-    "companyName": "Manakamana Group",
-    "jobTitle": "Accounts Assistant",
-    "jobCategory": "ONSITE",
-    "jobLocation": "Chitwan, Nepal",
-    "employmentType": "Full Time",
-    "minPrice": null,
-    "maxPrice": null,
-    "salaryType": "NEGOTIABLE",
-    "experienceLevel": "1",
-    "availablePositions": "1",
-    "description": "<ul><li>Performing basic accounting tasks, such as filing, data entry, bookkeeping, etc.,</li><li>Verify, allocate, post, and reconcile accounts payable and receivable.</li><li>Prepare the cheque plan on a daily basis.</li><li>Keep reports of transactions.</li><li>Processing transactions, and updating ledgers, budgets, etc.</li><li>Scan, file, and log accounting documents</li><li>Comply with the statutory requirements for taxation.</li><li>To assist internal &amp; external auditors.</li><li>Maintain company accounting procedures and processes.</li><li>To perform other duties as given by the Finance Manager.</li></ul>",
-    "requirements": "<ul><li>Performing basic accounting tasks, such as filing, data entry, bookkeeping, etc.,</li><li>Verify, allocate, post, and reconcile accounts payable and receivable.</li><li>Prepare the cheque plan on a daily basis.</li><li>Keep reports of transactions.</li><li>Processing transactions, and updating ledgers, budgets, etc.</li><li>Scan, file, and log accounting documents</li><li>Comply with the statutory requirements for taxation.</li><li>To assist internal &amp; external auditors.</li><li>Maintain company accounting procedures and processes.</li><li>To perform other duties as given by the Finance Manager.</li></ul>",
-    "expires": "2024-06-14",
-    "created": "2024-05-15",
-    "sector": "2",
-    "responsibilities": "<ul><li>Performing basic accounting tasks, such as filing, data entry, bookkeeping, etc.,</li><li>Verify, allocate, post, and reconcile accounts payable and receivable.</li><li>Prepare the cheque plan on a daily basis.</li><li>Keep reports of transactions.</li><li>Processing transactions, and updating ledgers, budgets, etc.</li><li>Scan, file, and log accounting documents</li><li>Comply with the statutory requirements for taxation.</li><li>To assist internal &amp; external auditors.</li><li>Maintain company accounting procedures and processes.</li><li>To perform other duties as given by the Finance Manager.</li></ul>",
-    "frontendDescription": "<ul><li>Performing basic accounting tasks, such as filing, data entry, bookkeeping, etc.,</li><li>Verify, allocate, post, and reconcile accounts payable and receivable",
-    "url": "https://www.vocalpanda.com/job-details/Accounts Assistant-3989",
-    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A6C2EA_Manakamana%20Group of Companies.jpg"
-  },
-  {
-    "id": 108,
+    "id": 109,
     "companyName": "Writelion Pvt. Ltd.",
     "jobTitle": "Sale Executive",
     "jobCategory": "ONSITE",
@@ -2483,7 +2507,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/C153AA_Writelion.jpg"
   },
   {
-    "id": 109,
+    "id": 110,
     "companyName": "MeroGhar.com",
     "jobTitle": "UI/UX Designer",
     "jobCategory": "ONSITE",
@@ -2506,7 +2530,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/4BF04A_Meroghar.jpg"
   },
   {
-    "id": 110,
+    "id": 111,
     "companyName": "MeroGhar.com",
     "jobTitle": "Branding and Marketing Executive",
     "jobCategory": "ONSITE",
@@ -2529,7 +2553,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/4BF04A_Meroghar.jpg"
   },
   {
-    "id": 111,
+    "id": 112,
     "companyName": "MeroGhar.com",
     "jobTitle": "DevOps Engineer",
     "jobCategory": "ONSITE",
@@ -2552,7 +2576,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/4BF04A_Meroghar.jpg"
   },
   {
-    "id": 112,
+    "id": 113,
     "companyName": "Smart Solutions",
     "jobTitle": "Senior Data Architect",
     "jobCategory": "ONSITE",
@@ -2575,7 +2599,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 113,
+    "id": 114,
     "companyName": "Smart Solutions",
     "jobTitle": "Technical Writer",
     "jobCategory": "ONSITE",
@@ -2598,7 +2622,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 114,
+    "id": 115,
     "companyName": "Smart Solutions",
     "jobTitle": "Junior .NET Developer",
     "jobCategory": "ONSITE",
@@ -2621,7 +2645,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 115,
+    "id": 116,
     "companyName": "Smart Solutions",
     "jobTitle": "Senior .NET Developer",
     "jobCategory": "ONSITE",
@@ -2644,7 +2668,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 116,
+    "id": 117,
     "companyName": "Smart Solutions",
     "jobTitle": "JUnior Software Tester",
     "jobCategory": "ONSITE",
@@ -2667,7 +2691,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 117,
+    "id": 118,
     "companyName": "Smart Solutions",
     "jobTitle": "Senior Solution Architect",
     "jobCategory": "ONSITE",
@@ -2690,7 +2714,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 118,
+    "id": 119,
     "companyName": "Smart Solutions",
     "jobTitle": "Data Analyst",
     "jobCategory": "ONSITE",
@@ -2713,7 +2737,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 119,
+    "id": 120,
     "companyName": "Smart Solutions",
     "jobTitle": "Business Analyst",
     "jobCategory": "ONSITE",
@@ -2736,7 +2760,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/16AF8D_Smart%20Solutions.jpg"
   },
   {
-    "id": 120,
+    "id": 121,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Area Sales Representative (ASR)",
     "jobCategory": "ONSITE",
@@ -2758,7 +2782,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
   },
   {
-    "id": 121,
+    "id": 122,
     "companyName": "Muncha.com",
     "jobTitle": "Accounts Apprentice",
     "jobCategory": "ONSITE",
@@ -2781,7 +2805,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/8D3B7B_Muncha.jpg"
   },
   {
-    "id": 122,
+    "id": 123,
     "companyName": "Doctors On Call Nepal",
     "jobTitle": "Customer Service Representative",
     "jobCategory": "ONSITE",
@@ -2804,7 +2828,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/9D0DE0_Doctors%20on Call.jpg"
   },
   {
-    "id": 123,
+    "id": 124,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Help Desk",
     "jobCategory": "ONSITE",
@@ -2826,7 +2850,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
   },
   {
-    "id": 124,
+    "id": 125,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Area Sales Representative (ASR)",
     "jobCategory": "ONSITE",
@@ -2848,7 +2872,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
   },
   {
-    "id": 125,
+    "id": 126,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Area Sales Representative (ASR)",
     "jobCategory": "ONSITE",
@@ -2868,29 +2892,6 @@
     "frontendDescription": "<ul><li>Lead Generations</li><li>Convince client to purchase product using a script or persuasive technique.</li><li>Follow up on customers who are in the position to buy the product",
     "url": "https://www.vocalpanda.com/job-details/Area Sales Representative (ASR)-4036",
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
-  },
-  {
-    "id": 126,
-    "companyName": "Doctors On Call Nepal",
-    "jobTitle": "Health Assistant",
-    "jobCategory": "ONSITE",
-    "jobLocation": "Anamnagar, Kathmandu, Nepal",
-    "Location": "Nepal",
-    "employmentType": "Full Time",
-    "minPrice": null,
-    "maxPrice": null,
-    "salaryType": "NEGOTIABLE",
-    "experienceLevel": "1",
-    "availablePositions": "1",
-    "description": "<ul><li>Assist healthcare providers during examinations and medical procedures.</li><li>Prepare patients for exams by taking vital signs, recording medical history, and noting any concerns.</li><li>Collect and prepare laboratory specimens, perform basic lab tests, and record results.</li><li>Provide patient education on health maintenance and disease prevention.</li><li>Offer emotional support and assistance to patients and their families.</li><li>Assist patients with mobility and personal hygiene needs, if required.</li><li>Schedule and confirm patient appointments.</li><li>Maintain accurate and up-to-date patient records and databases.</li><li>Handle billing, coding, and insurance claims processing.</li><li>Ensure exam rooms and equipment are clean, organized, and stocked with necessary supplies.</li><li>Maintain patient confidentiality and comply with HIPAA regulations.</li><li>Participate in ongoing training and development activities to stay current with medical practices and procedures.</li></ul><p><strong>Other Specification:</strong></p><ul><li>High school diploma or equivalent.</li><li>Most have passed from valid institutes with licenses from the Nepal Health Council(NHC).</li><li>Most have their 2-wheeler with valid licenses.</li><li>Most have decent Knowledge about certain procedures like: (Ng tube insertion, Catheterization, Dressing, and Cannulization)</li><li>Should perform procedure and lab collection on a home basis.</li></ul>",
-    "requirements": "<ul><li>Assist healthcare providers during examinations and medical procedures.</li><li>Prepare patients for exams by taking vital signs, recording medical history, and noting any concerns.</li><li>Collect and prepare laboratory specimens, perform basic lab tests, and record results.</li><li>Provide patient education on health maintenance and disease prevention.</li><li>Offer emotional support and assistance to patients and their families.</li><li>Assist patients with mobility and personal hygiene needs, if required.</li><li>Schedule and confirm patient appointments.</li><li>Maintain accurate and up-to-date patient records and databases.</li><li>Handle billing, coding, and insurance claims processing.</li><li>Ensure exam rooms and equipment are clean, organized, and stocked with necessary supplies.</li><li>Maintain patient confidentiality and comply with HIPAA regulations.</li><li>Participate in ongoing training and development activities to stay current with medical practices and procedures.</li></ul><p><strong>Other Specification:</strong></p><ul><li>High school diploma or equivalent.</li><li>Most have passed from valid institutes with licenses from the Nepal Health Council(NHC).</li><li>Most have their 2-wheeler with valid licenses.</li><li>Most have decent Knowledge about certain procedures like: (Ng tube insertion, Catheterization, Dressing, and Cannulization)</li><li>Should perform procedure and lab collection on a home basis.</li></ul>",
-    "expires": "2024-06-14",
-    "created": "2024-05-21",
-    "sector": "10",
-    "responsibilities": "<ul><li>Assist healthcare providers during examinations and medical procedures.</li><li>Prepare patients for exams by taking vital signs, recording medical history, and noting any concerns.</li><li>Collect and prepare laboratory specimens, perform basic lab tests, and record results.</li><li>Provide patient education on health maintenance and disease prevention.</li><li>Offer emotional support and assistance to patients and their families.</li><li>Assist patients with mobility and personal hygiene needs, if required.</li><li>Schedule and confirm patient appointments.</li><li>Maintain accurate and up-to-date patient records and databases.</li><li>Handle billing, coding, and insurance claims processing.</li><li>Ensure exam rooms and equipment are clean, organized, and stocked with necessary supplies.</li><li>Maintain patient confidentiality and comply with HIPAA regulations.</li><li>Participate in ongoing training and development activities to stay current with medical practices and procedures.</li></ul><p><strong>Other Specification:</strong></p><ul><li>High school diploma or equivalent.</li><li>Most have passed from valid institutes with licenses from the Nepal Health Council(NHC).</li><li>Most have their 2-wheeler with valid licenses.</li><li>Most have decent Knowledge about certain procedures like: (Ng tube insertion, Catheterization, Dressing, and Cannulization)</li><li>Should perform procedure and lab collection on a home basis.</li></ul>",
-    "frontendDescription": "<ul><li>Assist healthcare providers during examinations and medical procedures.</li><li>Prepare patients for exams by taking vital signs, recording medical history, and noting any concerns",
-    "url": "https://www.vocalpanda.com/job-details/Health Assistant-4037",
-    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/9D0DE0_Doctors%20on Call.jpg"
   },
   {
     "id": 127,
@@ -3504,29 +3505,6 @@
   },
   {
     "id": 154,
-    "companyName": "Shankar Associates, Chartered Accountants",
-    "jobTitle": "Financial Planning & Analysis (FP&A) Specialist",
-    "jobCategory": "ONSITE",
-    "jobLocation": "Anamnagar, Kathmandu, Nepal",
-    "Location": "Nepal",
-    "employmentType": "Full Time",
-    "minPrice": null,
-    "maxPrice": null,
-    "salaryType": "NEGOTIABLE",
-    "experienceLevel": "3",
-    "availablePositions": "1",
-    "description": "<p>We are seeking a dynamic and highly skilled FP&amp;A Specialist to&nbsp;work with us remotely from Nepal for a global digital media agency.&nbsp;This role offers an excellent opportunity for a motivated individual with a strong financial background to engage in budgeting, forecasting, planning, analysis, and reporting activities on an international scale..</p><p><strong>Responsibilities:</strong></p><ul><li><strong>Financial Planning &amp; Analysis:</strong><ul><li>Develop and maintain financial models for budgeting, forecasting, and scenario planning.</li><li>Analyze financial data, cashflow analysis, sales and clients analysis to identify trends, variances, and opportunities for improvement.</li><li>Prepare monthly, quarterly, and annual reports for internal and external stakeholders (including the Board and Banks).</li><li>Manage and update the Databook, CFO Report, &nbsp;ensuring accuracy and completeness.</li><li>Support with budget reshuffles and normalization of historical data.</li><li>Support with holdings accounts cleanup, capex and fixed assets management</li></ul></li><li><strong>Data Management &amp; Reporting:</strong><ul><li>Prepare and consolidate actuals reports fo rGlobal Holdings review</li><li>Update forecasts for Global Budget Holders</li><li>Update and manage the list of full-time equivalents (FTEs) for HR Controlling purposes.</li><li>Calculate IT/Holding charges and perform monthly normalizations and be answerable to stakeholders regarding IT/Holding charges and cost allocation.</li></ul></li><li><strong>Technical Skills &amp; Tools:</strong><ul><li>Utilize advanced skills in Excel, Power Query, Google Sheets, and ideally ETL, Power BI for data analysis and reporting.</li><li>Willingness to learn and adapt to new FP&amp;A tools and technologies (potential future task: support integration of a new FP&amp;A tool).</li></ul></li></ul><p><strong>Qualifications:</strong></p><ul><li>CFA/CA/ACCA/MBA with 2-3 years of experience in financial planning, analysis, reporting, and modeling.</li><li>Financial Modelling Certification is a plus</li><li>Excellent communication and interpersonal skills.</li><li>Proficiency in MS Office Suite (Excel, Power Query), Google Sheets (advanced) and presentation skills (Powerpoint, G-slides).</li><li>Experience with Netsuite, Salesforce, financial modeling software (advantage)</li><li>Sharp, detail oriented, organized and committed to a high level of accuracy.</li><li>Strong focus on customer service mindset with all stakeholders.</li><li>Curious self-starter who consistently takes the initiative to address questions and build new processes.</li><li>Strong analytical and problem-solving skills.</li><li>A strong work ethic, ability to meet deadlines.</li><li>Ability to multitask in a fast-paced environment.</li><li>Solid interpersonal skills with proven ability to develop and maintain effective business partner relationships at executive levels of the organization.</li><li>Strong verbal and written communications with the ability to effectively communicate at multiple levels in the organization.</li><li>Ability to work within a global team and as an individual contributor.</li></ul>",
-    "requirements": "<p>We are seeking a dynamic and highly skilled FP&amp;A Specialist to&nbsp;work with us remotely from Nepal for a global digital media agency.&nbsp;This role offers an excellent opportunity for a motivated individual with a strong financial background to engage in budgeting, forecasting, planning, analysis, and reporting activities on an international scale..</p><p><strong>Responsibilities:</strong></p><ul><li><strong>Financial Planning &amp; Analysis:</strong><ul><li>Develop and maintain financial models for budgeting, forecasting, and scenario planning.</li><li>Analyze financial data, cashflow analysis, sales and clients analysis to identify trends, variances, and opportunities for improvement.</li><li>Prepare monthly, quarterly, and annual reports for internal and external stakeholders (including the Board and Banks).</li><li>Manage and update the Databook, CFO Report, &nbsp;ensuring accuracy and completeness.</li><li>Support with budget reshuffles and normalization of historical data.</li><li>Support with holdings accounts cleanup, capex and fixed assets management</li></ul></li><li><strong>Data Management &amp; Reporting:</strong><ul><li>Prepare and consolidate actuals reports fo rGlobal Holdings review</li><li>Update forecasts for Global Budget Holders</li><li>Update and manage the list of full-time equivalents (FTEs) for HR Controlling purposes.</li><li>Calculate IT/Holding charges and perform monthly normalizations and be answerable to stakeholders regarding IT/Holding charges and cost allocation.</li></ul></li><li><strong>Technical Skills &amp; Tools:</strong><ul><li>Utilize advanced skills in Excel, Power Query, Google Sheets, and ideally ETL, Power BI for data analysis and reporting.</li><li>Willingness to learn and adapt to new FP&amp;A tools and technologies (potential future task: support integration of a new FP&amp;A tool).</li></ul></li></ul><p><strong>Qualifications:</strong></p><ul><li>CFA/CA/ACCA/MBA with 2-3 years of experience in financial planning, analysis, reporting, and modeling.</li><li>Financial Modelling Certification is a plus</li><li>Excellent communication and interpersonal skills.</li><li>Proficiency in MS Office Suite (Excel, Power Query), Google Sheets (advanced) and presentation skills (Powerpoint, G-slides).</li><li>Experience with Netsuite, Salesforce, financial modeling software (advantage)</li><li>Sharp, detail oriented, organized and committed to a high level of accuracy.</li><li>Strong focus on customer service mindset with all stakeholders.</li><li>Curious self-starter who consistently takes the initiative to address questions and build new processes.</li><li>Strong analytical and problem-solving skills.</li><li>A strong work ethic, ability to meet deadlines.</li><li>Ability to multitask in a fast-paced environment.</li><li>Solid interpersonal skills with proven ability to develop and maintain effective business partner relationships at executive levels of the organization.</li><li>Strong verbal and written communications with the ability to effectively communicate at multiple levels in the organization.</li><li>Ability to work within a global team and as an individual contributor.</li></ul>",
-    "expires": "2024-06-14",
-    "created": "2024-05-31",
-    "sector": "2",
-    "responsibilities": "<p>We are seeking a dynamic and highly skilled FP&amp;A Specialist to&nbsp;work with us remotely from Nepal for a global digital media agency.&nbsp;This role offers an excellent opportunity for a motivated individual with a strong financial background to engage in budgeting, forecasting, planning, analysis, and reporting activities on an international scale..</p><p><strong>Responsibilities:</strong></p><ul><li><strong>Financial Planning &amp; Analysis:</strong><ul><li>Develop and maintain financial models for budgeting, forecasting, and scenario planning.</li><li>Analyze financial data, cashflow analysis, sales and clients analysis to identify trends, variances, and opportunities for improvement.</li><li>Prepare monthly, quarterly, and annual reports for internal and external stakeholders (including the Board and Banks).</li><li>Manage and update the Databook, CFO Report, &nbsp;ensuring accuracy and completeness.</li><li>Support with budget reshuffles and normalization of historical data.</li><li>Support with holdings accounts cleanup, capex and fixed assets management</li></ul></li><li><strong>Data Management &amp; Reporting:</strong><ul><li>Prepare and consolidate actuals reports fo rGlobal Holdings review</li><li>Update forecasts for Global Budget Holders</li><li>Update and manage the list of full-time equivalents (FTEs) for HR Controlling purposes.</li><li>Calculate IT/Holding charges and perform monthly normalizations and be answerable to stakeholders regarding IT/Holding charges and cost allocation.</li></ul></li><li><strong>Technical Skills &amp; Tools:</strong><ul><li>Utilize advanced skills in Excel, Power Query, Google Sheets, and ideally ETL, Power BI for data analysis and reporting.</li><li>Willingness to learn and adapt to new FP&amp;A tools and technologies (potential future task: support integration of a new FP&amp;A tool).</li></ul></li></ul><p><strong>Qualifications:</strong></p><ul><li>CFA/CA/ACCA/MBA with 2-3 years of experience in financial planning, analysis, reporting, and modeling.</li><li>Financial Modelling Certification is a plus</li><li>Excellent communication and interpersonal skills.</li><li>Proficiency in MS Office Suite (Excel, Power Query), Google Sheets (advanced) and presentation skills (Powerpoint, G-slides).</li><li>Experience with Netsuite, Salesforce, financial modeling software (advantage)</li><li>Sharp, detail oriented, organized and committed to a high level of accuracy.</li><li>Strong focus on customer service mindset with all stakeholders.</li><li>Curious self-starter who consistently takes the initiative to address questions and build new processes.</li><li>Strong analytical and problem-solving skills.</li><li>A strong work ethic, ability to meet deadlines.</li><li>Ability to multitask in a fast-paced environment.</li><li>Solid interpersonal skills with proven ability to develop and maintain effective business partner relationships at executive levels of the organization.</li><li>Strong verbal and written communications with the ability to effectively communicate at multiple levels in the organization.</li><li>Ability to work within a global team and as an individual contributor.</li></ul>",
-    "frontendDescription": "<p>We are seeking a dynamic and highly skilled FP&amp;A Specialist to&nbsp;work with us remotely from Nepal for a global digital media agency.&nbsp;This role offers an excellent opportunity for a motivated individual with a strong financial background to engage in budgeting, forecasting, planning, analysis, and reporting activities on an international scale",
-    "url": "https://www.vocalpanda.com/job-details/Financial Planning & Analysis (FP&A) Specialist-4097",
-    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/null"
-  },
-  {
-    "id": 155,
     "companyName": "Peace Energy company Pvt. Ltd.",
     "jobTitle": "Accountant",
     "jobCategory": "ONSITE",
@@ -3549,7 +3527,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/12D9D7_Peace%20energy company.jpg"
   },
   {
-    "id": 156,
+    "id": 155,
     "companyName": "Letstrack Nepal",
     "jobTitle": "Marketing executive",
     "jobCategory": "ONSITE",
@@ -3572,7 +3550,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/C39B23_Letstrack.png"
   },
   {
-    "id": 157,
+    "id": 156,
     "companyName": "MoMo Way Pvt. Ltd",
     "jobTitle": "Sales and Marketing Officer",
     "jobCategory": "ONSITE",
@@ -3595,7 +3573,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A55E39_Momoway.jpg"
   },
   {
-    "id": 158,
+    "id": 157,
     "companyName": "Golyan Group",
     "jobTitle": "Technician/Jr. Technician",
     "jobCategory": "ONSITE",
@@ -3617,7 +3595,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/5F9B29_Golyan%20Group profile.jpg"
   },
   {
-    "id": 159,
+    "id": 158,
     "companyName": "Golyan Group",
     "jobTitle": "Graduate Engineer Trainee (Electrical)",
     "jobCategory": "ONSITE",
@@ -3639,7 +3617,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/5F9B29_Golyan%20Group profile.jpg"
   },
   {
-    "id": 160,
+    "id": 159,
     "companyName": "Golyan Group",
     "jobTitle": "Sr. Officer- Procurement",
     "jobCategory": "ONSITE",
@@ -3662,7 +3640,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/5F9B29_Golyan%20Group profile.jpg"
   },
   {
-    "id": 161,
+    "id": 160,
     "companyName": "Golyan Group",
     "jobTitle": "Geologist",
     "jobCategory": "ONSITE",
@@ -3684,7 +3662,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/5F9B29_Golyan%20Group profile.jpg"
   },
   {
-    "id": 162,
+    "id": 161,
     "companyName": "Being Base Pvt. Ltd.",
     "jobTitle": "Senior Sales Representative",
     "jobCategory": "ONSITE",
@@ -3707,7 +3685,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/BE44D9_Being%20base profile.jpg"
   },
   {
-    "id": 163,
+    "id": 162,
     "companyName": "Being Base Pvt. Ltd.",
     "jobTitle": "Sales and Marketing Officer",
     "jobCategory": "ONSITE",
@@ -3730,7 +3708,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/BE44D9_Being%20base profile.jpg"
   },
   {
-    "id": 164,
+    "id": 163,
     "companyName": "Being Base Pvt. Ltd.",
     "jobTitle": "Graduate Trainee",
     "jobCategory": "ONSITE",
@@ -3753,7 +3731,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/BE44D9_Being%20base profile.jpg"
   },
   {
-    "id": 165,
+    "id": 164,
     "companyName": "Being Base Pvt. Ltd.",
     "jobTitle": "Super Stockiest",
     "jobCategory": "ONSITE",
@@ -3776,7 +3754,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/BE44D9_Being%20base profile.jpg"
   },
   {
-    "id": 166,
+    "id": 165,
     "companyName": "Asterisk Digital",
     "jobTitle": "Customer Service cum sales officer",
     "jobCategory": "ONSITE",
@@ -3799,7 +3777,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0F4ECA_Aterisk%20digital.jpg"
   },
   {
-    "id": 167,
+    "id": 166,
     "companyName": "Himal Refrigeration and Electrical Industries Pvt. Ltd. ",
     "jobTitle": "Accountant",
     "jobCategory": "ONSITE",
@@ -3822,7 +3800,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0A895F_Himal%20Refrigeration profile.jpg"
   },
   {
-    "id": 168,
+    "id": 167,
     "companyName": "Himal Refrigeration and Electrical Industries Pvt. Ltd. ",
     "jobTitle": "Sales Officer",
     "jobCategory": "ONSITE",
@@ -3845,7 +3823,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0A895F_Himal%20Refrigeration profile.jpg"
   },
   {
-    "id": 169,
+    "id": 168,
     "companyName": "Nepaaus & Co ",
     "jobTitle": "Receptionist",
     "jobCategory": "ONSITE",
@@ -3868,7 +3846,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A38B98_nepaaus.jpg"
   },
   {
-    "id": 170,
+    "id": 169,
     "companyName": "Foodganj",
     "jobTitle": "Delivery Rider",
     "jobCategory": "ONSITE",
@@ -3890,7 +3868,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/844FCF_Foodganj.jpg"
   },
   {
-    "id": 171,
+    "id": 170,
     "companyName": "MoMo Way Pvt. Ltd",
     "jobTitle": "Head Chef",
     "jobCategory": "ONSITE",
@@ -3913,7 +3891,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A55E39_Momoway.jpg"
   },
   {
-    "id": 172,
+    "id": 171,
     "companyName": "MoMo Way Pvt. Ltd",
     "jobTitle": "Operation Manager",
     "jobCategory": "ONSITE",
@@ -3936,7 +3914,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A55E39_Momoway.jpg"
   },
   {
-    "id": 173,
+    "id": 172,
     "companyName": "MoMo Way Pvt. Ltd",
     "jobTitle": "Shift Supervisor",
     "jobCategory": "ONSITE",
@@ -3959,7 +3937,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/A55E39_Momoway.jpg"
   },
   {
-    "id": 174,
+    "id": 173,
     "companyName": "IME Motors Ashok Leyland Nepal",
     "jobTitle": "Sr. Officer- Sales (LCV)",
     "jobCategory": "ONSITE",
@@ -3982,7 +3960,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0D5CC3_IME%20motors profile.jpg"
   },
   {
-    "id": 175,
+    "id": 174,
     "companyName": "Education Asia",
     "jobTitle": "Graphic Designer and Video Editor",
     "jobCategory": "ONSITE",
@@ -4004,7 +3982,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/92FBE6_education%20asia.jpg"
   },
   {
-    "id": 176,
+    "id": 175,
     "companyName": "Rukmani International",
     "jobTitle": "Sales / Public Relations",
     "jobCategory": "ONSITE",
@@ -4027,7 +4005,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/FE05D5_rukmani.jpg"
   },
   {
-    "id": 177,
+    "id": 176,
     "companyName": "Global Quality Council",
     "jobTitle": "Auditor",
     "jobCategory": "ONSITE",
@@ -4049,7 +4027,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/919485_Global%20quality council.jpg"
   },
   {
-    "id": 178,
+    "id": 177,
     "companyName": "Global Quality Council",
     "jobTitle": "Trainer",
     "jobCategory": "ONSITE",
@@ -4071,7 +4049,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/919485_Global%20quality council.jpg"
   },
   {
-    "id": 179,
+    "id": 178,
     "companyName": "IME Motors Ashok Leyland Nepal",
     "jobTitle": "Regional Manager",
     "jobCategory": "ONSITE",
@@ -4093,7 +4071,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0D5CC3_IME%20motors profile.jpg"
   },
   {
-    "id": 180,
+    "id": 179,
     "companyName": "IME Motors Ashok Leyland Nepal",
     "jobTitle": "Officer- Sales (Bus)",
     "jobCategory": "ONSITE",
@@ -4116,7 +4094,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/0D5CC3_IME%20motors profile.jpg"
   },
   {
-    "id": 181,
+    "id": 180,
     "companyName": "Guitar Shop Nepal Pvt. Ltd.",
     "jobTitle": "Sales Assistant",
     "jobCategory": "ONSITE",
@@ -4138,7 +4116,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/1A627E_Guitar%20shop.jpg"
   },
   {
-    "id": 182,
+    "id": 181,
     "companyName": "Guitar Shop Nepal Pvt. Ltd.",
     "jobTitle": "Musician",
     "jobCategory": "ONSITE",
@@ -4161,7 +4139,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/1A627E_Guitar%20shop.jpg"
   },
   {
-    "id": 183,
+    "id": 182,
     "companyName": "THAKUR INTERNATIONAL",
     "jobTitle": "Business Development Executive",
     "jobCategory": "ONSITE",
@@ -4184,7 +4162,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/50F492_Thakur%20Int.jpg"
   },
   {
-    "id": 184,
+    "id": 183,
     "companyName": "THAKUR INTERNATIONAL",
     "jobTitle": "Web Design and SEO Executive",
     "jobCategory": "ONSITE",
@@ -4207,7 +4185,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/50F492_Thakur%20Int.jpg"
   },
   {
-    "id": 185,
+    "id": 184,
     "companyName": "THAKUR INTERNATIONAL",
     "jobTitle": "Recruiting Coordinator",
     "jobCategory": "ONSITE",
@@ -4230,7 +4208,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/50F492_Thakur%20Int.jpg"
   },
   {
-    "id": 186,
+    "id": 185,
     "companyName": "THAKUR INTERNATIONAL",
     "jobTitle": "English Teacher",
     "jobCategory": "ONSITE",
@@ -4253,7 +4231,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/50F492_Thakur%20Int.jpg"
   },
   {
-    "id": 187,
+    "id": 186,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Hostel Warden",
     "jobCategory": "ONSITE",
@@ -4276,7 +4254,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
   },
   {
-    "id": 188,
+    "id": 187,
     "companyName": "Abasar Nepal Pvt.ltd.",
     "jobTitle": "Door to Door Sales Marketing",
     "jobCategory": "ONSITE",
@@ -4298,7 +4276,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/411C82_Abasar%20Nepal.jpg"
   },
   {
-    "id": 189,
+    "id": 188,
     "companyName": "Millsberry School",
     "jobTitle": "Assistant Teacher- Pre-primary",
     "jobCategory": "ONSITE",
@@ -4320,7 +4298,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/2FBB47_millsberry%20profile.jpg"
   },
   {
-    "id": 190,
+    "id": 189,
     "companyName": "Millsberry School",
     "jobTitle": "Front Desk Officer",
     "jobCategory": "ONSITE",
@@ -4343,7 +4321,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/2FBB47_millsberry%20profile.jpg"
   },
   {
-    "id": 191,
+    "id": 190,
     "companyName": "Millsberry School",
     "jobTitle": "Teacher-Preschool",
     "jobCategory": "ONSITE",
@@ -4365,7 +4343,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/2FBB47_millsberry%20profile.jpg"
   },
   {
-    "id": 192,
+    "id": 191,
     "companyName": "Biomed International Pvt.Ltd.",
     "jobTitle": "Service Technicians/Engineers/Coordinator",
     "jobCategory": "ONSITE",
@@ -4388,7 +4366,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/73AF0A_Biomed%20international.jpg"
   },
   {
-    "id": 193,
+    "id": 192,
     "companyName": "Biomed International Pvt.Ltd.",
     "jobTitle": "Sales & marketing Executive",
     "jobCategory": "ONSITE",
@@ -4411,7 +4389,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/73AF0A_Biomed%20international.jpg"
   },
   {
-    "id": 194,
+    "id": 193,
     "companyName": "Nepa Rudraksha",
     "jobTitle": "Customer Care Specialist",
     "jobCategory": "ONSITE",
@@ -4434,7 +4412,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/12A689_nepa_rudraksha_upscaled.jpg"
   },
   {
-    "id": 195,
+    "id": 194,
     "companyName": "Nepa Rudraksha",
     "jobTitle": "UI/UX Designer",
     "jobCategory": "ONSITE",
@@ -4457,7 +4435,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/12A689_nepa_rudraksha_upscaled.jpg"
   },
   {
-    "id": 196,
+    "id": 195,
     "companyName": "Sewa Express",
     "jobTitle": "Business Development Intern (Logistics)",
     "jobCategory": "ONSITE",
@@ -4480,7 +4458,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/D5EA21_Sewa%20express.jpg"
   },
   {
-    "id": 197,
+    "id": 196,
     "companyName": "Sewa Express",
     "jobTitle": "Operation Associate-Internship",
     "jobCategory": "ONSITE",
@@ -4503,7 +4481,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/D5EA21_Sewa%20express.jpg"
   },
   {
-    "id": 198,
+    "id": 197,
     "companyName": "Care to beauty",
     "jobTitle": "Marketing Executive",
     "jobCategory": "ONSITE",
@@ -4525,7 +4503,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/8D94B9_WhatsApp_Image_2024-06-05_at_14.jpg"
   },
   {
-    "id": 199,
+    "id": 198,
     "companyName": "Peace Energy company Pvt. Ltd.",
     "jobTitle": "Site Accountant",
     "jobCategory": "ONSITE",
@@ -4547,7 +4525,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/12D9D7_Peace%20energy company.jpg"
   },
   {
-    "id": 200,
+    "id": 199,
     "companyName": "Seven Multi Trading Pvt. Ltd. (Foreveryng)",
     "jobTitle": "Marketing Intern",
     "jobCategory": "ONSITE",
@@ -4570,30 +4548,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/3B7F6D_Seven%20multitrade(Foreveryng).jpg"
   },
   {
-    "id": 201,
-    "companyName": "Dochaa Pvt. Ltd.",
-    "jobTitle": "Operations Assistant",
-    "jobCategory": "ONSITE",
-    "jobLocation": "Tusal Marg, Boudhanath, Kathmandu, Nepal",
-    "Location": "Kathmandu",
-    "employmentType": "Full Time",
-    "minPrice": "15000",
-    "maxPrice": null,
-    "salaryType": "FIXED",
-    "experienceLevel": "1",
-    "availablePositions": "1",
-    "description": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe and bag manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage. We are seeking a highly motivated and creative individual to join our team.&nbsp;</p><p><strong>Job Description:</strong></p><p>As an Operations Assistant, you will ensure efficient day-to-day production, and support the team in delivering high-quality products in a timely manner.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Handle day-to-day production activities to ensure timely delivery of products.</li><li>Oversee production process and quality assurance.</li><li>Co-ordinate with factory employees and designers simultaneously.</li><li>Delegate tasks effectively to ensure efficient workflow within the team.</li></ul><p><strong>Qualifications:</strong></p><ul><li>Bachelor’s degree completed (Bachelors Degree in Fashion Designing preferred)</li><li>Both experienced professionals and fresh graduates are encouraged to apply.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Strong interpersonal skills with the ability to effectively communicate with individuals at all levels.</li><li>Operations Management knowledge and skills.</li><li>Strong analytical and decision-making skills.</li><li>Knowledge in pattern making would be an added advantage.</li></ul><p>&nbsp;</p><p><strong>Why Dochaa?</strong></p><p><i>We provide you:</i></p><ul><li><i>Hands-on experience in learning how a manufacturing fashion brand works.</i></li><li><i>Valuable experience about day-to-day production activities and quality assurance.</i></li><li><i>Opportunity to develop skills in coordination with factory employees and designers.</i></li><li><i>Contribution to a socially conscious company dedicated to indigenous storytelling.</i></li><li><i>Opportunity to contribute to the development of designs and samples for bags/shoes and see your ideas come to life.</i></li></ul>",
-    "requirements": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe and bag manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage. We are seeking a highly motivated and creative individual to join our team.&nbsp;</p><p><strong>Job Description:</strong></p><p>As an Operations Assistant, you will ensure efficient day-to-day production, and support the team in delivering high-quality products in a timely manner.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Handle day-to-day production activities to ensure timely delivery of products.</li><li>Oversee production process and quality assurance.</li><li>Co-ordinate with factory employees and designers simultaneously.</li><li>Delegate tasks effectively to ensure efficient workflow within the team.</li></ul><p><strong>Qualifications:</strong></p><ul><li>Bachelor’s degree completed (Bachelors Degree in Fashion Designing preferred)</li><li>Both experienced professionals and fresh graduates are encouraged to apply.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Strong interpersonal skills with the ability to effectively communicate with individuals at all levels.</li><li>Operations Management knowledge and skills.</li><li>Strong analytical and decision-making skills.</li><li>Knowledge in pattern making would be an added advantage.</li></ul><p>&nbsp;</p><p><strong>Why Dochaa?</strong></p><p><i>We provide you:</i></p><ul><li><i>Hands-on experience in learning how a manufacturing fashion brand works.</i></li><li><i>Valuable experience about day-to-day production activities and quality assurance.</i></li><li><i>Opportunity to develop skills in coordination with factory employees and designers.</i></li><li><i>Contribution to a socially conscious company dedicated to indigenous storytelling.</i></li><li><i>Opportunity to contribute to the development of designs and samples for bags/shoes and see your ideas come to life.</i></li></ul>",
-    "expires": "2024-06-14",
-    "created": "2024-06-06",
-    "sector": "22",
-    "responsibilities": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe and bag manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage. We are seeking a highly motivated and creative individual to join our team.&nbsp;</p><p><strong>Job Description:</strong></p><p>As an Operations Assistant, you will ensure efficient day-to-day production, and support the team in delivering high-quality products in a timely manner.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Handle day-to-day production activities to ensure timely delivery of products.</li><li>Oversee production process and quality assurance.</li><li>Co-ordinate with factory employees and designers simultaneously.</li><li>Delegate tasks effectively to ensure efficient workflow within the team.</li></ul><p><strong>Qualifications:</strong></p><ul><li>Bachelor’s degree completed (Bachelors Degree in Fashion Designing preferred)</li><li>Both experienced professionals and fresh graduates are encouraged to apply.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Strong interpersonal skills with the ability to effectively communicate with individuals at all levels.</li><li>Operations Management knowledge and skills.</li><li>Strong analytical and decision-making skills.</li><li>Knowledge in pattern making would be an added advantage.</li></ul><p>&nbsp;</p><p><strong>Why Dochaa?</strong></p><p><i>We provide you:</i></p><ul><li><i>Hands-on experience in learning how a manufacturing fashion brand works.</i></li><li><i>Valuable experience about day-to-day production activities and quality assurance.</i></li><li><i>Opportunity to develop skills in coordination with factory employees and designers.</i></li><li><i>Contribution to a socially conscious company dedicated to indigenous storytelling.</i></li><li><i>Opportunity to contribute to the development of designs and samples for bags/shoes and see your ideas come to life.</i></li></ul>",
-    "frontendDescription": "<p>Dochaa Pvt. Ltd",
-    "url": "https://www.vocalpanda.com/job-details/Operations Assistant-4156",
-    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/8D8F57_Dochaa%20Logo red.jpg"
-  },
-  {
-    "id": 202,
+    "id": 200,
     "companyName": "Writelion Pvt. Ltd.",
     "jobTitle": "Content Writer",
     "jobCategory": "ONSITE",
@@ -4616,30 +4571,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/C153AA_Writelion.jpg"
   },
   {
-    "id": 203,
-    "companyName": "Dochaa Pvt. Ltd.",
-    "jobTitle": "Accounts Intern",
-    "jobCategory": "ONSITE",
-    "jobLocation": "Tusal Marg, Boudhanath, Kathmandu, Nepal",
-    "Location": "Kathmandu",
-    "employmentType": "Internship",
-    "minPrice": "5000",
-    "maxPrice": null,
-    "salaryType": "FIXED",
-    "experienceLevel": "1",
-    "availablePositions": "1",
-    "description": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage.&nbsp;We are seeking for a detail-oriented and proactive Accounts Intern to join our team.&nbsp;</p><p><strong>Job Description</strong></p><p>As an Accounts Intern, you will play a key role in ensuring the accuracy and efficiency of our financial processes while contributing to cost control measures and process improvements. The ideal candidate will have a strong understanding of financial operations, including reconciling and analyzing balance sheets, profit and loss accounts, monitoring day-to-day financial activities, and assisting in budget development.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Reconcile and analyze balance sheets, profit and loss accounts.</li><li>Monitor day-to-day financial operations including invoicing, payments, collections, and follow-up.</li><li>Assist in payroll processes, calculate salaries, deductions, and taxes ensuring timely and accurate disbursement.</li><li>Verify payments and deposits, reconcile with bank transactions.</li><li>Collaborate with financial managers and team members to execute various accounting tasks and operational duties.</li></ul><p>&nbsp;</p><p><strong>Other Specifications:</strong></p><ul><li>Knowledge in Sales Entry, Parties Ledger, Sales Register, Purchase Register, Bank Reconciliation, Salary Sheet Details,.</li><li>Strong interpersonal skills with the ability to communicate effectively at all levels.</li><li>Strong analytical and decision-making skills.</li><li>Proficiency in Microsoft Office, especially Excel.</li><li>Knowledge of accounting software - Tally and ERP systems is desirable.</li><li>Ability to work independently and in a team environment.</li><li>Attention to detail and accuracy.</li></ul><p>&nbsp;</p><p><strong>Qualifications:</strong></p><ul><li>Bachelor's degree in Finance, Accounting, or related field.</li></ul><p>Dochaa Pvt. Ltd. is an equal opportunity employer and is committed to diversity and inclusion in the workplace. We encourage individuals from all backgrounds to apply.</p>",
-    "requirements": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage.&nbsp;We are seeking for a detail-oriented and proactive Accounts Intern to join our team.&nbsp;</p><p><strong>Job Description</strong></p><p>As an Accounts Intern, you will play a key role in ensuring the accuracy and efficiency of our financial processes while contributing to cost control measures and process improvements. The ideal candidate will have a strong understanding of financial operations, including reconciling and analyzing balance sheets, profit and loss accounts, monitoring day-to-day financial activities, and assisting in budget development.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Reconcile and analyze balance sheets, profit and loss accounts.</li><li>Monitor day-to-day financial operations including invoicing, payments, collections, and follow-up.</li><li>Assist in payroll processes, calculate salaries, deductions, and taxes ensuring timely and accurate disbursement.</li><li>Verify payments and deposits, reconcile with bank transactions.</li><li>Collaborate with financial managers and team members to execute various accounting tasks and operational duties.</li></ul><p>&nbsp;</p><p><strong>Other Specifications:</strong></p><ul><li>Knowledge in Sales Entry, Parties Ledger, Sales Register, Purchase Register, Bank Reconciliation, Salary Sheet Details,.</li><li>Strong interpersonal skills with the ability to communicate effectively at all levels.</li><li>Strong analytical and decision-making skills.</li><li>Proficiency in Microsoft Office, especially Excel.</li><li>Knowledge of accounting software - Tally and ERP systems is desirable.</li><li>Ability to work independently and in a team environment.</li><li>Attention to detail and accuracy.</li></ul><p>&nbsp;</p><p><strong>Qualifications:</strong></p><ul><li>Bachelor's degree in Finance, Accounting, or related field.</li></ul><p>Dochaa Pvt. Ltd. is an equal opportunity employer and is committed to diversity and inclusion in the workplace. We encourage individuals from all backgrounds to apply.</p>",
-    "expires": "2024-06-14",
-    "created": "2024-06-06",
-    "sector": "2",
-    "responsibilities": "<p>Dochaa Pvt. Ltd. is a socially conscious and culturally aware shoe manufacturing company dedicated to creating impact through indigenous storytelling. We believe in the power of storytelling to connect communities and promote cultural heritage.&nbsp;We are seeking for a detail-oriented and proactive Accounts Intern to join our team.&nbsp;</p><p><strong>Job Description</strong></p><p>As an Accounts Intern, you will play a key role in ensuring the accuracy and efficiency of our financial processes while contributing to cost control measures and process improvements. The ideal candidate will have a strong understanding of financial operations, including reconciling and analyzing balance sheets, profit and loss accounts, monitoring day-to-day financial activities, and assisting in budget development.</p><p><strong>Key Responsibilities:</strong></p><ul><li>Reconcile and analyze balance sheets, profit and loss accounts.</li><li>Monitor day-to-day financial operations including invoicing, payments, collections, and follow-up.</li><li>Assist in payroll processes, calculate salaries, deductions, and taxes ensuring timely and accurate disbursement.</li><li>Verify payments and deposits, reconcile with bank transactions.</li><li>Collaborate with financial managers and team members to execute various accounting tasks and operational duties.</li></ul><p>&nbsp;</p><p><strong>Other Specifications:</strong></p><ul><li>Knowledge in Sales Entry, Parties Ledger, Sales Register, Purchase Register, Bank Reconciliation, Salary Sheet Details,.</li><li>Strong interpersonal skills with the ability to communicate effectively at all levels.</li><li>Strong analytical and decision-making skills.</li><li>Proficiency in Microsoft Office, especially Excel.</li><li>Knowledge of accounting software - Tally and ERP systems is desirable.</li><li>Ability to work independently and in a team environment.</li><li>Attention to detail and accuracy.</li></ul><p>&nbsp;</p><p><strong>Qualifications:</strong></p><ul><li>Bachelor's degree in Finance, Accounting, or related field.</li></ul><p>Dochaa Pvt. Ltd. is an equal opportunity employer and is committed to diversity and inclusion in the workplace. We encourage individuals from all backgrounds to apply.</p>",
-    "frontendDescription": "<p>Dochaa Pvt. Ltd",
-    "url": "https://www.vocalpanda.com/job-details/Accounts Intern-4158",
-    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/8D8F57_Dochaa%20Logo red.jpg"
-  },
-  {
-    "id": 204,
+    "id": 201,
     "companyName": "Writelion Pvt. Ltd.",
     "jobTitle": "HR cum Account assistant",
     "jobCategory": "ONSITE",
@@ -4662,7 +4594,7 @@
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/C153AA_Writelion.jpg"
   },
   {
-    "id": 205,
+    "id": 202,
     "companyName": "Velox Lab",
     "jobTitle": "Marketing representative",
     "jobCategory": "ONSITE",
@@ -4683,5 +4615,117 @@
     "frontendDescription": "<ul><li>Conduct market research to identify target audiences and trends.</li><li>Develop and manage marketing campaigns across various channels",
     "url": "https://www.vocalpanda.com/job-details/Marketing representative-4160",
     "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/3F2AC3_Velox%20Labs.jpg"
+  },
+  {
+    "id": 203,
+    "companyName": "Hair Stop Nepal ",
+    "jobTitle": "Hairdresser",
+    "jobCategory": "ONSITE",
+    "jobLocation": "New Baneshwor, Kathmandu, Nepal",
+    "Location": "Nepal",
+    "employmentType": "Full Time",
+    "minPrice": null,
+    "maxPrice": null,
+    "salaryType": "NEGOTIABLE",
+    "experienceLevel": "2",
+    "availablePositions": "1",
+    "description": "<ul><li>Provide professional hair styling services to clients based on their preferences and needs.</li><li>Consult with clients to understand their desired look and offer expert advice on hair care and maintenance.</li><li>Perform haircuts, color treatments, and styling techniques such as blowouts, curling, and straightening.</li><li>Keep up-to-date with the latest trends in hair fashion and techniques to offer innovative and on-trend services.</li></ul><p><strong>Other Specification:</strong></p><ul><li>Proven experience as a Hairdresser or Hairstylist, with a portfolio of past work.</li><li>Certification or license in cosmetology or hairdressing from a recognized institution.</li><li>Strong knowledge of hair care products, tools, and techniques.</li><li>Excellent communication and interpersonal skills.</li><li>Ability to work efficiently in a fast-paced environment while maintaining high standards of quality.</li><li>Creativity and artistic flair with a passion for hair styling and fashion.</li></ul>",
+    "requirements": "<ul><li>Provide professional hair styling services to clients based on their preferences and needs.</li><li>Consult with clients to understand their desired look and offer expert advice on hair care and maintenance.</li><li>Perform haircuts, color treatments, and styling techniques such as blowouts, curling, and straightening.</li><li>Keep up-to-date with the latest trends in hair fashion and techniques to offer innovative and on-trend services.</li></ul><p><strong>Other Specification:</strong></p><ul><li>Proven experience as a Hairdresser or Hairstylist, with a portfolio of past work.</li><li>Certification or license in cosmetology or hairdressing from a recognized institution.</li><li>Strong knowledge of hair care products, tools, and techniques.</li><li>Excellent communication and interpersonal skills.</li><li>Ability to work efficiently in a fast-paced environment while maintaining high standards of quality.</li><li>Creativity and artistic flair with a passion for hair styling and fashion.</li></ul>",
+    "expires": "2024-07-06",
+    "created": "2024-06-07",
+    "sector": "22",
+    "responsibilities": "<ul><li>Provide professional hair styling services to clients based on their preferences and needs.</li><li>Consult with clients to understand their desired look and offer expert advice on hair care and maintenance.</li><li>Perform haircuts, color treatments, and styling techniques such as blowouts, curling, and straightening.</li><li>Keep up-to-date with the latest trends in hair fashion and techniques to offer innovative and on-trend services.</li></ul><p><strong>Other Specification:</strong></p><ul><li>Proven experience as a Hairdresser or Hairstylist, with a portfolio of past work.</li><li>Certification or license in cosmetology or hairdressing from a recognized institution.</li><li>Strong knowledge of hair care products, tools, and techniques.</li><li>Excellent communication and interpersonal skills.</li><li>Ability to work efficiently in a fast-paced environment while maintaining high standards of quality.</li><li>Creativity and artistic flair with a passion for hair styling and fashion.</li></ul>",
+    "frontendDescription": "<ul><li>Provide professional hair styling services to clients based on their preferences and needs.</li><li>Consult with clients to understand their desired look and offer expert advice on hair care and maintenance",
+    "url": "https://www.vocalpanda.com/job-details/Hairdresser-4162",
+    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/1CDB41_Hair%20Stop Nepal.jpg"
+  },
+  {
+    "id": 204,
+    "companyName": "SHREEYAM EDUCATIONAL SERVICES S.E.S-2008",
+    "jobTitle": "MODEL FOR INSTA/FB/TIKTOK",
+    "jobCategory": "ONSITE",
+    "jobLocation": "Thapathali, Kathmandu, Nepal",
+    "Location": "Nepal",
+    "employmentType": "Contract",
+    "minPrice": null,
+    "maxPrice": null,
+    "salaryType": "NEGOTIABLE",
+    "experienceLevel": "1",
+    "availablePositions": "2",
+    "description": "<p>The job description of a model for creative development typically includes:</p><p>1.Collaboration: Work closely with creative directors, photographers, stylists, and other team members to conceptualize and develop visual content.</p><p>2.Creative Input: Offer creative ideas and suggestions to enhance the overall vision of projects.</p><p>3.Versatility: Adapt to various themes, concepts, and styles, and bring creativity and innovation to each project.</p><p>4.Professionalism: Maintain a positive attitude, adhere to schedules, and communicate effectively with the team.</p><p>5.Brand Representation: Represent the brand or client effectively, embodying their values and vision through visual storytelling.</p><p>6.Portfolio Development: Continuously work on expanding and diversifying your portfolio with unique and compelling content.</p><p>7.Market Awareness: Stay updated on industry trends, styles, and concepts to bring fresh perspectives to projects.</p><p>8.Adaptability: Be flexible and open to feedback, adjusting your performance to meet the evolving needs of each project.</p><p>9.Attention to Detail: Pay close attention to grooming, styling, and overall presentation to ensure the desired aesthetic is achieved.</p><p>10.Networking: Build and maintain relationships within the industry to foster future collaboration opportunities and career growth.</p>",
+    "requirements": "<p>The job description of a model for creative development typically includes:</p><p>1.Collaboration: Work closely with creative directors, photographers, stylists, and other team members to conceptualize and develop visual content.</p><p>2.Creative Input: Offer creative ideas and suggestions to enhance the overall vision of projects.</p><p>3.Versatility: Adapt to various themes, concepts, and styles, and bring creativity and innovation to each project.</p><p>4.Professionalism: Maintain a positive attitude, adhere to schedules, and communicate effectively with the team.</p><p>5.Brand Representation: Represent the brand or client effectively, embodying their values and vision through visual storytelling.</p><p>6.Portfolio Development: Continuously work on expanding and diversifying your portfolio with unique and compelling content.</p><p>7.Market Awareness: Stay updated on industry trends, styles, and concepts to bring fresh perspectives to projects.</p><p>8.Adaptability: Be flexible and open to feedback, adjusting your performance to meet the evolving needs of each project.</p><p>9.Attention to Detail: Pay close attention to grooming, styling, and overall presentation to ensure the desired aesthetic is achieved.</p><p>10.Networking: Build and maintain relationships within the industry to foster future collaboration opportunities and career growth.</p>",
+    "expires": "2024-06-30",
+    "created": "2024-06-07",
+    "sector": "17",
+    "responsibilities": "<p>The job description of a model for creative development typically includes:</p><p>1.Collaboration: Work closely with creative directors, photographers, stylists, and other team members to conceptualize and develop visual content.</p><p>2.Creative Input: Offer creative ideas and suggestions to enhance the overall vision of projects.</p><p>3.Versatility: Adapt to various themes, concepts, and styles, and bring creativity and innovation to each project.</p><p>4.Professionalism: Maintain a positive attitude, adhere to schedules, and communicate effectively with the team.</p><p>5.Brand Representation: Represent the brand or client effectively, embodying their values and vision through visual storytelling.</p><p>6.Portfolio Development: Continuously work on expanding and diversifying your portfolio with unique and compelling content.</p><p>7.Market Awareness: Stay updated on industry trends, styles, and concepts to bring fresh perspectives to projects.</p><p>8.Adaptability: Be flexible and open to feedback, adjusting your performance to meet the evolving needs of each project.</p><p>9.Attention to Detail: Pay close attention to grooming, styling, and overall presentation to ensure the desired aesthetic is achieved.</p><p>10.Networking: Build and maintain relationships within the industry to foster future collaboration opportunities and career growth.</p>",
+    "frontendDescription": "<p>The job description of a model for creative development typically includes:</p><p>1.Collaboration: Work closely with creative directors, photographers, stylists, and other team members to conceptualize and develop visual content",
+    "url": "https://www.vocalpanda.com/job-details/MODEL FOR INSTA/FB/TIKTOK-4163",
+    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/D23E27_WhatsApp%20Image 2024-03-21 at 11.jpg"
+  },
+  {
+    "id": 205,
+    "companyName": "Bajeko Sekuwa",
+    "jobTitle": "Sous Chef",
+    "jobCategory": "ONSITE",
+    "jobLocation": "Biratnagar, Nepal",
+    "employmentType": "Full Time",
+    "minPrice": null,
+    "maxPrice": null,
+    "salaryType": "NEGOTIABLE",
+    "experienceLevel": "2",
+    "availablePositions": "2",
+    "description": "<ul><li>Develop new menu options based on seasonal changes and customer demand.</li><li>Assist with the preparation and planning of meal designs.</li><li>Ensure that kitchen activities operate in a timely manner.</li><li>Resolve customer problems and concerns personally.</li><li>Monitor and record inventory, and if necessary, order new supplies.</li><li>Provide support to junior kitchen employees with various tasks including line cooking, food preparation, and dish plating.</li><li>Recruit and train new kitchen employees to meet restaurant and kitchen standards.</li><li>Create schedules for kitchen employees and evaluate their performance.</li><li>Adhere to and implement sanitation regulations and safety regulations.</li><li>Manage the kitchen team in the executive chef's absence.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Proven experience as a Sous Chef or in a similar role within a high-volume kitchen.</li><li>Strong culinary skills and a passion for food, with knowledge of various cuisines and cooking techniques.</li><li>Excellent leadership and management abilities, with the capacity to motivate and inspire a team.</li><li>Exceptional organizational and time management skills to handle multiple tasks and meet deadlines.</li><li>Attention to detail and a commitment to delivering high-quality culinary experiences.</li><li>Strong communication and interpersonal skills to collaborate effectively with kitchen staff and other team members.</li><li>Knowledge of food safety and sanitation regulations, with a focus on maintaining cleanliness and hygiene in the kitchen.</li><li>Ability to work well under pressure and in a fast-paced environment.</li><li>Flexibility to work evenings, weekends, and holidays as required.</li><li>Culinary degree or relevant certification is a plus.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha and Biratnagar.</strong></i></p>",
+    "requirements": "<ul><li>Develop new menu options based on seasonal changes and customer demand.</li><li>Assist with the preparation and planning of meal designs.</li><li>Ensure that kitchen activities operate in a timely manner.</li><li>Resolve customer problems and concerns personally.</li><li>Monitor and record inventory, and if necessary, order new supplies.</li><li>Provide support to junior kitchen employees with various tasks including line cooking, food preparation, and dish plating.</li><li>Recruit and train new kitchen employees to meet restaurant and kitchen standards.</li><li>Create schedules for kitchen employees and evaluate their performance.</li><li>Adhere to and implement sanitation regulations and safety regulations.</li><li>Manage the kitchen team in the executive chef's absence.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Proven experience as a Sous Chef or in a similar role within a high-volume kitchen.</li><li>Strong culinary skills and a passion for food, with knowledge of various cuisines and cooking techniques.</li><li>Excellent leadership and management abilities, with the capacity to motivate and inspire a team.</li><li>Exceptional organizational and time management skills to handle multiple tasks and meet deadlines.</li><li>Attention to detail and a commitment to delivering high-quality culinary experiences.</li><li>Strong communication and interpersonal skills to collaborate effectively with kitchen staff and other team members.</li><li>Knowledge of food safety and sanitation regulations, with a focus on maintaining cleanliness and hygiene in the kitchen.</li><li>Ability to work well under pressure and in a fast-paced environment.</li><li>Flexibility to work evenings, weekends, and holidays as required.</li><li>Culinary degree or relevant certification is a plus.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha and Biratnagar.</strong></i></p>",
+    "expires": "2024-07-07",
+    "created": "2024-06-07",
+    "sector": "12",
+    "responsibilities": "<ul><li>Develop new menu options based on seasonal changes and customer demand.</li><li>Assist with the preparation and planning of meal designs.</li><li>Ensure that kitchen activities operate in a timely manner.</li><li>Resolve customer problems and concerns personally.</li><li>Monitor and record inventory, and if necessary, order new supplies.</li><li>Provide support to junior kitchen employees with various tasks including line cooking, food preparation, and dish plating.</li><li>Recruit and train new kitchen employees to meet restaurant and kitchen standards.</li><li>Create schedules for kitchen employees and evaluate their performance.</li><li>Adhere to and implement sanitation regulations and safety regulations.</li><li>Manage the kitchen team in the executive chef's absence.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Proven experience as a Sous Chef or in a similar role within a high-volume kitchen.</li><li>Strong culinary skills and a passion for food, with knowledge of various cuisines and cooking techniques.</li><li>Excellent leadership and management abilities, with the capacity to motivate and inspire a team.</li><li>Exceptional organizational and time management skills to handle multiple tasks and meet deadlines.</li><li>Attention to detail and a commitment to delivering high-quality culinary experiences.</li><li>Strong communication and interpersonal skills to collaborate effectively with kitchen staff and other team members.</li><li>Knowledge of food safety and sanitation regulations, with a focus on maintaining cleanliness and hygiene in the kitchen.</li><li>Ability to work well under pressure and in a fast-paced environment.</li><li>Flexibility to work evenings, weekends, and holidays as required.</li><li>Culinary degree or relevant certification is a plus.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha and Biratnagar.</strong></i></p>",
+    "frontendDescription": "<ul><li>Develop new menu options based on seasonal changes and customer demand.</li><li>Assist with the preparation and planning of meal designs",
+    "url": "https://www.vocalpanda.com/job-details/Sous Chef-4164",
+    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/FA8D5F_Bajeko%20sekuwa prof.jpg"
+  },
+  {
+    "id": 206,
+    "companyName": "Bajeko Sekuwa",
+    "jobTitle": "Commis I",
+    "jobCategory": "ONSITE",
+    "jobLocation": "Budhanilkantha, Nepal",
+    "employmentType": "Full Time",
+    "minPrice": null,
+    "maxPrice": null,
+    "salaryType": "NEGOTIABLE",
+    "experienceLevel": "4",
+    "availablePositions": "3",
+    "description": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, Durbar Marg, Mhepi, Anamnagar and Biratnagar.</strong></i></p><p>&nbsp;</p>",
+    "requirements": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, Durbar Marg, Mhepi, Anamnagar and Biratnagar.</strong></i></p><p>&nbsp;</p>",
+    "expires": "2024-07-07",
+    "created": "2024-06-07",
+    "sector": "12",
+    "responsibilities": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, Durbar Marg, Mhepi, Anamnagar and Biratnagar.</strong></i></p><p>&nbsp;</p>",
+    "frontendDescription": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits",
+    "url": "https://www.vocalpanda.com/job-details/Commis I-4165",
+    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/FA8D5F_Bajeko%20sekuwa prof.jpg"
+  },
+  {
+    "id": 207,
+    "companyName": "Bajeko Sekuwa",
+    "jobTitle": "Commis II",
+    "jobCategory": "ONSITE",
+    "jobLocation": "Budhanilkantha, Nepal",
+    "employmentType": "Full Time",
+    "minPrice": null,
+    "maxPrice": null,
+    "salaryType": "NEGOTIABLE",
+    "experienceLevel": "3",
+    "availablePositions": "2",
+    "description": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Previous experience in a culinary role or relevant culinary training is preferred.</li><li>Basic knowledge of cooking techniques, food preparation, and kitchen operations.</li><li>Familiarity with kitchen equipment and tools.</li><li>Strong attention to detail and ability to follow instructions accurately.</li><li>Ability to work in a fast-paced environment and handle multiple tasks simultaneously.</li><li>Excellent teamwork and communication skills.</li><li>Willingness to learn and develop culinary skills and knowledge.</li><li>Flexibility to work in shifts, including evenings, weekends, and holidays, as required in the hospitality industry.</li><li>Adherence to food safety and hygiene regulations.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, DurbarMarg, Anamnagar and Biratnagar.</strong></i></p>",
+    "requirements": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Previous experience in a culinary role or relevant culinary training is preferred.</li><li>Basic knowledge of cooking techniques, food preparation, and kitchen operations.</li><li>Familiarity with kitchen equipment and tools.</li><li>Strong attention to detail and ability to follow instructions accurately.</li><li>Ability to work in a fast-paced environment and handle multiple tasks simultaneously.</li><li>Excellent teamwork and communication skills.</li><li>Willingness to learn and develop culinary skills and knowledge.</li><li>Flexibility to work in shifts, including evenings, weekends, and holidays, as required in the hospitality industry.</li><li>Adherence to food safety and hygiene regulations.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, DurbarMarg, Anamnagar and Biratnagar.</strong></i></p>",
+    "expires": "2024-07-07",
+    "created": "2024-06-07",
+    "sector": "12",
+    "responsibilities": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits.</li><li>Preparing basic salads and sauces as directed by the Chef de Partie.</li><li>Receiving deliveries and verifying that all ordered items have been delivered and are of good quality.</li><li>Taking inventory of restaurant supplies and notifying the supervisor of low or depleted supplies.</li><li>Discarding all expired and spoiled food items stored in the stock rooms, refrigerators, and freezers.</li><li>Performing basic cleaning duties and ensuring that workstations are properly sanitized.</li><li>Plating and presenting meal items as per the Chef de Partie’s instructions.</li></ul><p><strong>Other Specifications:</strong></p><ul><li>Previous experience in a culinary role or relevant culinary training is preferred.</li><li>Basic knowledge of cooking techniques, food preparation, and kitchen operations.</li><li>Familiarity with kitchen equipment and tools.</li><li>Strong attention to detail and ability to follow instructions accurately.</li><li>Ability to work in a fast-paced environment and handle multiple tasks simultaneously.</li><li>Excellent teamwork and communication skills.</li><li>Willingness to learn and develop culinary skills and knowledge.</li><li>Flexibility to work in shifts, including evenings, weekends, and holidays, as required in the hospitality industry.</li><li>Adherence to food safety and hygiene regulations.</li></ul><p><i><strong>Note: The job location is available at both Budhanilkantha, DurbarMarg, Anamnagar and Biratnagar.</strong></i></p>",
+    "frontendDescription": "<ul><li>Accurately measuring meal ingredients for the Chef de Partie.</li><li>Preparing meal ingredients, which includes seasoning of different meats as well as washing, peeling, and chopping vegetables and fruits",
+    "url": "https://www.vocalpanda.com/job-details/Commis II-4166",
+    "image": "https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/FA8D5F_Bajeko%20sekuwa prof.jpg"
   }
 ]

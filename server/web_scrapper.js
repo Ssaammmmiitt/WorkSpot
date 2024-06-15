@@ -116,9 +116,9 @@ async function VocalPanda() {
         // console.log(response);
         let jobListingsData = await response.json();
         jobListingsData = jobListingsData.response.job_list;
-        console.log(jobListingsData[0].logo);
+        //console.log(jobListingsData[0].logo);
         const jobData = jobListingsData.map(job => (
-            console.log(job.logo),
+           // console.log(job.logo),
             {
                 id: id++,
                 companyName: job.first_name,
