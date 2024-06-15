@@ -25,7 +25,7 @@ const Login = () => {
       }
       // Handle new or existing user login
       console.log(result);
-      const isNewUser = result.user.metadata.creationTime === result.user.metadata.lastSignInTime && result.user.metadata.createdAt === result.user.metadata.lastLoginAt;
+      const isNewUser = result.user.metadata.createdAt === result.user.metadata.lastLoginAt;
       if (isNewUser) {
         navigate("/complete-registration");
       } else {
@@ -49,6 +49,9 @@ const Login = () => {
       navigate("/app");
     } catch (error) {
       alert(error.message);
+      if (error.code === "auth/invalid-credential") {
+        navigate("/sign-up");
+      }
     }
   };
   return (

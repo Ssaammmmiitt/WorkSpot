@@ -35,6 +35,9 @@ const SignUp1 = () => {
   const onSubmit =async (data) => {
     console.log(data);
     const formData = new FormData();
+    data.remoteWorking = data.remoteWorking ? "Yes" : "No";
+    data.phone = data.phone? data.phone : (9999999999);
+
     formData.append("firstname", data.firstname);
     formData.append("lastname", data.lastname);
     formData.append("email", data.email);
