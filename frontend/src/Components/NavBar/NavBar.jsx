@@ -256,7 +256,7 @@ import Lottie from "lottie-react";
 import { useAuth } from "../../firebase/AuthProvider";
 
 const NavBar = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
 
@@ -302,6 +302,12 @@ const NavBar = () => {
       });
     }
   };
+
+  const handleSignout = () => {
+    logout();
+    setIsLoggedIn(false);
+  };
+
 
   return (<>
     {/*handleLogin*/}
@@ -356,12 +362,14 @@ const NavBar = () => {
                 My Jobs
               </Link>
               <Link
+
                 to="/login"
                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-base font-semibold text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
               >
-                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+
+                <button onClick={handleSignout} className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   Sign Out
-                </span>
+                </button>
               </Link>
             </>
           ) : (
