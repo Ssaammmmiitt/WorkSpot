@@ -14,11 +14,7 @@ const LoginPage = () => {
   const [showAnim, setShowAnim] = useState(true);
   const { user } = useAuth();
   const navigate = useNavigate();
-  console.log(user);
 
-  if (user) {
-    return navigate("/app");
-  }
 
   useEffect(() => {
     const timer = setTimeout(() => {

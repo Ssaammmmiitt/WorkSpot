@@ -116,9 +116,9 @@ async function VocalPanda() {
         // console.log(response);
         let jobListingsData = await response.json();
         jobListingsData = jobListingsData.response.job_list;
-        console.log(jobListingsData[0].logo);
+        //console.log(jobListingsData[0].logo);
         const jobData = jobListingsData.map(job => (
-            console.log(job.logo),
+            //console.log(job.logo),
             {
                 id: id++,
                 companyName: job.first_name,
@@ -139,8 +139,8 @@ async function VocalPanda() {
                 sector: (job.job_category),
                 responsibilities: (job.job_description),
                 frontendDescription: (job.job_description.split('.').slice(0, 2).join('.')),
-                url: `https://www.vocalpanda.com/job-details/${job.job_title}-${job.job_id}`,
-                image: (`https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/${job.logo}`).replace(' ', '%20')
+                url: `https://www.vocalpanda.com/${job.job_title.toLowerCase()}-${job.job_id}`.replace(/ /g, '-'),
+                image: `https://jobportal-prod-bucket.s3.amazonaws.com/uploads/portal/${job.logo}`.replace(/ /g, '%20')
             }));
         return jobData;
     }).catch(error => {

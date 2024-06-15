@@ -253,19 +253,26 @@ import { NavLink, Link } from "react-router-dom";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 import search from "../../Assets/search.json";
 import Lottie from "lottie-react";
+import { useAuth } from "../../firebase/AuthProvider";
 
 const NavBar = () => {
+  const user = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Set initial state to false for demonstration
+  const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
 
   const handleMenuToggler = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleLogin = () => {
-    // implement login logic
-    setIsLoggedIn(!isLoggedIn);
-  };
+  // const handleLogin = () => {
+  //   console.log(user);
+  //   // implement login logic
+  //   if (user) {
+  //     setIsLoggedIn(true);
+  //     return;
+  //   }
+  //   setIsLoggedIn(!isLoggedIn);
+  // };
 
   const navItems = [
     { path: "/", title: "Start a search" },
@@ -296,8 +303,9 @@ const NavBar = () => {
     }
   };
 
-  return (
-    <header className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
+  return (<>
+    {/*handleLogin*/}
+    < header className="max-w-screen-2xl container mx-auto xl:px-24 px-4" >
       <nav className="flex justify-between items-center py-6">
         <div className="flex items-center justify-center">
           <Lottie animationData={search} style={{ width: 100, height: 100 }} />
@@ -392,9 +400,8 @@ const NavBar = () => {
 
       {/* nav items for mobile */}
       <div
-        className={`px-4 bg-black py-5 rounded-sm ${
-          isMenuOpen ? "" : "hidden"
-        }`}
+        className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"
+          }`}
       >
         <ul className="flex flex-col items-center space-y-4">
           {/* {navItems.map(({ path, title }) => (
@@ -441,7 +448,8 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-    </header>
+    </header >
+  </>
   );
 };
 

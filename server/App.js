@@ -37,4 +37,4 @@ const server = app.listen(port, () =>
 
 setInterval(() => {
     scraperJob();
-}, 1000000000000000)
+}, 24 * 60 * 60 * 1000);

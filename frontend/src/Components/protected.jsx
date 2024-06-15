@@ -4,11 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthProvider";
 
 export const ProtectedRoute = ({ children }) => {
-    const { user, loading } = useContext(AuthContext);
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+    let { user, loading } = useContext(AuthContext);
 
     return user ? children : <Navigate to="/login" />;
 };

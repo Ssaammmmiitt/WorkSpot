@@ -9,35 +9,12 @@ import { useLocation } from 'react-router-dom';
 
 
 
-// const App = () => {
-//   return (
-//     <>
-//     <NavBar/>
-//     <Outlet/>
-//     </>
-//   )
-// }
-
-// export default App
-
-function App({ children }) {
-
-  const { user, loading } = React.useContext(AuthContext);
-  const Location = useLocation();
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (user && Location.pathname === "/app") {
-    return (
-      <AuthProvider>
-        <RouterProvider router={router}>
-          <Outlet />
-        </RouterProvider>
-      </AuthProvider>
-    );
-  }
+const App = () => {
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  )
 }
-
 export default App;
