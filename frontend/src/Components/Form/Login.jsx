@@ -4,12 +4,17 @@ import { ImGithub, ImGoogle } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { collection, addDoc } from "firebase/firestore";
+import { db_firebase } from "../../firebase/firebase.config";
+import { doc, runTransaction, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore } from 'firebase/firestore';
+import { getFunctions, httpsCallable } from 'firebase/functions';
 import app from "../../firebase/firebase.config";
 import { useAuth } from "../../firebase/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
 
-
+const functions = getFunctions();
 
 
 const Login = () => {
@@ -18,55 +23,157 @@ const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   let idToken = {};
+
+  // const handleSocialLogin = async (provider) => {
+
+  //   try {
+  //     let result;
+
+  //     // Perform sign-up based on provider
+  //     if (provider === "Google") {
+  //       result = await signUpWithGoogle();
+  //     } else if (provider === "Github") {
+  //       result = await signUpWithGithub();
+  //     } else {
+  //       throw new Error("Unsupported provider");
+  //     }
+
+  //     const user = result.user;
+
+  //     // Check if user exists in Firestore
+  //     try {
+  //       const userRef = doc(db_firebase, `users/${user.uid}`);
+  //       const userDoc = await getDoc(userRef);
+
+  //       if (userDoc.exists()) {
+  //         // User exists in Firestore
+  //         console.log("User exists:", userDoc.data());
+  //         navigate("/app");
+  //       } else {
+  //         // User does not exist in Firestore
+  //         console.log("User does not exist, creating new user");
+  //         await createNewUser(user);
+  //         navigate("/sign-up");
+  //       }
+  //     } catch (firestoreError) {
+  //       console.error("Firestore error:", firestoreError);
+  //       // If there's an error (including permission denied), try to create the user
+  //       await createNewUser(user);
+  //       navigate("/sign-up");
+  //     }
+
+  //   } catch (error) {
+  //     console.error("Error in social login:", error);
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Oops...",
+  //       text: error.message,
+  //     });
+  //   }
+  // };
   const handleSocialLogin = async (provider) => {
     try {
       let result;
-      if (provider === "Google") {
-        result = await signUpWithGoogle().then(async (result) => {
-          //console.log(result);
-          idToken = result.user.accessToken;
-          //console.log(result.user.email);
-          await axios.post("/user/login", {
-            email: result.user.email
-          }).then(
-            (response) => {
-              console.log(response);
-            },
-            (error) => {
-              console.log(error);
-              return;
-            }
-          );
-          return result;
-        })
-      } else if (provider === "Github") {
-        result = await signUpWithGithub().then((result) => {
-          idToken = result.user.accessToken;
-          return result;
-        });
-      }
-      // Handle new or existing user login
-      //console.log(result);
-      const isNewUser = result.user.metadata.createdAt === result.user.metadata.lastLoginAt;
-      if (isNewUser) {
-        navigate("/complete-registration");
-      } else {
-        const expirationTime = new Date().getTime() + 5 * 60 * 1000;
-        localStorage.setItem('idToken', idToken);
-        localStorage.setItem('tokenExpiration', expirationTime);
-        //console.log(idToken, expirationTime)
 
-        // console.log(localStorage.getItem('idToken'), localStorage.getItem('tokenExpiration'));
-        navigate("/app");
+      // Perform sign-up based on provider
+      if (provider === "Google") {
+        result = await signUpWithGoogle();
+      } else if (provider === "Github") {
+        result = await signUpWithGithub();
+      } else {
+        throw new Error("Unsupported provider");
       }
+
+      const user = result.user;
+
+      // Check if user exists in Firestore
+      try {
+        const userRef = doc(db_firebase, `users/${user.uid}`);
+        const userDoc = await getDoc(userRef);
+
+        if (userDoc.exists()) {
+          // User exists in Firestore
+          console.log("User exists:", userDoc.data());
+          navigate("/app");
+        } else {
+          // User does not exist in Firestore
+          console.log("User does not exist, creating new user");
+          await createNewUser(user);
+          navigate("/sign-up");
+        }
+      } catch (firestoreError) {
+        console.error("Firestore error:", firestoreError);
+        console.error("Firestore error code:", firestoreError.code);
+        console.error("Firestore error message:", firestoreError.message);
+
+        if (firestoreError.code === 'permission-denied') {
+          console.log("Permission denied, attempting to create user");
+          await createNewUser(user);
+          navigate("/sign-up");
+        } else {
+          // For other Firestore errors, we might want to handle them differently
+          throw firestoreError;
+        }
+      }
+
     } catch (error) {
+      console.error("Error in social login:", error);
+      console.error("Error code:", error.code);
+      console.error("Error message:", error.message);
+
+      let errorMessage = "An unexpected error occurred. Please try again.";
+
+      if (error.code === 'auth/popup-closed-by-user') {
+        errorMessage = "The sign-in popup was closed before completing the process.";
+      } else if (error.code === 'auth/cancelled-popup-request') {
+        errorMessage = "The sign-in process was cancelled.";
+      } else if (error.code === 'auth/popup-blocked') {
+        errorMessage = "The sign-in popup was blocked. Please allow popups for this site.";
+      } else if (error.code === 'permission-denied') {
+        errorMessage = "Permission denied. Please check your account permissions.";
+      }
+
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: error.message,
+        title: "Sign-In Error",
+        text: errorMessage,
       });
     }
   };
+  // Function to create a new user in Firestore
+  async function createNewUser(user) {
+    try {
+      // Call a Cloud Function to create the user document
+      const createUserFunction = httpsCallable(functions, 'createUser');
+      await createUserFunction({
+        // uid: user.uid,
+        // email: user.email,
+        // displayName: user.displayName,
+        firstname: user.displayName.split(" ")[0],
+        lastname: user.displayName.split(" ")[1],
+        email: user.email,
+        phone: 0,
+        currentCompany: "None",
+        bio: "None",
+        jobTitle: "None",
+        workExperience: 0,
+        jobTypes: "None",
+        jobLocation: "None",
+        remoteWorking: false,
+        linkedinUrl: "None",
+        twitterUrl: "None",
+        githubUrl: "None",
+        portfolioUrl: "None",
+        otherWebsite: "None",
+
+        // Add any other initial user data you want to store
+      });
+      console.log("New user created in Firestore");
+    } catch (error) {
+      console.error("Error creating new user:", error);
+      throw error;
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,22 +182,19 @@ const Login = () => {
       email: data.get("email"),
       password: data.get("password"),
     };
+
     try {
       await login(value.email, value.password);
       const expirationTime = new Date().getTime() + 5 * 60 * 1000;
       localStorage.setItem('idToken', idToken);
       localStorage.setItem('tokenExpiration', expirationTime);
-      console.log(idToken, expirationTime)
       navigate("/app");
     } catch (error) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: error.message,
-      });      
-      // if (error.code === "auth/invalid-credential") {
-      //   navigate("/sign-up");
-      // }
+      });
     }
   };
   return (
