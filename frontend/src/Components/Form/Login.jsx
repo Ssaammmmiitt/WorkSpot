@@ -77,7 +77,7 @@ const Login = () => {
     };
     try {
       await login(value.email, value.password);
-      const expirationTime = new Date().getTime() + sessionExpirationMinutes * 60 * 1000;
+      const expirationTime = new Date().getTime() + 5 * 60 * 1000;
       localStorage.setItem('idToken', idToken);
       localStorage.setItem('tokenExpiration', expirationTime);
       console.log(idToken, expirationTime)
