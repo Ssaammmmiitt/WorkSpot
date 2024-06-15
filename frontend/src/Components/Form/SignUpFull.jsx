@@ -58,6 +58,7 @@ const SignUp1 = () => {
     formData.append("firstname", data.firstname);
     formData.append("lastname", data.lastname);
     formData.append("email", data.email);
+    //    formData.append("password", );
     formData.append("phone", data.phone);
     formData.append("currentCompany", data.currentCompany);
     formData.append("resumeCV", data.resumeCV[0]);
@@ -332,7 +333,7 @@ const SignUp1 = () => {
               </div>
 
               <div className="sm:col-span-9">
-                <select 
+                <select
                   {...register("jobLocation")}
                   name=""
                   id="relevance3"
@@ -347,7 +348,7 @@ const SignUp1 = () => {
               </div>
 
               <div className="mt-5 col-span-9">
-                <input 
+                <input
                   {...register("remoteWorking")}
                   type="checkbox"
                   className="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "

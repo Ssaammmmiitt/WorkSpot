@@ -15,51 +15,56 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        required: true
+        required: false
     },
     firstname: {
-        type: String, 
+        type: String,
         required: true
     },
     lastname: {
-        type: String, 
-        required: true
-    },
-    phone_number: {
-        type: String, 
-        required: true, 
-        unique: true
-    },
-    currentcompany: {
-        type: String
-    },
-    
-    personal_summary: {
         type: String,
         required: true
     },
-    current_job_title: {
+    phone: {
+        type: String,
+        required: true,
+        //unique: true
+    },
+    currentCompany: {
+        type: String
+    },
+    bio: {
+        type: String,
+        required: true
+    },
+    jobTitle: {
         type: String,
     },
-    work_experience: {
+    workExperience: {
         type: String,
     },
-    job_location: {
+    jobTypes: {
         type: String,
     },
-    linkedin_url: {
+    jobLocation: {
+        type: String,
+    },
+    remoteWorking: {
         type: String
     },
-    twitter_url: {
+    linkedinUrl: {
         type: String
     },
-    github_url: {
+    twitterUrl: {
         type: String
     },
-    portfolio_url: {
+    githubUrl: {
         type: String
     },
-    other_links: {
+    portfolioUrl: {
+        type: String
+    },
+    otherWebsite: {
         type: String
     },
     resetPasswordOTP: {
@@ -68,65 +73,83 @@ const userSchema = new Schema({
     resetPasswordOTPExpires: {
         type: Date
     },
-    jobs_applied: {
+    jobsApplied: {
         type: [Number]
     },
-})
- 
-
+});
 //staticsignup
-userSchema.statics.signup = async function (email, password, firstname, lastname, phone_number, currentcompany, personal_summary, current_job_title ,work_experience, job_location,linkedin_url, twitter_url, github_url, portfolio_url, other_links)
-{
+userSchema.statics.signup = async function (firstname,
+    lastname,
+    email,
+    password,
+    phone,
+    currentCompany,
+    bio,
+    jobTitle,
+    workExperience,
+    jobTypes,
+    jobLocation,
+    remoteWorking,
+    linkedinUrl,
+    twitterUrl,
+    githubUrl,
+    portfolioUrl,
+    otherWebsite) {
     // validation
-    if (!email || !password ||!firstname ||!lastname ||! phone_number ||! personal_summary)
-        {
-            throw Error ('Email, Password, Name, Phone_Number and Personal Summary must be filled')
-        }
+    console.log(firstname, lastname, email, phone, currentCompany, bio, jobTitle, workExperience, jobTypes, jobLocation, remoteWorking, linkedinUrl, twitterUrl, githubUrl, portfolioUrl, otherWebsite);
+    if (!email || !firstname || !lastname || !phone || !bio) {
+        throw Error('Email,  Name, Phone_Number and Personal Summary must be filled')
+    }
 
-        
-    if (!validator.isEmail(email)) 
-        {
-            throw Error('Email is not valid')
-        }
 
-    if (!validator.isStrongPassword(password))
-        {
-            throw Error('Password not strong Enough')
-        }
-    const exists = await this.findOne({email})
+    if (!validator.isEmail(email)) {
+        throw Error('Email is not valid')
+    }
+
+    const exists = await this.findOne({ email })
 
     if (exists) {
         throw Error('Email Already in Use')
     }
-
-    const salt = await bcryptjs.genSalt(10)
-    const hash = await bcryptjs.hash(password, salt)
-
-    const user = await this.create({email, password: hash, firstname, lastname, phone_number,currentcompany,personal_summary, current_job_title ,work_experience, job_location,linkedin_url, twitter_url, github_url, portfolio_url, other_links })
+    const user = await this.create({
+        firstname,
+        lastname,
+        email,
+        phone,
+        currentCompany,
+        bio,
+        jobTitle,
+        workExperience,
+        jobTypes,
+        jobLocation,
+        remoteWorking,
+        linkedinUrl,
+        twitterUrl,
+        githubUrl,
+        portfolioUrl,
+        otherWebsite
+    })
 
     return user
 }
 
 //staticlogin
-userSchema.statics.login = async function (email, password)
-{
-    if (!email || !password )
-        {
-            throw Error ('Email and Password must be filled')
-        }
+userSchema.statics.login = async function (email, password) {
+    if (!email || !password) {
+        throw Error('Email and Password must be filled')
+    }
 
-    const user = await this.findOne({email})
+    const user = await this.findOne({ email })
 
     if (!user) {
-        throw Error ('Incorrect Email')
+        throw Error('Incorrect Email')
     }
-    
+
     const match = await bcryptjs.compare(password, user.password)
 
-    if (!match)
-        {
-            throw Error ('Incorrect Pasword')
-        }
+    if (!match) {
+        throw Error('Incorrect Pasword')
+    }
 
     return user
 }
@@ -135,4 +158,4 @@ userSchema.statics.login = async function (email, password)
 
 
 
-module.exports= mongoose.model('User', userSchema)
+module.exports = mongoose.model('User', userSchema)
