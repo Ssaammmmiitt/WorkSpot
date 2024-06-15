@@ -164,7 +164,7 @@ import Card from '../Components/Card/Card';
 import Sidebar from '../Components/Sidebar/Sidebar';
 import NewsLetter from '../Components/NewsLetter/NewsLetter';
 import jobsdata from '../../Public/jobListings.json';
-
+import Footer from '../Components/FooterDiv/Footer';
 
 const Home = () => 
     {
@@ -301,6 +301,7 @@ const Home = () =>
                     <NewsLetter />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

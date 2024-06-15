@@ -16,8 +16,8 @@ import Salary from "../Pages/EstSalary.jsx";
 import MyJobs from "../Pages/MyJobs.jsx";
 import { Children } from "react";
 import NavBar from "../Components/NavBar/NavBar.jsx";
-import { ProtectedRoute } from "../Components/protected.jsx";
-
+import { ProtectedRoute } from "../firebase/protected.jsx";
+import Profile from "../Pages/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +41,7 @@ const router = createBrowserRouter([
   { path: "/about", element: <><NavBar /><About /></> },
   { path: "terms-and-conditions", element: <><NavBar /><TermsAndConditions /></> },
   { path: "faq", element: <><NavBar /><FAQPage /> </> },
+  {path:"profile",element:<><NavBar/><Profile/></>}
 ]);
 
 export default router;
