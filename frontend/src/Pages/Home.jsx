@@ -165,7 +165,6 @@ import Sidebar from '../Components/Sidebar/Sidebar';
 import NewsLetter from '../Components/NewsLetter/NewsLetter';
 import jobsdata from '../../Public/jobListings.json';
 
-
 const Home = () => 
     {
     const [jobs, setJobs] = useState(jobsdata);

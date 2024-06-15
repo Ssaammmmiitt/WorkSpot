@@ -87,9 +87,10 @@ const Login = () => {
         icon: "error",
         title: "Oops...",
         text: error.message,
-      }); if (error.code === "auth/invalid-credential") {
-        navigate("/sign-up");
-      }
+      });      
+      // if (error.code === "auth/invalid-credential") {
+      //   navigate("/sign-up");
+      // }
     }
   };
   return (
