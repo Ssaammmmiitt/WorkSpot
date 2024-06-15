@@ -64,10 +64,6 @@ const LoginPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (user) {
-    return null; // Return null to stop rendering
-  }
-
   return (
     <div>
       {showAnim ? <ComponentA /> : <Login />}

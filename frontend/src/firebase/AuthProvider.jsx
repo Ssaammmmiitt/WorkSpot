@@ -13,7 +13,7 @@ import {
 
 import { useState, useEffect, useContext } from "react";
 
-export  const AuthContext = createContext();
+export const AuthContext = createContext();
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
@@ -76,14 +76,11 @@ export const AuthProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     )
-
-  
-
 }
 
-const useAuth = () => {
+export const useAuth = () => {
     return useContext(AuthContext);
 }
 
-export default useAuth;
+export default { useAuth };
 

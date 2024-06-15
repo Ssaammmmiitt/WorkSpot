@@ -22,7 +22,7 @@ import { ProtectedRoute } from "../Components/protected.jsx";
 const router = createBrowserRouter([
   {
     path: "/app",
-    element: <><ProtectedRoute ><App /></ProtectedRoute></>,
+    element: <><ProtectedRoute><App /></ProtectedRoute></>,
     children: [
       { path: "", element: < Home /> },
       { path: "salary", element: <Salary /> },
