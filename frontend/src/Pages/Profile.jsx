@@ -234,7 +234,7 @@ const Profile = () => {
 
 return ( 
   <> 
-  <div className="container flex items-center justify-left h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+  <div className="container w-[80%] mx-auto flex items-center justify-center h-auto lg:h-screen flex-wrap  my-32 lg:my-0">
     {/*<!--Main Col-- */}
     <div
       id="profile"
@@ -246,71 +246,75 @@ return (
           src={social ? dataS.photoURL : data.photoURL}
           className="profile-image-mobile block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
         />
-        <h1 className="profile-name text-3xl font-bold pt-8 lg:pt-0">
+       <div className="flex justify-left items-center"> <h1 className="profile-name text-3xl font-bold pt-8 lg:pt-0">
           {social ? dataS.displayName : data.firstname + data.lastname}
         </h1>
-        <div className="image-container w-full lg:w-2/5">
-      {/*<!-- Big profile image for side bar (desktop) --*/}
+         {/*<!-- Big profile image for side bar (desktop) --*/}
       <img  
         src={social ? dataS.photoURL : data.photoURL}
-        className="profile-image-desktop ml-5 rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+        className="ml-[280px] profile-image-desktop rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
       />
+        </div>
+        
+        <p className="bio-title pt-4 text-lg font-semibold">Bio:</p>
+        <p className="bio pt-2 text-Text text-xs lg:text-base">{data.bio}</p>
+        <div className="image-container w-full lg:w-2/5">
+     
     </div>
-        <div className="separator mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+        <div className="separator mx-auto lg:mx-0 w-4/5 pt-4 border-b-2 border-green-500 opacity-25"></div>
 
-        <p className="location pt-2 text-Text text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+        <p className="location pt-2 text-Text text-xs lg:text-base flex items-center justify-center lg:justify-start">
           <IoLocationSharp className="icon mr-5 w-7 h-7" /> Job Location : {data.jobLocation}
         </p>
-        <p className="email pt-2 text-Text text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+        <p className="email pt-2 text-Text text-xs lg:text-base flex items-center justify-center lg:justify-start">
           <MdEmail className="icon mr-5 w-7 h-7" /> {data.email}
         </p>
-        <p className="phone pt-2 text-Text text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+        <p className="phone pt-2 text-Text text-xs lg:text-base flex items-center justify-center lg:justify-start">
           <FaPhoneAlt className="icon mr-5 w-6 h-6" /> {data.phone}
         </p>
         <div className="separator mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
 
-        <p className="bio-title pt-8 text-lg font-semibold">Bio:</p>
-        <p className="bio pt-2 text-Text text-xs lg:text-sm">{data.bio}</p>
+        
 
-        <div className="spacer pt-12 pb-8"></div>
-        <div className="separator mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
-        <h1 className="urls-title text-[#000000] pt-4 text-">Urls:</h1>
+        {/* <div className="spacer pt-12 pb-8"></div> */}
+        <h1 className="urls-title text-[#000000] pt-4 text-lg font-semibold">Urls:</h1>
         <div className="urls mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-col">
           <ul>
-            <li className="url-item flex justify-left items-center">
+            <li className="url-item flex text-xs lg:text-base justify-center lg:justify-start items-center ">
               <FaGithubSquare className="icon mr-5 w-7 h-7" /> {data.githubUrl}
             </li>
-            <li className="url-item flex justify-left items-center">
+            <li className="url-item text-xs lg:text-base flex justify-center lg:justify-start items-center">
               <FaTwitterSquare className="icon mr-5 w-7 h-7" /> {data.twitterUrl}
             </li>
-            <li className="url-item flex justify-left items-center">
+            <li className="url-item text-xs lg:text-base flex justify-center lg:justify-start items-center">
               <FaLinkedin className="icon mr-5 w-7 h-7" /> {data.linkedinUrl}
             </li>
-            <li className="url-item flex justify-left items-center">
+            <li className="url-item text-xs lg:text-base flex justify-center lg:justify-start items-center">
               <CgWebsite className="icon mr-5 w-7 h-7" /> {data.portfolioUrl}
             </li>
-            <li className="url-item flex justify-left items-center">
+            <li className="url-item text-xs lg:text-base flex justify-center lg:justify-start items-center">
               <CgWebsite className="icon mr-5 w-7 h-7" /> {data.otherWebsite}
             </li>
           </ul>
         </div>
+        <div className="separator mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
         <div>
           <p className="job-info-title pt-4 text-lg font-semibold">Job Information:</p>
-          <p className="job-title pt-4 text-base mx-2 font-semibold flex items-center justify-center lg:justify-start">
+          <p className="job-title pt-4 text-xs lg:text-base mx-2 flex items-center justify-center lg:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={24}
               height={24}
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase mr-5 w-7 h-7"
+              className="icon icon-tabler icons-tabler-filled icon-tabler-briefcase mr-2 w-7 h-7"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z" />
             </svg>
             Title : {data.jobTitle}
           </p>
-          <p className="experience pt-4 text-base mx-2 font-semibold flex items-center justify-center lg:justify-start">
+          <p className="experience pt-4 text-xs lg:text-base mx-2 flex items-center justify-center lg:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -321,7 +325,7 @@ return (
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-hourglass-empty"
+              className="icon icon-tabler icons-tabler-outline mr-2 icon-tabler-hourglass-empty"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
@@ -329,9 +333,9 @@ return (
             </svg>
             Experience : {data.workExperience}
           </p>
-          <p className="company pt-4 text-base mx-2 font-semibold flex items-center justify-center lg:justify-start">
+          <p className="company pt-4 text-xs lg:text-base mx-2  flex items-center justify-center lg:justify-start">
             <svg
-              className="icon w-[24px] h-[24px]"
+              className="icon  mr-2 w-[24px] h-[24px]"
               fill="#000000"
               viewBox="0 0 50 50"
               xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +353,7 @@ return (
             </svg>
             Company : {data.currentCompany}
           </p>
-          <p className="remote-working pt-4 text-base mx-2 font-semibold flex items-center justify-center lg:justify-start">
+          <p className="remote-working mr-2 pt-4 text-xs lg:text-base mx-2 flex items-center justify-center lg:justify-start">
             <svg
               height="28px"
               width="28px"

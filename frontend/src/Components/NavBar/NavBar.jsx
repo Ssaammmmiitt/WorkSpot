@@ -375,7 +375,10 @@ const NavBar = () => {
                 to="/login"
                 className="text-white block text-center md:text-left"
               >
-                SignOut
+                 <div className="flex items-center">
+                              <span className="mr-2">Sign Out</span>
+                              <BiLogOut className="" />
+                            </div>
               </Link>
             </li>
             </>:<>

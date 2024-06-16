@@ -270,10 +270,10 @@ const MyJobs = () => {
     <div>
       <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
         <h1 className="text-left font-semibold text-2xl align-baseline">
-          Welcome, Username
+          Welcome, {data.firstname}
         </h1>
         <div className="my-jobs-container">
-          <h1 className="text-center p-4">All My Jobs</h1>
+          <h1 className="text-center p-4">All Applied Jobs:</h1>
           <div className="search-box p-2 text-center mb-2">
             <input
               type="text"
@@ -342,9 +342,9 @@ const MyJobs = () => {
                       <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Salary
                       </th>
-                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      {/* <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Applied On:
-                      </th>
+                      </th> */}
                       <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Delete
                       </th>
@@ -366,9 +366,9 @@ const MyJobs = () => {
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                           Rs {job.minPrice} - {job.maxPrice}
                         </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        {/* <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                           {new Date(job.appliedDate).toLocaleDateString()}
-                        </td>
+                        </td> */}
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                           <button
                             onClick={() => handleDelete(job.id)}
