@@ -58,5 +58,4 @@ function getEstimatedSalary() {
     FinalData = JSON.stringify(FinalData, null, 2);
     fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'salaries.json'), FinalData);
 }
-//getEstimatedSalary()
 module.exports = getEstimatedSalary;
