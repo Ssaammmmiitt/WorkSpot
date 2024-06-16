@@ -42,16 +42,24 @@ const SignUp1 = () => {
     const storage = getStorage();
     try {
       // Ensure the user is authenticated
-      const user = auth.currentUser;
-      if (!user) {
+      const userUID = localStorage.getItem("uid");
+      const email = localStorage.getItem("email");
+
+      console.log("User UID:", userUID);
+      console.log("Email:", email);
+
+      localStorage.removeItem("uid");
+      localStorage.removeItem("email");
+
+      if (!userUID) {
         throw new Error("User not authenticated");
       }
 
       // Prepare the data
       const userData = {
-        firstname: data.firstname || `User${user.uid.slice(0, 5)}`,
+        firstname: data.firstname || `User${userUID.slice(0, 5)}`,
         lastname: data.lastname || "",
-        email: data.email || user.email,
+        email: data.email || email,
         phone: data.phone || 9999999999,
         currentCompany: data.currentCompany || "None",
         bio: data.bio || "None",
@@ -71,7 +79,7 @@ const SignUp1 = () => {
       // Handle resume upload if provided
       if (data.resumeCV && data.resumeCV[0]) {
         const resumeFile = data.resumeCV[0];
-        const storageRef = ref(storage, `resumes/${user.uid}/${resumeFile.name}`);
+        const storageRef = ref(storage, `resumes/${userUID}/${resumeFile.name}`);
         await uploadBytes(storageRef, resumeFile);
         const downloadURL = await getDownloadURL(storageRef);
         userData.resumeCV = downloadURL;
@@ -80,7 +88,7 @@ const SignUp1 = () => {
       }
 
       // Save to Firestore
-      const userRef = doc(db_firebase, 'users', user.uid);
+      const userRef = doc(db_firebase, 'users', userUID);
       await setDoc(userRef, userData, { merge: true });
 
       console.log("User data saved successfully");

@@ -154,9 +154,10 @@ import db_firebase from '../firebase/firebase.config';
 import { collection, doc, getDocs, writeBatch } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
 import { useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const MyJobs = () => {
-    const email = "abcd@gmail.com";
+    const [user, setUser] = useState(getAuth().currentUser);
     const [jobs, setJobs] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -169,30 +170,30 @@ const MyJobs = () => {
     // },[])
 
 
+    useEffect(() => {
+        const getJobs = async () => {
+            const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+                if (user) {
+                    console.log(db_firebase);
+                    const userDoc = await getDocs(collection(db_firebase.db_firebase, `users`));
+                    console.log(userDoc);
+                    let data = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+                    data = data.filter((doc) => doc.id === user.uid);
+                    data = data[0];
+                    console.log(data.job_id);
+                    setUser(data);
+                    setJobs(data.job_id);
+                } else {
+                    setUser(null);
+                }
+            });
 
-    const getJobs = () => {
-        const [jobs, setJobs] = useState([]);
 
-        useEffect(() => {
-            const fetchJobs = async () => {
-                await getJobs();
-            };
 
-            fetchJobs();
-        }, []);
-
-        return (
-            <div>
-                <h1>Jobs</h1>
-                <ul>
-                    {jobs.map((job, index) => (
-                        <li key={index}>{job.name}</li> // Adjust according to your job object structure
-                    ))}
-                </ul>
-            </div>
-        );
-    };
-
+            return unsubscribe;
+        };
+        getJobs();
+    }, []);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -241,7 +242,6 @@ const MyJobs = () => {
         await batch.commit();
         setJobs(jobs.filter(job => job.id !== id));
     };
-    getJobs();
     return (
         <div>
             <div className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>

@@ -97,9 +97,7 @@ const Login = () => {
         navigate("/app"); // or wherever you want existing users to go
       } else {
         // User doesn't exist, create new user document
-        await createNewUser(user);
-        console.log("New user created successfully");
-        navigate("/sign-up"); // or wherever you want new users to go
+        navigate("/complete-registration"); // or wherever you want new users to go
       }
 
     } catch (error) {
