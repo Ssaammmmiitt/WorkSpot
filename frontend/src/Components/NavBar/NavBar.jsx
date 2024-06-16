@@ -8,24 +8,61 @@ import { BiLogOut } from "react-icons/bi";
 import { useAuth } from "../../firebase/AuthProvider";
 import { getAuth } from "firebase/auth";
 import { FaChevronDown } from "react-icons/fa";
+import { onAuthStateChanged } from "firebase/auth";
+import { db_firebase } from "../../firebase/firebase.config";
+import { collection, getDocs } from "firebase/firestore";
+
 
 const NavBar = () => {
-  const { user, logout } = useAuth();
+  let { user, logout } = useAuth();
+  if(user){
+  console.log(user.providerData[0].providerId);
+  }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
   const [isOpen, setIsOpen] = useState(false);
   const [photoUrl, setPhotoUrl] = useState("");
   const [firstName, setFirstName] = useState("");
+  const [data,setData]=useState([]);
 
   useEffect(() => {
-    if (user) {
+    if(user){
+    if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
       const result = getAuth().currentUser;
       if(result.displayName !== null && result.photoURL !== null){
       setPhotoUrl(result.photoURL);
       setFirstName(result.displayName.split(" ")[0]);
     }
+    else
+    {
+      const userDoc = data;
+      setPhotoUrl(userDoc.photoURL);
+      setFirstName(userDoc.displayName.split(" ")[0]);
+    }
   }
-  }, [user]);
+  }}, [user]);
+
+  useEffect(() => {
+    const getJobs = async () => {
+        const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+            if (user) {
+                console.log(db_firebase);
+                const userDoc = await getDocs(collection(db_firebase, "users"));
+                console.log(userDoc);
+                let data = userDoc.docs.map( doc => ({ ...doc.data(), id: doc.id }));
+                data=data.find((doc)=>doc.id===user.uid);
+                console.log(data)
+                setData(data);
+                
+            } else {
+                setData(null);
+            }
+        });
+
+        return unsubscribe;
+    };
+    getJobs();
+}, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -87,6 +124,8 @@ const NavBar = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         logout();
+        setData(null);
+        user=null;
         setIsLoggedIn(false);
         NavBar(); // This may not be necessary as the state change should re-render the component
       }
@@ -95,8 +134,8 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
-        <nav className="flex justify-between items-center py-6">
+      <header className="max-w-screen-2xl container mx-auto xl:px-24 px-4 ">
+        <nav className="flex justify-between items-center py-6 ">
           <div className="flex items-center justify-center">
             <Lottie
               animationData={search}
