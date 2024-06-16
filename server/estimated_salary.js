@@ -24,7 +24,7 @@ function getEstimatedSalary() {
         // Check for duplicates
         const jobSectors = job.jobSector.toLowerCase();
         const existingjobSectors = Object.keys(salary_by_job).map(title => title.toLowerCase());
-        const isDuplicate = existingjobSectors.some(title => title === jobSectors);
+        const isDuplicate = existingjobSectors.includes(jobSectors);
 
         if (!salary && isDuplicate && salary !== 0) {
             const existingSalary = salary_by_job[job.jobSector];
@@ -37,10 +37,25 @@ function getEstimatedSalary() {
         }
         //console.log(salary_by_job);
     });
+    let FinalData = [];
+    let id = 1;
+    console.log(salary_by_job);
     for (let sector in salary_by_job) {
         salary_by_job[sector] = Math.ceil(salary_by_job[sector] / 1000) * 1000;
+        FinalData.push(({
+
+            id: id++,
+            "title": sector,
+            "salary": salary_by_job[sector],
+            "currency": "NPR",
+            "skills": [],
+
+        }));
+        console.log(FinalData);
     }
-    const FinalData = JSON.stringify(salary_by_job, null, 2);
+    console.log(FinalData);
+    FinalData = JSON.stringify(FinalData, null, 2);
     fs.writeFileSync(path.join(__dirname, 'EstimatedSalary.json'), FinalData);
 }
+getEstimatedSalary()
 module.exports = getEstimatedSalary;
