@@ -96,8 +96,9 @@ const Login = () => {
         console.log("User already exists");
         navigate("/app"); // or wherever you want existing users to go
       } else {
+        console.log("User does not exist, creating new user document");
         // User doesn't exist, create new user document
-        navigate("/complete-registration"); // or wherever you want new users to go
+        navigate("/sign-up");
       }
 
     } catch (error) {

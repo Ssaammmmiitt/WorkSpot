@@ -29,20 +29,21 @@ const router = createBrowserRouter([
       { path: "salary", element: <Salary /> },
       { path: "my-jobs", element: <MyJobs /> },
       { path: "job/:id", element: <JobDetails /> },
+      { path: "profile", element: <><NavBar /><Profile /><Footer /></> }
     ]
   },
-  { path: "/login", element: <><NavBar /> <LoginPage /><Footer/></> },
-  { path: "/sign-up", element: <><NavBar /> <SignUpPage /><Footer/></> },
-  { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /><Footer/></> },
+  { path: "/login", element: <><NavBar /> <LoginPage /><Footer /></> },
+  { path: "/sign-up", element: <><NavBar /> <SignUpPage /><Footer /></> },
+  { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /><Footer /></> },
   { path: "/reset", element: <ResetForm /> },
   { path: "/reset-otp", element: <Reset_otp /> },
   { path: "/update-password", element: <UpdatePass /> },
   { path: "/*", element: <Navigate to="/login" /> },
-  { path: "/contact-us", element: <><NavBar /><ContactUsPage /> <Footer/></> },
-  { path: "/about", element: <><NavBar /><About /> <Footer/></> },
-  { path: "terms-and-conditions", element: <><NavBar /><TermsAndConditions /> <Footer/></> },
-  { path: "faq", element: <><NavBar /><FAQPage /><Footer/> </> },
-  {path:"profile",element:<><NavBar/><Profile/><Footer/></>}
+  { path: "/contact-us", element: <><NavBar /><ContactUsPage /> <Footer /></> },
+  { path: "/about", element: <><NavBar /><About /> <Footer /></> },
+  { path: "terms-and-conditions", element: <><NavBar /><TermsAndConditions /> <Footer /></> },
+  { path: "faq", element: <><NavBar /><FAQPage /><Footer /> </> },
+
 ]);
 
 export default router;

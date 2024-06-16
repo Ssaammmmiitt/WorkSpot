@@ -15,54 +15,119 @@ import { collection, getDocs } from "firebase/firestore";
 
 const NavBar = () => {
   let { user, logout } = useAuth();
-  if(user){
-  console.log(user.providerData[0].providerId);
+  if (user) {
+    console.log(user.providerData[0].providerId);
   }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
   const [isOpen, setIsOpen] = useState(false);
   const [photoUrl, setPhotoUrl] = useState("");
   const [firstName, setFirstName] = useState("");
-  const [data,setData]=useState([]);
+  const [data, setData] = useState([]);
+  const [users, setUser] = useState(null);
 
-  useEffect(() => {
-    if(user){
-    if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
-      const result = getAuth().currentUser;
-      if(result.displayName !== null && result.photoURL !== null){
-      setPhotoUrl(result.photoURL);
-      setFirstName(result.displayName.split(" ")[0]);
-    }
-    else
-    {
-      const userDoc = data;
-      setPhotoUrl(userDoc.photoURL);
-      setFirstName(userDoc.displayName.split(" ")[0]);
-    }
-  }
-  }}, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
+  //       const result = getAuth().currentUser;
+  //       if (result.displayName !== null && result.photoURL !== null) {
+  //         setPhotoUrl(result.photoURL);
+  //         setFirstName(result.displayName.split(" ")[0]);
+  //       }
+  //       else {
+  //         const userDoc = data;
+  //         setPhotoUrl(userDoc.photoURL);
+  //         setFirstName(userDoc.displayName.split(" ")[0]);
+  //       }
+  //     }
+  //   }
+  // }, [user]);
 
+  //   useEffect(() => {
+  //     const getJobs = async () => {
+  //         const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+  //             if (user) {
+  //                 console.log(db_firebase);
+  //                 const userDoc = await getDocs(collection(db_firebase, "users"));
+  //                 console.log(userDoc);
+  //                 let data = userDoc.docs.map( doc => ({ ...doc.data(), id: doc.id }));
+  //                 data=data.find((doc)=>doc.id===user.uid);
+  //                 console.log(data)
+  //                 setData(data);
+
+  //             } else {
+  //                 setData(null);
+  //             }
+  //         });
+
+  //         return unsubscribe;
+  //     };
+  //     getJobs();
+  // }, []);
+
+  // const getJobs = async () => {
+  //   const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+  //     if (user) {
+  //       console.log(db_firebase);
+  //       const userDoc = await getDocs(collection(db_firebase, "users"));
+  //       console.log(userDoc);
+  //       let data1 = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+  //       data1 = data1.find((doc) => doc.id === user.uid);
+  //       console.log(data1)
+  //       setData(data1);
+
+  //     } else {
+  //       setData(null);
+  //     }
+  //   });
+
+  //   return unsubscribe;
+  // };
+
+  // useEffect(() => {
+  //   getJobs();
+  // }, []);
   useEffect(() => {
     const getJobs = async () => {
-        const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
-            if (user) {
-                console.log(db_firebase);
-                const userDoc = await getDocs(collection(db_firebase, "users"));
-                console.log(userDoc);
-                let data = userDoc.docs.map( doc => ({ ...doc.data(), id: doc.id }));
-                data=data.find((doc)=>doc.id===user.uid);
-                console.log(data)
-                setData(data);
-                
-            } else {
-                setData(null);
-            }
-        });
+      const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
 
-        return unsubscribe;
+        if (user) {
+          if (user.providerData[0].providerId === "password") {
+            console.log(db_firebase);
+            const userDoc = await getDocs(collection(db_firebase, `users`));
+            console.log(userDoc);
+            let data = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+            data = data.filter((doc) => doc.id === user.uid);
+            data = data[0];
+            console.log(data.job_id);
+            setUser(data);
+            //setJobs(data.job_id);
+            setPhotoUrl(data.photoURL);
+            setFirstName(data.firstname);
+            console.log(data.photoURL);
+          } else {
+            if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
+              const result = getAuth().currentUser;
+              console.log(result);
+              if (result.displayName !== null && result.photoURL !== null) {
+                setPhotoUrl(result.photoURL);
+                setFirstName(result.displayName.split(" ")[0]);
+              }
+            }
+          }
+        }
+      });
+      return unsubscribe;
     };
+
+
     getJobs();
-}, []);
+  }, []);
+
+
+
+
+
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -125,7 +190,7 @@ const NavBar = () => {
       if (result.isConfirmed) {
         logout();
         setData(null);
-        user=null;
+        user = null;
         setIsLoggedIn(false);
         NavBar(); // This may not be necessary as the state change should re-render the component
       }
@@ -201,7 +266,7 @@ const NavBar = () => {
                       >
                         <li>
                           <Link
-                            to="/profile"
+                            to="/app/profile"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             onClick={closeDropdown}
                           >
@@ -268,9 +333,8 @@ const NavBar = () => {
         </nav>
 
         <div
-          className={`px-4 bg-black py-5 rounded-sm ${
-            isMenuOpen ? "" : "hidden"
-          }`}
+          className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"
+            }`}
         >
           <ul className="flex flex-col items-center space-y-4">
             {navItems.map(({ path, title }) => (
