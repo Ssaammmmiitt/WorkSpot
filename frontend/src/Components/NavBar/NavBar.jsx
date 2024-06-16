@@ -20,9 +20,11 @@ const NavBar = () => {
   useEffect(() => {
     if (user) {
       const result = getAuth().currentUser;
+      if(result.displayName !== null && result.photoURL !== null){
       setPhotoUrl(result.photoURL);
       setFirstName(result.displayName.split(" ")[0]);
     }
+  }
   }, [user]);
 
   const toggleDropdown = () => {
