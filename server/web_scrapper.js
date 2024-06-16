@@ -1,18 +1,11 @@
 const fs = require('fs');
+const path = require('path');
 
 const axios = require('axios');
 const { populate } = require('./models/userModel');
 const { get } = require('http');
 const getEstimatedSalary = require('./estimated_salary');
-async function extractTitlesFromFile() {
-    try {
-        const titles = fs.readFileSync(__dirname, 'titles.txt', 'utf-8').split('\n');
-        return titles;
-    } catch (error) {
-        console.error('Error reading titles.txt:', error);
-        return [];
-    }
-}
+
 let id = 1;
 
 
@@ -24,10 +17,9 @@ async function scraperJob() {
     let dataInternsathi = await Internsathi();
     let dataVocalPanda = await VocalPanda();
     finalData = [dataInternsathi, dataVocalPanda];
-    fs.writeFileSync('jobListings.json', JSON.stringify(finalData.flat(), null, 2), 'utf-8');
-
+    console.log(__dirname);
+    fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'jobListings.json'), JSON.stringify(finalData.flat(), null, 2), 'utf-8', { flag: 'wx' });
     getEstimatedSalary();
-
 }
 
 
@@ -67,7 +59,7 @@ async function Internsathi() {
             jobCategory: job.opportunityType || "N/A",
             jobLocation: job.jobLocation,
             jobSector: job.sectorName || "N/A",
-            Location: job.Address ? job.Address.cityName : "N/A",
+            Location: job.cityName || "N/A",
             employmentType: job.jobType,
             minPrice: job.salaryMin || "N/A",
             maxPrice: job.salaryMax || "N/A",
@@ -78,7 +70,6 @@ async function Internsathi() {
             requirements: job.requirements.replace('class', 'className') || "N/A",
             expires: job.deadline.split('T')[0] || "N/A",
             created: job.createdAt.split('T')[0] || "N/A",
-            sector: job.sectorName || "N/A",
             responsibilities: job.responsibilities.replace('class', 'className') || "N/A",
             frontendDescription: job.description.replace(/<\/?[^>]+(>|$)/g, "").replace('class', 'className').split('.').slice(0, 2).join('.') || "N/A",
             url: `https://internsathi.com/internships/${job.slug}`,
@@ -96,6 +87,23 @@ async function Internsathi() {
 }
 
 async function VocalPanda() {
+
+    const getLocation = (location) => {
+
+        // Split the address by comma
+        const parts = location.split(', ');
+
+        // If the address has both city and country
+        if (parts.length === 2) {
+            // Check if the second part is "nepal", return the first part
+            if (parts[1].toLowerCase() === 'nepal') {
+                return parts[0];
+            }
+        }
+
+        // Otherwise, return the first part of the address
+        return parts[1];
+    };
 
     let data = await fetch("https://vocalpanda-prod-gvshg-a006ddd577b0.herokuapp.com/dashboard/getCategoryListWithJobCount", {
         "headers": {
@@ -163,7 +171,7 @@ async function VocalPanda() {
                 jobCategory: job.is_remote === 0 ? "ONSITE" : "REMOTE",
                 jobLocation: job.job_location,
                 jobSector: `${getSector(job.job_category)}`,
-                Location: job.job_location.split(', ')[2],
+                Location: getLocation(job.job_location),
                 employmentType: job.job_type_name,
                 minPrice: job.salary_from,
                 maxPrice: job.salary_to,

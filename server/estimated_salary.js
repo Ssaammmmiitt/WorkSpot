@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const fileData = fs.readFileSync(path.join(__dirname, 'JobListings.json'));
+const fileData = fs.readFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'jobListings.json'));
 const jobListings = JSON.parse(fileData);
 
 function getEstimatedSalary() {
@@ -22,6 +22,7 @@ function getEstimatedSalary() {
             }
         }
         // Check for duplicates
+        console.log(job);
         const jobSectors = job.jobSector.toLowerCase();
         const existingjobSectors = Object.keys(salary_by_job).map(title => title.toLowerCase());
         const isDuplicate = existingjobSectors.includes(jobSectors);
@@ -57,5 +58,5 @@ function getEstimatedSalary() {
     FinalData = JSON.stringify(FinalData, null, 2);
     fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'salaries.json'), FinalData);
 }
-getEstimatedSalary()
+//getEstimatedSalary()
 module.exports = getEstimatedSalary;
