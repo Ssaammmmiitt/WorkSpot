@@ -96,6 +96,7 @@ const Login = () => {
         console.log("User already exists");
         navigate("/app"); // or wherever you want existing users to go
       } else {
+        console.log("User does not exist, creating new user document");
         // User doesn't exist, create new user document
         // await createNewUser(user);
         console.log("New user created successfully");

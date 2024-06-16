@@ -32,9 +32,9 @@ const router = createBrowserRouter([
       { path:"profile",element:<><Profile/></>},
     ]
   },
-  { path: "/login", element: <><NavBar /> <LoginPage /><Footer/></> },
-  { path: "/sign-up", element: <><NavBar /> <SignUpPage /><Footer/></> },
-  { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /><Footer/></> },
+  { path: "/login", element: <><NavBar /> <LoginPage /><Footer /></> },
+  { path: "/sign-up", element: <><NavBar /> <SignUpPage /><Footer /></> },
+  { path: "/complete-registration", element: <><NavBar /> <CompleteRegistraion /><Footer /></> },
   { path: "/reset", element: <ResetForm /> },
   { path: "/reset-otp", element: <Reset_otp /> },
   { path: "/update-password", element: <UpdatePass /> },

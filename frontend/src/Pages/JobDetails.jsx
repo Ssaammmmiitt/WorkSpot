@@ -237,8 +237,9 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
 import 'animate.css';
 import db_firebase from '../firebase/firebase.config';
-import { collection, doc, writeBatch } from "firebase/firestore";
+import { collection, doc, updateDoc } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
+import { arrayUnion } from 'firebase/firestore';
 
 
 
@@ -251,8 +252,8 @@ const JobDetails = () => {
     console.log(found);
     const { companyName, jobTitle, jobCategory, availablePositions, requirements, sector, image, expires, minPrice, url, maxPrice, salaryType, jobLocation, responsibilities, created, employmentType, description, experienceLevel } = found;
 
-    const redirect = (url) => {
-        Swal.fire({
+    const redirect = async (url) => {
+        const result = await Swal.fire({
             title: 'Do you want to apply to the job',
             text: "You will be redirected to the application page.",
             icon: 'info',
@@ -260,26 +261,28 @@ const JobDetails = () => {
             confirmButtonColor: '#008a8a',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, apply now!'
-        }).then(async (result) => {
-            console.log(auth.currentUser.uid);
-            await handleJobsAdd();
-            if (result.isConfirmed) {
-                window.location.assign(url);
-            }
         });
+        console.log(auth.currentUser.uid);
+        if (result.isConfirmed) {
+            await handleJobsAdd();
+            //window.location.assign(url);
+        }
+
     }
 
     const handleJobsAdd = async () => {
         try {
-            const batch = writeBatch(db_firebase);
-            const docRef = doc(db_firebase, `users/${auth.currentUser.uid}`);
-            batch.set(docRef, { job_id: id }, { merge: true });
-            await batch.commit();
-            alert("Document written with ID: ", docRef.id);
+            const userUID = auth.currentUser.uid;
+            const querySnapshot = doc(collection(db_firebase.db_firebase, "users"), userUID);
+            await updateDoc(querySnapshot, {
+                job_id: arrayUnion(id)
+            }); // Reference to the user's document
+            alert("Document written successfully");
         } catch (e) {
-            alert("Error adding document: ", e);
+            alert("Error adding document: " + e);
+            console.error("Error adding document: ", e);
         }
-    }
+    };
 
 
     return (
@@ -340,7 +343,7 @@ const JobDetails = () => {
                         Apply Now
                     </button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

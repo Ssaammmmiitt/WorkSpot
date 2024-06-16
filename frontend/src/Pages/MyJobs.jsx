@@ -151,14 +151,18 @@ import React, { useState } from 'react';
 import jobsdata from '../../Public/jobListings.json';
 import { Link } from 'react-router-dom';
 import db_firebase from '../firebase/firebase.config';
-import { collection, doc, getDocs, writeBatch } from "firebase/firestore";
+import { FieldValue, collection, doc, getDocs, arrayRemove } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
+import { Firestore } from 'firebase/firestore';
+import { updateDoc } from 'firebase/firestore';
 
 const MyJobs = () => {
     const [user, setUser] = useState(getAuth().currentUser);
-    const [jobs, setJobs] = useState([]);
+    const auth = getAuth();
+    const [userJobs, setUserJobs] = useState([]);
+    const [jobs, setJobs] = useState(jobsdata);
     const [searchText, setSearchText] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [fetchError, setFetchError] = useState(null);
@@ -168,7 +172,7 @@ const MyJobs = () => {
     //     setIsLoading(true);
     //     fetch()
     // },[])
-
+    console.log(jobs);
 
     useEffect(() => {
         const getJobs = async () => {
@@ -180,16 +184,13 @@ const MyJobs = () => {
                     let data = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
                     data = data.filter((doc) => doc.id === user.uid);
                     data = data[0];
-                    console.log(data.job_id);
-                    setUser(data);
+                    setUserJobs(data);
                     setJobs(data.job_id);
+                    console.log(data.photoURL);
                 } else {
                     setUser(null);
                 }
             });
-
-
-
             return unsubscribe;
         };
         getJobs();
@@ -231,15 +232,16 @@ const MyJobs = () => {
     // Reset search to show all jobs
     const resetSearch = () => {
         setSearchText("");
-        setJobs(jobsdata);
+        setJobs();
     };
 
     // Handle job deletion
     const handleDelete = async (id) => {
-        const batch = writeBatch(db_firebase);
-        const jobRef = doc(collection(db_firebase, `user`), id);
-        batch.delete(jobRef);
-        await batch.commit();
+        const userUID = auth.currentUser.uid;
+        const querySnapshot = doc(collection(db_firebase.db_firebase, "users"), userUID);
+        await updateDoc(querySnapshot, {
+            job_id: arrayRemove()
+        }); // Reference to the user's document
         setJobs(jobs.filter(job => job.id !== id));
     };
     return (
