@@ -10,7 +10,7 @@ const EmploymentType = ({handleChange}) => {
     <div>
       <label className="sidebar-label-container">
       <input type="radio" name="test" id="all3" value="" onChange={handleChange} />
-        <span className="checkmark"></span>Any Experience
+        <span className="checkmark"></span>Any Type
       </label>
 
       <InputField
