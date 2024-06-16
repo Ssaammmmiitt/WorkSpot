@@ -375,23 +375,26 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="text-white">
-                <Link
-                  to="/app/my-jobs"
-                  className="text-white block text-center md:text-left"
-                >
-                  My Jobs
-                </Link>
-              </li>
-              <li className="text-white">
-                <Link
-                  onClick={(e) => onSignOut(e)}
-                  to="/login"
-                  className="text-white block text-center md:text-left"
-                >
-                  SignOut
-                </Link>
-              </li>
-            </> : <>
+              <Link
+                to="/app/my-jobs"
+                className="text-white block text-center md:text-left"
+              >
+                My Jobs
+              </Link>
+            </li>
+            <li className="text-white">
+              <Link
+                onClick={(e) => onSignOut(e)}
+                to="/login"
+                className="text-white block text-center md:text-left"
+              >
+                 <div className="flex items-center">
+                              <span className="mr-2">Sign Out</span>
+                              <BiLogOut className="" />
+                            </div>
+              </Link>
+            </li>
+            </>:<>
 
               <li className="text-white">
                 <Link

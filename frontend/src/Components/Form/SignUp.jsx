@@ -1,14 +1,3 @@
-// import React from 'react';
-// import { Link,useNavigate } from 'react-router-dom';
-// import { FaFacebookSquare } from 'react-icons/fa';
-// import { ImGithub,ImGoogle } from "react-icons/im";
-// import { FaEye , FaEyeSlash } from "react-icons/fa";
-// import { useState } from 'react';
-
-// const SignUp=()=>{
-//   const [showPassword,setShowPassword]=useState(false);
-//   const [showConfirmPassword,setShowConfirmPassword]=useState(false);
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -141,15 +130,6 @@ const SignUp = () => {
             <span className="invisible relative">Button</span>
           </button>
 
-          {/* <button id="Google" onClick={() => handleSocialSignUp("Facebook")} className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl border-2 border-Primary p-4 w-full font-medium text-[#C4DFE6] shadow-md transition duration-300 ease-out">
-            <span className="absolute inset-0 flex h-full w-full -translate-y-full items-center justify-center bg-[#A47786] text-white duration-300 group-hover:translate-y-0">
-              <FaFacebookSquare size={30} />
-            </span>
-            <span className="absolute flex h-full w-full transform items-center justify-center text-Text transition-all duration-300 group-hover:translate-y-full">
-              <FaFacebookSquare size={20} /> <p className="flex items-center justify-center">Sign Up With Facebook</p>
-            </span>
-            <span className="invisible relative">Button</span>
-          </button> */}
 
           <div className="py-3 flex items-center text-xs text-Text font-semibold uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">OR</div>
 
