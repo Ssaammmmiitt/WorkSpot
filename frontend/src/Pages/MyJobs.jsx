@@ -185,7 +185,7 @@ const MyJobs = () => {
                     data = data.filter((doc) => doc.id === user.uid);
                     data = data[0];
                     setUserJobs(data);
-                    setJobs(data.job_id);
+                    setJobs(data);
                     console.log(data.photoURL);
                 } else {
                     setUser(null);
@@ -240,7 +240,7 @@ const MyJobs = () => {
         const userUID = auth.currentUser.uid;
         const querySnapshot = doc(collection(db_firebase.db_firebase, "users"), userUID);
         await updateDoc(querySnapshot, {
-            job_id: arrayRemove()
+            job_id: arrayRemove(`${id}`)
         }); // Reference to the user's document
         setJobs(jobs.filter(job => job.id !== id));
     };
@@ -310,6 +310,7 @@ const MyJobs = () => {
 
                                     <tbody>
                                         {
+                                            [console.log(jobs),
                                             jobs.map((job, index) => (
                                                 <tr key={job.id}>
                                                     <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{index + 1}</th>
@@ -321,7 +322,7 @@ const MyJobs = () => {
                                                         <button onClick={() => handleDelete(job.id)} className="bg-red-500 text-white active:bg-red-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Delete</button>
                                                     </td>
                                                 </tr>
-                                            ))
+                                            ))]
                                         }
                                     </tbody>
                                 </table>
