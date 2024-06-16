@@ -16,7 +16,7 @@ import { collection, getDocs } from "firebase/firestore";
 const NavBar = () => {
   let { user, logout } = useAuth();
   if (user) {
-    console.log(user.providerData[0].providerId);
+    console.log(user);
   }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
@@ -25,6 +25,16 @@ const NavBar = () => {
   const [firstName, setFirstName] = useState("");
   const [data, setData] = useState([]);
   const [users, setUser] = useState(null);
+  //session check
+  useEffect(() => {
+    const idToken = localStorage.getItem('idToken');
+    const tokenExpiration = localStorage.getItem('tokenExpiration');
+    const now = new Date().getTime();
+
+    if (idToken === user && tokenExpiration > now) {
+      setIsLoggedIn(!isLoggedIn);
+    }
+  }, []);
 
   // useEffect(() => {
   //   if (user) {
@@ -192,7 +202,10 @@ const NavBar = () => {
         setData(null);
         user = null;
         setIsLoggedIn(false);
-        NavBar(); // This may not be necessary as the state change should re-render the component
+        localStorage.removeItem('idToken');
+        localStorage.removeItem('tokenExpiration');
+        getAuth().signOut();
+        NavBar();
       }
     });
   };
@@ -351,51 +364,51 @@ const NavBar = () => {
                   <Link to={path}>{title}</Link>
                 )}
               </li>
-            ))} 
-            {isLoggedIn?<>
+            ))}
+            {isLoggedIn ? <>
               <li className="text-white">
-              <Link
-                to="/app/profile"
-                className="text-white block text-center md:text-left"
-              >
-                My Profile
-              </Link>
-            </li>
+                <Link
+                  to="/app/profile"
+                  className="text-white block text-center md:text-left"
+                >
+                  My Profile
+                </Link>
+              </li>
               <li className="text-white">
-              <Link
-                to="/app/my-jobs"
-                className="text-white block text-center md:text-left"
-              >
-                My Jobs
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link
-                onClick={(e) => onSignOut(e)}
-                to="/login"
-                className="text-white block text-center md:text-left"
-              >
-                SignOut
-              </Link>
-            </li>
-            </>:<>
+                <Link
+                  to="/app/my-jobs"
+                  className="text-white block text-center md:text-left"
+                >
+                  My Jobs
+                </Link>
+              </li>
+              <li className="text-white">
+                <Link
+                  onClick={(e) => onSignOut(e)}
+                  to="/login"
+                  className="text-white block text-center md:text-left"
+                >
+                  SignOut
+                </Link>
+              </li>
+            </> : <>
 
-            <li className="text-white">
-              <Link
-                to="/login"
-                className="text-white block text-center md:text-left"
-              >
-                Login
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link
-                to="/sign-up"
-                className="text-white block text-center md:text-left"
-              >
-                Sign Up
-              </Link>
-            </li>
+              <li className="text-white">
+                <Link
+                  to="/login"
+                  className="text-white block text-center md:text-left"
+                >
+                  Login
+                </Link>
+              </li>
+              <li className="text-white">
+                <Link
+                  to="/sign-up"
+                  className="text-white block text-center md:text-left"
+                >
+                  Sign Up
+                </Link>
+              </li>
             </>}
           </ul>
         </div>

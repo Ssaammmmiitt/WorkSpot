@@ -19,8 +19,15 @@ import { useAuth } from "./AuthProvider";
 
 
 export const ProtectedRoute = ({ children }) => {
-    const { user, loading } = useAuth();
-
+    let { user, loading } = useAuth();
+    //session check
+    const idToken = localStorage.getItem('idToken');
+    const tokenExpiration = localStorage.getItem('tokenExpiration');
+    console.log("Protected.jsx", idToken, tokenExpiration);
+    const now = new Date().getTime();
+    if (user && idToken === user.accessToken && tokenExpiration > now) {
+        user = true;
+    }
     if (!user) {
         return <Navigate to="/login" />;
     }

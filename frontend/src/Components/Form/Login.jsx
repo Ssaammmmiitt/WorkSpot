@@ -94,6 +94,13 @@ const Login = () => {
 
       if (userDoc.exists()) {
         console.log("User already exists");
+        //adding session token to local storage
+        const idToken = result.user.accessToken;
+        console.log(result.user.accessToken);
+        console.log("idToken:", idToken);
+        const expirationTime = new Date().getTime() + 5 * 60 * 1000;
+        localStorage.setItem('idToken', idToken);
+        localStorage.setItem('tokenExpiration', expirationTime);
         navigate("/app"); // or wherever you want existing users to go
       } else {
         console.log("User does not exist, creating new user document");
@@ -106,10 +113,11 @@ const Login = () => {
           text: "You need to complete your registration first",
           confirmButtonText: "OK",
         }).then((result) => {
-          if(result.isConfirmed){
-        navigate("/sign-up");
-           } // or wherever you want new users to go
-      })}
+          if (result.isConfirmed) {
+            navigate("/sign-up");
+          } // or wherever you want new users to go
+        })
+      }
 
     } catch (error) {
       console.error("Error in social login:", error);
