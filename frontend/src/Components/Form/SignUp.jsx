@@ -16,6 +16,7 @@ import { ImGithub, ImGoogle } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import Swal from 'sweetalert2';
+import { set } from 'react-hook-form';
 
 
 const SignUp = () => {
@@ -28,23 +29,19 @@ const SignUp = () => {
   const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
-  const facebookProvider = new FacebookAuthProvider();
   const auth = getAuth();
 
   const handleSocialSignUp = async (provider) => {
+    let user = {};
     if (provider === "Google") {
-      await signInWithPopup(auth, googleProvider).then((userCredential) => {
-        localStorage.setItem("user", JSON.stringify({
-          userCredential
-        }));
-      }
-      );
+      user = await signInWithPopup(auth, googleProvider);
     } else if (provider === "Github") {
-      await signInWithPopup(auth, githubProvider).then((userCredential) => {
-        localStorage.setItem("user", JSON.stringify(userCredential));
-      }
-      );
+      user = await signInWithPopup(auth, githubProvider);
     }
+    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("email", JSON.parse(localStorage.getItem("user")).user.email);
+    localStorage.setItem("uid", JSON.parse(localStorage.getItem("user")).user.uid);
+    alert(localStorage.getItem("uid"), localStorage.getItem("email"));
     navigate("/complete-registration");
   };
 
@@ -84,7 +81,7 @@ const SignUp = () => {
       return;
     }
     let returnValue = false;
-    await createUserWithEmailAndPassword(auth, value.email, value.password)
+    let result = await createUserWithEmailAndPassword(auth, value.email, value.password)
       .then((userCredential) => {
         localStorage.setItem("user", JSON.stringify(userCredential));
         returnValue = false;
@@ -100,12 +97,13 @@ const SignUp = () => {
         returnValue = true;
 
       });
+    console.log(result);
     if (returnValue) {
       return;
     }
-    console.log(localStorage.getItem("user"));
     localStorage.setItem("email", value.email);
     localStorage.setItem("uid", JSON.parse(localStorage.getItem("user")).user.uid);
+    alert(localStorage.getItem("uid"), localStorage.getItem("email"));
     navigate("/complete-registration");
   };
   return (
