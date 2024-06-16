@@ -61,6 +61,7 @@ const SignUp1 = () => {
         lastname: data.lastname || "",
         email: data.email || email,
         phone: data.phone || 9999999999,
+        photoURL: data.photoURL || "https://p7.hiclipart.com/preview/722/101/213/computer-icons-user-profile-circle-abstract.jpg",
         currentCompany: data.currentCompany || "None",
         bio: data.bio || "None",
         jobTitle: data.jobTitle || "None",

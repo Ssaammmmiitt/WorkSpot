@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PageHeader from '../Components/Header/PageHeader'
 import salaries from '../../Public/salaries.json'
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 const Salary = () => {
     const [searchText,setSearchText]=useState("");
@@ -39,7 +40,7 @@ const Salary = () => {
                         <h4 className='font-semibold text-xl'>{data.title}</h4>
                         <p className='my-2 font-medium text-[#00006f] text-lg'>{data.salary}</p>
                         <div className='flex flex-wrap hap-4'> 
-                        <a href='/' className='underline'>{data.status}</a> 
+                        <Link to="/app"  className='underline'>{data.status}</Link> 
                         </div>
                     </div>):null
                 ))

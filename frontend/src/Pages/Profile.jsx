@@ -8,7 +8,8 @@ import { IoLocationSharp } from "react-icons/io5";
 import { PiHandbagSimpleFill } from "react-icons/pi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { getAuth } from 'firebase/auth';
-
+import { db_firebase } from '../firebase/firebase.config';
+import { collection, getDocs } from 'firebase/firestore';
 
 const Profile = () => {
     const[result,setResult]=useState({});
@@ -18,7 +19,20 @@ const Profile = () => {
         setResult(user);
     }
     ,[]);
+
     console.log(result);
+    const [data,setData]=useState([]);
+    const [loading,setLoading]=useState(true);
+    useEffect(() => {
+        const fetchData = async () => {
+          const querySnapshot = await getDocs(collection(db_firebase, 'users'));
+          const dataList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+          setData(dataList);
+          setLoading(false);
+        };
+        fetchData();
+        console.log(data);
+    }, []);
 
 
   return (
