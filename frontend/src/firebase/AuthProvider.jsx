@@ -40,13 +40,13 @@ export const AuthProvider = ({ children }) => {
     // create user with google
     const signUpWithGoogle = () => {
         setLoading(true);
-        return signInWithPopup(auth, googleProvider);//signInWithRedirect(auth, googleProvider);
+        return signInWithPopup(auth, googleProvider);
     }
 
     // create user with github
     const signUpWithGithub = () => {
         setLoading(true);
-        return signInWithPopup(auth, githubProvider);//signInWithRedirect(auth, githubProvider);
+        return signInWithPopup(auth, githubProvider);
     }
 
     // login

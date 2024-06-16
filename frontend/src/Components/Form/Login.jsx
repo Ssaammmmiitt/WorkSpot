@@ -14,6 +14,7 @@ import { useAuth } from "../../firebase/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { getAuth } from "firebase/auth";
+import { fetchSignInMethodsForEmail, linkWithCredential, EmailAuthProvider } from "firebase/auth";
 
 const functions = getFunctions();
 
@@ -84,7 +85,7 @@ const Login = () => {
       } else {
         throw new Error("Unsupported provider");
       }
-
+      console.log("Result:", result);
       const user = result.user;
 
       // Check if the user document already exists
@@ -103,24 +104,16 @@ const Login = () => {
 
     } catch (error) {
       console.error("Error in social login:", error);
-      console.error("Error code:", error.code);
-      console.error("Error message:", error.message);
-
-      let errorMessage = "An unexpected error occurred. Please try again.";
-
-      if (error.code === 'auth/popup-closed-by-user') {
-        errorMessage = "The sign-in popup was closed before completing the process.";
-      } else if (error.code === 'auth/cancelled-popup-request') {
-        errorMessage = "The sign-in process was cancelled.";
-      } else if (error.code === 'auth/popup-blocked') {
-        errorMessage = "The sign-in popup was blocked. Please allow popups for this site.";
+      const auth = getAuth();
+      if (error.code === 'auth/account-exists-with-different-credential') {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "An account already exists with the same email address but different sign-in credentials. Try signing in.",
+        });
+        const email = error.email;
+        return;
       }
-
-      Swal.fire({
-        icon: "error",
-        title: "Sign-In Error",
-        text: errorMessage,
-      });
     }
   };
 
