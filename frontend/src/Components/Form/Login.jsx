@@ -97,10 +97,18 @@ const Login = () => {
         navigate("/app"); // or wherever you want existing users to go
       } else {
         // User doesn't exist, create new user document
-        await createNewUser(user);
+        // await createNewUser(user);
         console.log("New user created successfully");
-        navigate("/sign-up"); // or wherever you want new users to go
-      }
+        Swal.fire({
+          icon: "warning",
+          title: "SignUp First",
+          text: "You need to complete your registration first",
+          confirmButtonText: "OK",
+        }).then((result) => {
+          if(result.isConfirmed){
+        navigate("/sign-up");
+           } // or wherever you want new users to go
+      })}
 
     } catch (error) {
       console.error("Error in social login:", error);

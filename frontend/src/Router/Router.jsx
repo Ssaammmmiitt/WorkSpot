@@ -29,6 +29,7 @@ const router = createBrowserRouter([
       { path: "salary", element: <Salary /> },
       { path: "my-jobs", element: <MyJobs /> },
       { path: "job/:id", element: <JobDetails /> },
+      { path:"profile",element:<><Profile/><Footer/></>},
     ]
   },
   { path: "/login", element: <><NavBar /> <LoginPage /><Footer/></> },
@@ -42,7 +43,6 @@ const router = createBrowserRouter([
   { path: "/about", element: <><NavBar /><About /> <Footer/></> },
   { path: "terms-and-conditions", element: <><NavBar /><TermsAndConditions /> <Footer/></> },
   { path: "faq", element: <><NavBar /><FAQPage /><Footer/> </> },
-  {path:"profile",element:<><NavBar/><Profile/><Footer/></>}
 ]);
 
 export default router;
