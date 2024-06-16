@@ -95,7 +95,7 @@ const SignUp1 = () => {
       console.log("User data saved successfully");
       navigate("/login");
     } catch (error) {
-      console.error("Error saving user data:", error);
+      alert("Error saving user data:", error.message);
       // Handle the error (e.g., show an error message to the user)
       navigate("/sign-up");
     }

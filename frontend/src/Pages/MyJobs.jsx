@@ -186,7 +186,6 @@ const MyJobs = () => {
                     data = data[0];
                     setUserJobs(data);
                     setJobs(data);
-                    console.log(data.photoURL);
                 } else {
                     setUser(null);
                 }
