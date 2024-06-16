@@ -104,6 +104,8 @@ const SignUp = () => {
       return;
     }
     console.log(localStorage.getItem("user"));
+    localStorage.setItem("email", value.email);
+    localStorage.setItem("uid", JSON.parse(localStorage.getItem("user")).user.uid);
     navigate("/complete-registration");
   };
   return (
