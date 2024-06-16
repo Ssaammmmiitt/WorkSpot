@@ -7,8 +7,11 @@ import {
     getAuth,
     onAuthStateChanged,
     signInWithEmailAndPassword,
+    signInWithRedirect,
     signInWithPopup,
-    signOut
+    getRedirectResult,
+    signOut,
+    sendPasswordResetEmail,
 } from "firebase/auth";
 
 import { useState, useEffect, useContext } from "react";
@@ -28,16 +31,22 @@ export const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    // reset password
+    const resetPassword = (email) => {
+        setLoading(true);
+        return sendPasswordResetEmail(auth, email);
+    }
+
     // create user with google
     const signUpWithGoogle = () => {
         setLoading(true);
-        return signInWithPopup(auth, googleProvider);
+        return signInWithPopup(auth, googleProvider);//signInWithRedirect(auth, googleProvider);
     }
 
     // create user with github
     const signUpWithGithub = () => {
         setLoading(true);
-        return signInWithPopup(auth, githubProvider);
+        return signInWithPopup(auth, githubProvider);//signInWithRedirect(auth, githubProvider);
     }
 
     // login
@@ -50,6 +59,15 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         setLoading(true);
         return signOut(auth);
+    }
+
+    // creating session
+    const createSession = async () => {
+        const result = get
+        if (result.user) {
+            setUser(result.user);
+            setLoading(false);
+        }
     }
 
     useEffect(() => {
@@ -68,7 +86,8 @@ export const AuthProvider = ({ children }) => {
         signUpWithGoogle,
         signUpWithGithub,
         logout,
-        login
+        login,
+        resetPassword,
     };
 
     return (

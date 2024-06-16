@@ -237,8 +237,8 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import Swal from 'sweetalert2'
 import 'animate.css';
 import db_firebase from '../firebase/firebase.config';
-import axios from 'axios';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, doc, writeBatch } from "firebase/firestore";
+import { getAuth } from 'firebase/auth';
 
 
 
@@ -246,11 +246,12 @@ import { collection, addDoc } from "firebase/firestore";
 
 const JobDetails = () => {
     const { id } = useParams();
+    const auth = getAuth();
     const found = jobs.find(job => job.id === parseInt(id));
     console.log(found);
     const { companyName, jobTitle, jobCategory, availablePositions, requirements, sector, image, expires, minPrice, url, maxPrice, salaryType, jobLocation, responsibilities, created, employmentType, description, experienceLevel } = found;
 
-    const redirect = async (url) => {
+    const redirect = (url) => {
         Swal.fire({
             title: 'Do you want to apply to the job',
             text: "You will be redirected to the application page.",
@@ -260,7 +261,7 @@ const JobDetails = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, apply now!'
         }).then(async (result) => {
-            console.log(localStorage.getItem('email'));
+            console.log(auth.currentUser.uid);
             await handleJobsAdd();
             if (result.isConfirmed) {
                 window.location.assign(url);
@@ -270,13 +271,13 @@ const JobDetails = () => {
 
     const handleJobsAdd = async () => {
         try {
-            const docRef = await addDoc(collection(db_firebase, "users"), {
-                email: localStorage.getItem('email'),
-                jobsApplied: id
-            });
-            console.log("Document written with ID: ", docRef.id);
+            const batch = writeBatch(db_firebase);
+            const docRef = doc(db_firebase, `users/${auth.currentUser.uid}`);
+            batch.set(docRef, { job_id: id }, { merge: true });
+            await batch.commit();
+            alert("Document written with ID: ", docRef.id);
         } catch (e) {
-            console.error("Error adding document: ", e);
+            alert("Error adding document: ", e);
         }
     }
 

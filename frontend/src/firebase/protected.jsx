@@ -16,18 +16,12 @@ import { useAuth } from "./AuthProvider";
 // };
 
 
-const isSessionValid = () => {
-    const idToken = localStorage.getItem('idToken');
-    const tokenExpiration = localStorage.getItem('tokenExpiration');
-    const now = new Date().getTime();
 
-    return tokenExpiration && now < tokenExpiration && idToken;
-};
 
 export const ProtectedRoute = ({ children }) => {
     const { user, loading } = useAuth();
 
-    if (!isSessionValid() || !user) {
+    if (!user) {
         return <Navigate to="/login" />;
     }
 

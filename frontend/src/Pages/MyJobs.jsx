@@ -102,7 +102,7 @@
 //         <tbody>
 //             {
 //                 jobs.map((job,index)=>(<tr>
-                    
+
 //                     <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
 //                       {index +1}
 //                     </th>
@@ -127,7 +127,7 @@
 //                 ))
 
 //         }
-          
+
 //         </tbody>
 
 //       </table>
@@ -150,11 +150,14 @@
 import React, { useState } from 'react';
 import jobsdata from '../../Public/jobListings.json';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import db_firebase from '../firebase/firebase.config';
+import { collection, doc, getDocs, writeBatch } from "firebase/firestore";
+import { getAuth } from 'firebase/auth';
+import { useEffect } from 'react';
 
 const MyJobs = () => {
     const email = "abcd@gmail.com";
-    const [jobs, setJobs] = useState(jobsdata);
+    const [jobs, setJobs] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [fetchError, setFetchError] = useState(null);
@@ -164,6 +167,31 @@ const MyJobs = () => {
     //     setIsLoading(true);
     //     fetch()
     // },[])
+
+
+
+    const getJobs = () => {
+        const [jobs, setJobs] = useState([]);
+
+        useEffect(() => {
+            const fetchJobs = async () => {
+                await getJobs();
+            };
+
+            fetchJobs();
+        }, []);
+
+        return (
+            <div>
+                <h1>Jobs</h1>
+                <ul>
+                    {jobs.map((job, index) => (
+                        <li key={index}>{job.name}</li> // Adjust according to your job object structure
+                    ))}
+                </ul>
+            </div>
+        );
+    };
 
 
     const handleFileChange = (event) => {
@@ -194,7 +222,7 @@ const MyJobs = () => {
 
     // Filtering jobs based on search text
     const handleSearch = () => {
-        setJobs(jobsdata.filter((job) => 
+        setJobs(jobsdata.filter((job) =>
             job.jobTitle.toLowerCase().includes(searchText.toLowerCase())
         ));
     };
@@ -206,11 +234,14 @@ const MyJobs = () => {
     };
 
     // Handle job deletion
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
+        const batch = writeBatch(db_firebase);
+        const jobRef = doc(collection(db_firebase, `user`), id);
+        batch.delete(jobRef);
+        await batch.commit();
         setJobs(jobs.filter(job => job.id !== id));
-        
     };
-
+    getJobs();
     return (
         <div>
             <div className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
@@ -218,22 +249,22 @@ const MyJobs = () => {
                 <div className='my-jobs-container'>
                     <h1 className='text-center p-4'>All My Jobs</h1>
                     <div className='search-box p-2 text-center mb-2'>
-                        <input 
-                            type='text' 
-                            name='search' 
-                            id='search' 
-                            className='py-2 pl-3 border focus:outline-none lg:w-6/12 mb-4 w-full' 
-                            onChange={(e) => setSearchText(e.target.value)} 
+                        <input
+                            type='text'
+                            name='search'
+                            id='search'
+                            className='py-2 pl-3 border focus:outline-none lg:w-6/12 mb-4 w-full'
+                            onChange={(e) => setSearchText(e.target.value)}
                             value={searchText}
                         />
-                        <button 
-                            className='bg-Primary text-white font-semibold px-8 py-2 rounded-sm mb-4' 
+                        <button
+                            className='bg-Primary text-white font-semibold px-8 py-2 rounded-sm mb-4'
                             onClick={handleSearch}
                         >
                             Search
                         </button>
-                        <button 
-                            className='bg-gray-500 text-white font-semibold px-8 py-2 rounded-sm mb-4' 
+                        <button
+                            className='bg-gray-500 text-white font-semibold px-8 py-2 rounded-sm mb-4'
                             onClick={resetSearch}
                         >
                             Reset
