@@ -351,7 +351,35 @@ const NavBar = () => {
                   <Link to={path}>{title}</Link>
                 )}
               </li>
-            ))}
+            ))} 
+            {isLoggedIn?<>
+              <li className="text-white">
+              <Link
+                to="/app/profile"
+                className="text-white block text-center md:text-left"
+              >
+                My Profile
+              </Link>
+            </li>
+              <li className="text-white">
+              <Link
+                to="/app/my-jobs"
+                className="text-white block text-center md:text-left"
+              >
+                My Jobs
+              </Link>
+            </li>
+            <li className="text-white">
+              <Link
+                onClick={(e) => onSignOut(e)}
+                to="/login"
+                className="text-white block text-center md:text-left"
+              >
+                SignOut
+              </Link>
+            </li>
+            </>:<>
+
             <li className="text-white">
               <Link
                 to="/login"
@@ -368,6 +396,7 @@ const NavBar = () => {
                 Sign Up
               </Link>
             </li>
+            </>}
           </ul>
         </div>
       </header>
