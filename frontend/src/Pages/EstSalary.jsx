@@ -49,6 +49,7 @@ const Salary = () => {
                         name='search' 
                         id='search' 
                         value={searchText}
+                        placeholder='Search for job title...'
                         className='py-2 pl-3 border focus:outline-none lg:w-6/12 mb-4 w-full' 
                         onChange={(e) => setSearchText(e.target.value)} 
                     />
