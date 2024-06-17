@@ -26,15 +26,16 @@ const NavBar = () => {
   const [data, setData] = useState([]);
   const [users, setUser] = useState(null);
   //session check
-  useEffect(() => {
-    const idToken = localStorage.getItem('idToken');
-    const tokenExpiration = localStorage.getItem('tokenExpiration');
-    const now = new Date().getTime();
+  // useEffect(() => {
+  //   const idToken = localStorage.getItem('idToken');
+  //   const tokenExpiration = localStorage.getItem('tokenExpiration');
+  //   const now = new Date().getTime();
 
-    if (idToken === user && tokenExpiration > now) {
-      setIsLoggedIn(!isLoggedIn);
-    }
-  }, []);
+  //   if (idToken === user && tokenExpiration > now) {
+  //     setIsLoggedIn(!isLoggedIn);
+  //   }
+
+  // }, []);
 
   // useEffect(() => {
   //   if (user) {
@@ -375,26 +376,26 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="text-white">
-              <Link
-                to="/app/my-jobs"
-                className="text-white block text-center md:text-left"
-              >
-                My Jobs
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link
-                onClick={(e) => onSignOut(e)}
-                to="/login"
-                className="text-white block text-center md:text-left"
-              >
-                 <div className="flex items-center">
-                              <span className="mr-2">Sign Out</span>
-                              <BiLogOut className="" />
-                            </div>
-              </Link>
-            </li>
-            </>:<>
+                <Link
+                  to="/app/my-jobs"
+                  className="text-white block text-center md:text-left"
+                >
+                  My Jobs
+                </Link>
+              </li>
+              <li className="text-white">
+                <Link
+                  onClick={(e) => onSignOut(e)}
+                  to="/login"
+                  className="text-white block text-center md:text-left"
+                >
+                  <div className="flex items-center">
+                    <span className="mr-2">Sign Out</span>
+                    <BiLogOut className="" />
+                  </div>
+                </Link>
+              </li>
+            </> : <>
 
               <li className="text-white">
                 <Link

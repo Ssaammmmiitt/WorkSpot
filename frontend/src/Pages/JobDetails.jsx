@@ -39,7 +39,7 @@ const JobDetails = () => {
         console.log(auth.currentUser.uid);
         if (result.isConfirmed) {
             await handleJobsAdd();
-            //window.location.assign(url);
+            window.location.assign(url);
         }
 
     }
@@ -51,7 +51,7 @@ const JobDetails = () => {
             await updateDoc(querySnapshot, {
                 job_id: arrayUnion(id)
             }); // Reference to the user's document
-            alert("Document written successfully");
+            //alert("Document written successfully");
         } catch (e) {
             alert("Error adding document: " + e);
             console.error("Error adding document: ", e);

@@ -32,33 +32,32 @@ const MyJobs = () => {
     //     setIsLoading(true);
     //     fetch()
     // },[])
-
+    const getJobs = async () => {
+        const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+            if (user) {
+                console.log(db_firebase);
+                const userDoc = await getDocs(
+                    collection(db_firebase.db_firebase, `users`)
+                );
+                let data = userDoc.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+                data = data.filter((doc) => doc.id === user.uid);
+                data = data[0];
+                setData(data);
+                console.log(data.job_id);
+                const userjobIds = data.job_id.map((id) => parseInt(id, 10));
+                console.log(userjobIds);
+                const jobDetails = jobsdata.filter((job) =>
+                    userjobIds.includes(job.id)
+                );
+                console.log(jobDetails);
+                setUserJobs(jobDetails);
+            } else {
+                setUser(null);
+            }
+        });
+        return unsubscribe;
+    };
     useEffect(() => {
-        const getJobs = async () => {
-            const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
-                if (user) {
-                    console.log(db_firebase);
-                    const userDoc = await getDocs(
-                        collection(db_firebase.db_firebase, `users`)
-                    );
-                    let data = userDoc.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-                    data = data.filter((doc) => doc.id === user.uid);
-                    data = data[0];
-                    setData(data);
-                    console.log(data.job_id);
-                    const userjobIds = data.job_id.map((id) => parseInt(id, 10));
-                    console.log(userjobIds);
-                    const jobDetails = jobsdata.filter((job) =>
-                        userjobIds.includes(job.id)
-                    );
-                    console.log(jobDetails);
-                    setUserJobs(jobDetails);
-                } else {
-                    setUser(null);
-                }
-            });
-            return unsubscribe;
-        };
         getJobs();
     }, []);
 
@@ -118,12 +117,7 @@ const MyJobs = () => {
         await updateDoc(querySnapshot, {
             job_id: arrayRemove(`${id}`),
         }); // Reference to the user's document
-        const userjobIds = data.job_id.map((id) => parseInt(id, 10));
-        console.log(userjobIds);
-        const jobDetails = jobsdata.filter((job) =>
-            userjobIds.includes(job.id)
-        );
-        setUserJobs(jobDetails);
+        getJobs();
         // setJobs(jobs.filter((job) => job.id !== id));
     };
     return (
