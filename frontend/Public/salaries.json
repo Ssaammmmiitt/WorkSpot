@@ -212,7 +212,7 @@
   {
     "id": 31,
     "title": "Accounting/Finance",
-    "salary": 31000,
+    "salary": 38000,
     "currency": "NPR",
     "skills": []
   },
@@ -233,14 +233,14 @@
   {
     "id": 34,
     "title": "Sales and Marketing",
-    "salary": 13000,
+    "salary": 28000,
     "currency": "NPR",
     "skills": []
   },
   {
     "id": 35,
     "title": "Administrative/Public Service",
-    "salary": 37000,
+    "salary": 27000,
     "currency": "NPR",
     "skills": []
   },
@@ -248,6 +248,13 @@
     "id": 36,
     "title": "Designing/Graphics",
     "salary": 33000,
+    "currency": "NPR",
+    "skills": []
+  },
+  {
+    "id": 37,
+    "title": "Others",
+    "salary": 23000,
     "currency": "NPR",
     "skills": []
   }

@@ -6,7 +6,7 @@ const cors = require('cors');
 require("dotenv").config();
 const userRoutes = require('./routes/user');
 const feedbackRoute = require('./routes/feedback')
-const scraperJob = require('./web_scrapper')
+const scraperJob = require('./web_scrapper');
 
 //app
 const app = express();

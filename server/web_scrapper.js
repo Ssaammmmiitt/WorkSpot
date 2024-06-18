@@ -4,8 +4,6 @@ const path = require('path');
 const axios = require('axios');
 const { populate } = require('./models/userModel');
 const { get } = require('http');
-const getEstimatedSalary = require('./estimated_salary');
-
 let id = 1;
 
 
@@ -14,12 +12,13 @@ async function scraperJob() {
 
     let finalData = [];
 
-    let dataInternsathi = await Internsathi();
-    let dataVocalPanda = await VocalPanda();
-    finalData = [dataInternsathi, dataVocalPanda];
-    console.log(__dirname);
-    fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'jobListings.json'), JSON.stringify(finalData.flat(), null, 2), 'utf-8', { flag: 'wx' });
-    getEstimatedSalary();
+    let dataInternsathi = async () => { return await Internsathi() };
+    let dataVocalPanda = async () => { return await VocalPanda() };
+    finalData = [await dataInternsathi(), await dataVocalPanda()];
+
+    if (fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'jobListings.json'), JSON.stringify(finalData.flat(), null, 2), 'utf-8', { flag: 'wx' })) {
+        getEstimatedSalary();
+    }
 }
 
 
@@ -133,8 +132,6 @@ async function VocalPanda() {
     const getSector = (category) => {
         let sector = data.category_list.flat();
         const data_to_find = sector.find(item => String(item.id) === category);
-        console.log(data_to_find);
-        console.log(category);
         return data_to_find ? data_to_find.job_category_title : "N/A";
     }
 
@@ -194,7 +191,6 @@ async function VocalPanda() {
 
 }
 
-scraperJob();
 
 module.exports = scraperJob;
 
