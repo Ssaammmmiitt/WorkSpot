@@ -7,13 +7,10 @@ import {
     getAuth,
     onAuthStateChanged,
     signInWithEmailAndPassword,
-    signInWithRedirect,
     signInWithPopup,
-    getRedirectResult,
     signOut,
     sendPasswordResetEmail,
 } from "firebase/auth";
-
 import { useState, useEffect, useContext } from "react";
 
 export const AuthContext = createContext();
@@ -56,9 +53,15 @@ export const AuthProvider = ({ children }) => {
     }
 
     // logout
-    const logout = () => {
+    const logout = async () => {
         setLoading(true);
-        return signOut(auth);
+        setUser(null);
+        await signOut(auth).then(() => {
+            console.log("logout successful");
+        }).catch((error) => {
+            console.log("logout failed", error);
+        });
+        return await auth.revokeAccessToken();
     }
 
     // creating session

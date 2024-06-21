@@ -1,20 +1,14 @@
-import { React, useContext, useEffect, useState } from "react";
-import { FaFacebookSquare } from "react-icons/fa";
+import { React,  useState } from "react";
 import { ImGithub, ImGoogle } from "react-icons/im";
-import { MdEmail } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { collection, addDoc } from "firebase/firestore";
 import { db_firebase } from "../../firebase/firebase.config";
-import { doc, runTransaction, getDoc, setDoc } from "firebase/firestore";
-import { getFirestore } from 'firebase/firestore';
-import { getFunctions, httpsCallable } from 'firebase/functions';
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { getFunctions } from 'firebase/functions';
 import app from "../../firebase/firebase.config";
 import { useAuth } from "../../firebase/AuthProvider";
 import Swal from "sweetalert2";
-import axios from "axios";
 import { getAuth } from "firebase/auth";
-import { fetchSignInMethodsForEmail, linkWithCredential, EmailAuthProvider } from "firebase/auth";
 import Cookies from 'universal-cookie';
 
 const functions = getFunctions();
@@ -22,11 +16,9 @@ const cookies = new Cookies();
 
 
 const Login = () => {
-
   const { login, signUpWithGoogle, signUpWithGithub } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  let idToken = {};
 
   const handleSocialLogin = async (provider) => {
     try {
@@ -51,11 +43,11 @@ const Login = () => {
         console.log("User already exists");
         //adding session token to local storage
         const idToken = result.user.accessToken;
-        console.log(result.user.accessToken);
-        console.log("idToken:", idToken);
         const expirationTime = new Date().getTime() + 5 * 60 * 1000;
 
-        navigate("/app"); // or wherever you want existing users to go
+        cookies.set('token', idToken, { expires: new Date(expirationTime) });
+        console.log("Token added to cookies", cookies.get('token'));
+        navigate("/app");
       } else {
         console.log("User does not exist, creating new user document");
         // User doesn't exist, create new user document
@@ -69,7 +61,7 @@ const Login = () => {
         }).then((result) => {
           if (result.isConfirmed) {
             navigate("/sign-up");
-          } // or wherever you want new users to go
+          }
         })
       }
 
@@ -112,9 +104,7 @@ const Login = () => {
 
     try {
       await login(value.email, value.password);
-      const expirationTime = new Date().getTime() + 5 * 60 * 1000;
-      localStorage.setItem('idToken', idToken);
-      localStorage.setItem('tokenExpiration', expirationTime);
+      
       navigate("/app");
     } catch (error) {
       Swal.fire({
