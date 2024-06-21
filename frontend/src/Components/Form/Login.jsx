@@ -15,8 +15,10 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { getAuth } from "firebase/auth";
 import { fetchSignInMethodsForEmail, linkWithCredential, EmailAuthProvider } from "firebase/auth";
+import Cookies from 'universal-cookie';
 
 const functions = getFunctions();
+const cookies = new Cookies();
 
 
 const Login = () => {
@@ -52,8 +54,7 @@ const Login = () => {
         console.log(result.user.accessToken);
         console.log("idToken:", idToken);
         const expirationTime = new Date().getTime() + 5 * 60 * 1000;
-        localStorage.setItem('idToken', idToken);
-        localStorage.setItem('tokenExpiration', expirationTime);
+
         navigate("/app"); // or wherever you want existing users to go
       } else {
         console.log("User does not exist, creating new user document");
