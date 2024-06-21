@@ -233,15 +233,16 @@ const NavBar = () => {
                           </Link>
                         </li>
                         <li>
-                          <button
+                          <Link
                             onClick={e => onSignOut(e).then(closeDropdown)}
+                            to="/login"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             <div className="flex items-center">
                               <span className="mr-2">Sign Out</span>
                               <BiLogOut className="" />
                             </div>
-                          </button>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -319,15 +320,16 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="text-white">
-                <button
+                <Link
                   onClick={e => onSignOut(e)}
+                  to="/login"
                   className="text-white block text-center md:text-left"
                 >
                   <div className="flex items-center">
                     <span className="mr-2">Sign Out</span>
                     <BiLogOut className="" />
                   </div>
-                </button>
+                </Link>
               </li>
             </> : <>
 
