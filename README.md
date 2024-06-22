@@ -54,7 +54,6 @@ The different features in our application are as follows:
 
 
 
-<img width="400" alt="Screen Shot 2024-06-22 at 08 44 37" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/c59a5ecd-f5c3-43dc-b3d4-6cf9094016e0">
 
 
 
