@@ -14,13 +14,18 @@ This is our academic project for fulfillment of COMP206 in 3rd Semester.
 **TOOLS**
 
 The packages that have been used in our project includes:
+
 Database: FireBase
+
 Front-end Packages: animate.css, axios, localforage, lottie-react, match-sorter, react, react-dom, react-hook-form, react-icons, react-router-dom, react-select, sort-by, sweetalert2, universal-cookie, postcss, tailwindcss, vite
+
 Back-end Packages: Node.js, axios, bcryptjs, cors, dotenv, express, firebase, firebase-admin, jsonwebtoken, mongodb, mongoose, morgan, multer, nodemailer, nodemon, path, uuid, validator
 
 **NOTE**
 To run the application, Install Necessary Packages. 
+
 For frontend: use command line: npm run dev
+
 For server: use command line: Node App.js
 
 The different features in our application are as follows:
