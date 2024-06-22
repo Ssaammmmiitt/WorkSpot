@@ -44,6 +44,19 @@ The different features in our application are as follows:
 
 
 3. Reset Password:
+
+<img width="270" alt="Screen Shot 2024-06-22 at 08 44 09" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/71dfeae4-17a5-4aa6-8291-c0cfe9dfdd7e">
+
+
+
+<img width="400" alt="Screen Shot 2024-06-22 at 08 44 37" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/c59a5ecd-f5c3-43dc-b3d4-6cf9094016e0">
+
+
+
+<img width="368" alt="Screen Shot 2024-06-22 at 08 44 50" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/330dd0e2-99cf-449e-a8cf-ffff739da8e8">
+
+
+
 4. Main Window:
 5. Search:
 6. Filter:
