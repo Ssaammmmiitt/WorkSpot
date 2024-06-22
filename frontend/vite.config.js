@@ -10,6 +10,7 @@ const outDir = resolve(__dirname, 'dist');
 export default defineConfig({
   root,
   plugins: [react()],
+  envDir: resolve(__dirname),
   build: {
     outDir,
     emptyOutDir: true,
