@@ -9,10 +9,10 @@ import inclusion from "../../Assets/inclusion.png";
 
 const AboutUs = () => {
   return (
-    <div className="">
-      <section className="px-6 py-12 sm:py-24 lg:px-8 mx-auto w-[90%] max-w mt-7 bg-white rounded-lg shadow-sm border-2 border-Primary">
+    <div className="my-5">
+      <section className="px-6 pb-12 sm:py-24 lg:px-8 mx-auto w-[90%] max-w mt-7 bg-white rounded-lg shadow-sm border-2 border-Primary">
         <div className="container mx-auto flex flex-col p-6">
-          <h2 className="py-4 text-5xl font-bold text-center">Features</h2>
+          <h2 className="pb-4 text-5xl font-bold text-center">Features</h2>
           <div className="divide-y pt-8 ">
             <div className=" animate__animated animate__fadeInTopLeft grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
               <div className="flex items-center justify-center lg:col-span-1 col-span-full">
