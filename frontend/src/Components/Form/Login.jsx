@@ -1,4 +1,4 @@
-import { React,  useState } from "react";
+import { React, useState } from "react";
 import { ImGithub, ImGoogle } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -13,7 +13,7 @@ import Cookies from 'universal-cookie';
 
 const functions = getFunctions();
 const cookies = new Cookies();
-
+const Time_of_expiry = 45;
 
 const Login = () => {
   const { login, signUpWithGoogle, signUpWithGithub } = useAuth();
@@ -43,7 +43,7 @@ const Login = () => {
         console.log("User already exists");
         //adding session token to local storage
         const idToken = result.user.accessToken;
-        const expirationTime = new Date().getTime() + 5 * 60 * 1000;
+        const expirationTime = new Date().getTime() + Time_of_expiry * 60 * 1000;
 
         cookies.set('token', idToken, { expires: new Date(expirationTime) });
         console.log("Token added to cookies", cookies.get('token'));
@@ -104,7 +104,7 @@ const Login = () => {
 
     try {
       await login(value.email, value.password);
-      
+
       navigate("/app");
     } catch (error) {
       Swal.fire({
