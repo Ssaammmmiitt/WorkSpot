@@ -12,8 +12,6 @@ import { db_firebase } from "../../firebase/firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import Cookies from "universal-cookie";
 
-
-
 const NavBar = () => {
   const cookies = new Cookies();
   const token = cookies.get("token");
@@ -33,17 +31,18 @@ const NavBar = () => {
     }
   }, [token, user]);
 
-
   useEffect(() => {
     const getJobs = async () => {
       const unsubscribe = onAuthStateChanged(getAuth(), async (user1) => {
-
         if (user1) {
           if (user1.providerData[0].providerId === "password") {
             console.log(db_firebase);
             const userDoc = await getDocs(collection(db_firebase, `users`));
             console.log(userDoc);
-            let data = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+            let data = userDoc.docs.map((doc) => ({
+              ...doc.data(),
+              id: doc.id,
+            }));
             data = data.filter((doc) => doc.id === user1.uid);
             data = data[0];
             console.log(data.job_id);
@@ -53,7 +52,10 @@ const NavBar = () => {
             setFirstName(data.firstname);
             console.log(data.photoURL);
           } else {
-            if (user1.providerData[0].providerId === "google.com" || user1.providerData[0].providerId === "github.com") {
+            if (
+              user1.providerData[0].providerId === "google.com" ||
+              user1.providerData[0].providerId === "github.com"
+            ) {
               const result = getAuth().currentUser;
               console.log(result);
               if (result.displayName !== null && result.photoURL !== null) {
@@ -68,11 +70,6 @@ const NavBar = () => {
     };
     getJobs();
   }, []);
-
-
-
-
-
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -133,11 +130,13 @@ const NavBar = () => {
       confirmButtonText: "SignOut",
     });
     if (result.isConfirmed) {
-      logout().then(() => {
-        console.log("logout successful");
-      }).catch((error) => {
-        console.log("logout failed", error);
-      });
+      logout()
+        .then(() => {
+          console.log("logout successful");
+        })
+        .catch((error) => {
+          console.log("logout failed", error);
+        });
       cookies.remove("token");
       setUser(null);
       setData(null);
@@ -233,7 +232,7 @@ const NavBar = () => {
                         </li>
                         <li>
                           <Link
-                            onClick={e => onSignOut(e).then(closeDropdown)}
+                            onClick={(e) => onSignOut(e).then(closeDropdown)}
                             to="/login"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
@@ -282,8 +281,9 @@ const NavBar = () => {
         </nav>
 
         <div
-          className={`px-4 bg-black py-5 rounded-sm ${isMenuOpen ? "" : "hidden"
-            }`}
+          className={`px-4 bg-black py-5 rounded-sm ${
+            isMenuOpen ? "" : "hidden"
+          }`}
         >
           <ul className="flex flex-col items-center space-y-4">
             {navItems.map(({ path, title }) => (
@@ -301,57 +301,60 @@ const NavBar = () => {
                 )}
               </li>
             ))}
-            {isLoggedIn ? <>
-              <li className="text-white">
-                <Link
-                  to="/app/profile"
-                  className="text-white block text-center md:text-left"
-                >
-                  My Profile
-                </Link>
-              </li>
-              <li className="text-white">
-                <Link
-                  to="/app/my-jobs"
-                  className="text-white block text-center md:text-left"
-                >
-                  My Jobs
-                </Link>
-              </li>
-              <li className="text-white">
-                <Link
-                  onClick={e => onSignOut(e)}
-                  to="/login"
-                  className="text-white block text-center md:text-left"
-                >
-                  <div className="flex items-center">
-                    <span className="mr-2">Sign Out</span>
-                    <BiLogOut className="" />
-                  </div>
-                </Link>
-              </li>
-            </> : <>
-
-              <li className="text-white">
-                <Link
-                  to="/login"
-                  className="text-white block text-center md:text-left"
-                >
-                  Login
-                </Link>
-              </li>
-              <li className="text-white">
-                <Link
-                  to="/sign-up"
-                  className="text-white block text-center md:text-left"
-                >
-                  Sign Up
-                </Link>
-              </li>
-            </>}
+            {isLoggedIn ? (
+              <>
+                <li className="text-white">
+                  <Link
+                    to="/app/profile"
+                    className="text-white block text-center md:text-left"
+                  >
+                    My Profile
+                  </Link>
+                </li>
+                <li className="text-white">
+                  <Link
+                    to="/app/my-jobs"
+                    className="text-white block text-center md:text-left"
+                  >
+                    My Jobs
+                  </Link>
+                </li>
+                <li className="text-white">
+                  <Link
+                    onClick={(e) => onSignOut(e)}
+                    to="/login"
+                    className="text-white block text-center md:text-left"
+                  >
+                    <div className="flex items-center">
+                      <span className="mr-2">Sign Out</span>
+                      <BiLogOut className="" />
+                    </div>
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="text-white">
+                  <Link
+                    to="/login"
+                    className="text-white block text-center md:text-left"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li className="text-white">
+                  <Link
+                    to="/sign-up"
+                    className="text-white block text-center md:text-left"
+                  >
+                    Sign Up
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
-      </header >
+      </header>
     </>
   );
 };
