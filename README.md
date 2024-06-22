@@ -58,6 +58,12 @@ The different features in our application are as follows:
 
 
 4. Main Window:
+
+
+<img width="1375" alt="Screen Shot 2024-06-22 at 08 51 08" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/f3c0ae17-7e53-4e08-8941-e60422aeab37">
+
+
+
 5. Search:
 6. Filter:
 7. My Jobs:
