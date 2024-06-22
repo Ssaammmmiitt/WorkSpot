@@ -29,3 +29,20 @@ For frontend: use command line: npm run dev
 For server: use command line: Node App.js
 
 The different features in our application are as follows:
+
+1. Login:
+
+<img width="311" alt="Screen Shot 2024-06-22 at 08 33 54" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/1200057d-bbd2-4250-82fb-c36147852c95">
+
+
+2. Sign Up:
+3. Reset Password:
+4. Main Window:
+5. Search:
+6. Filter:
+7. My Jobs:
+8. My Profile:
+9. About Us:
+10. FAQ
+11. Contact:
+12. Estimated Salaries:
