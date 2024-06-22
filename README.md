@@ -36,6 +36,13 @@ The different features in our application are as follows:
 
 
 2. Sign Up:
+
+<img width="316" alt="Screen Shot 2024-06-22 at 08 38 24" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/ee0201d3-4ab0-44fc-992d-a890514aec0b">
+
+
+<img width="307" alt="Screen Shot 2024-06-22 at 08 39 14" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/df6559d9-8222-45d6-af29-e1cab0fa6257">
+
+
 3. Reset Password:
 4. Main Window:
 5. Search:
