@@ -94,9 +94,12 @@ import React, { useEffect, useState, useMemo } from 'react';
 import PageHeader from '../Components/Header/PageHeader';
 import salariesData from '../../Public/salaries.json';
 import 'animate.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useHref } from 'react-router-dom';
+import { doc, documentId } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 const Salary = () => {
+    const navigate = useNavigate();
     const [searchText, setSearchText] = useState("");
     const [salary, setSalary] = useState(salariesData);
     const [filteredSalaries, setFilteredSalaries] = useState(salariesData);
@@ -160,7 +163,9 @@ const Salary = () => {
             ) : memoizedFilteredSalaries.length > 0 ? (
                 <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 my-12 items-center animate__animated animate__slideInLeft'>
                     {memoizedFilteredSalaries.map((data) => (
-                        data.salary !== " Salary 0.00 per month" && (
+                         data.salary !== " Salary 0.00 per month" && (
+                        <button onClick={() => {navigate(`/app`)}}
+                             className='text-black'>
                             <div key={data.id} className='shadow-lg px-6 py-8 rounded-lg transition-transform transform hover:scale-105'>
                                 <h4 className='font-semibold text-xl'>{data.title}</h4>
                                 <p className='my-2 font-medium text-[#00006f] text-lg'> Salary : {data.salary}</p>
@@ -172,8 +177,8 @@ const Salary = () => {
                                         <path d="M21 17l-4.586 -4.414a2 2 0 0 0 -2.828 2.828l.707 .707" />
                                     </svg>
                                 </div>
-                            </div>
-                        )
+                            </div>                       
+                        </button>)
                     ))}
                 </div>
             ) : (

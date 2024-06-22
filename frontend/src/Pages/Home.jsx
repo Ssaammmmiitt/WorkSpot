@@ -156,6 +156,7 @@ import NewsLetter from '../Components/NewsLetter/NewsLetter';
 import jobsdata from '../../Public/jobListings.json';
 
 const Home = () => {
+    
     const [jobs, setJobs] = useState(jobsdata);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
