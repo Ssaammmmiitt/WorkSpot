@@ -65,10 +65,51 @@ The different features in our application are as follows:
 
 
 5. Search:
+
+
+<img width="804" alt="Screen Shot 2024-06-22 at 08 52 24" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/1bc4f0c2-172c-42fd-9683-7de1cca11078">
+
+
 6. Filter:
+
+
+<img width="804" alt="Screen Shot 2024-06-22 at 08 52 24" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/5d7fbf84-e75e-4908-b278-2f858c69e2d6">
+
+
+
 7. My Jobs:
+
+<img width="1010" alt="Screen Shot 2024-06-22 at 08 56 25" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/cdee6b64-f101-4fa8-be9a-dcc372f1fbfa">
+
+
+
 8. My Profile:
+
+<img width="970" alt="Screen Shot 2024-06-22 at 08 57 39" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/35fad4c2-e568-4a83-b8be-1982b065894c">
+
+
+
 9. About Us:
+
+<img width="802" alt="Screen Shot 2024-06-22 at 08 59 28" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/cfce4529-b4c5-4767-b6d9-eb4bda829b55">
+
+
+
 10. FAQ
+
+<img width="1263" alt="Screen Shot 2024-06-22 at 09 00 10" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/db0a6aaf-0ab2-4bda-8cfb-41fe8d6e4f1a">
+
+
+
 11. Contact:
+
+
+<img width="477" alt="Screen Shot 2024-06-22 at 09 01 05" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/ae944402-4ab1-4304-b39d-029bee1b4573">
+
+
 12. Estimated Salaries:
+
+
+<img width="853" alt="Screen Shot 2024-06-22 at 09 01 48" src="https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/9e4360d8-d32f-48e5-a639-5e94c2c77a3d">
+
+
