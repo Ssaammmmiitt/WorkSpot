@@ -1,6 +1,3 @@
-For running the application.
-go to frontend : cd frontend
-run the command : npm i vite
-                : npm run dev
+The growth of online job boards has expanded the pool of vacant positions for today’s job seekers. However, this abundance presents a new challenge: navigating a wide range of platforms, each with its own search functionality and listing format. This inefficiency, coupled with burden of tailoring applications for each platform, hinders a truly efficient job search. 
+Work-Spot is a centralized job search platform built using the FERN stack that utilizes web scraping to search and display jobs based on the user’s skills and preferences![image](https://github.com/Ssaammmmiitt/WorkSpot/assets/149813234/83b0fb8b-f9fa-4b85-9dde-7571670c4a7e)
 
-That`s it , it shall run
