@@ -143,7 +143,6 @@ const NavBar = () => {
       setData(null);
       setIsLoggedIn(false);
       user = null;
-      NavBar();
     }
   };
 

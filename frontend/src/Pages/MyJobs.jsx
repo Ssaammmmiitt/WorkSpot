@@ -15,6 +15,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { Firestore } from "firebase/firestore";
 import { updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
 
 const MyJobs = () => {
     const navigate = useNavigate();
@@ -26,12 +27,14 @@ const MyJobs = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [fetchError, setFetchError] = useState(null);
     const [data, setData] = useState([]);
+    const cookies = new Cookies();
 
     // useEffect left unchanged as per your request.
     // useEffect(()=>{
     //     setIsLoading(true);
     //     fetch()
     // },[])
+    const change = cookies.get("token");
     const getJobs = async () => {
         const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
             if (user) {
@@ -59,7 +62,7 @@ const MyJobs = () => {
     };
     useEffect(() => {
         getJobs();
-    }, []);
+    }, [change]);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
