@@ -83,16 +83,6 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // const handleLogin = () => {
-  //   console.log(user);
-  //   // implement login logic
-  //   if (user) {
-  //     setIsLoggedIn(true);
-  //     return;
-  //   }
-  //   setIsLoggedIn(!isLoggedIn);
-  // };
-
   const navItems = [
     { path: "/app", title: "Start a search" },
     { path: "/app/salary", title: "Estimated Salary" },

@@ -50,7 +50,8 @@ const JobDetails = () => {
             const querySnapshot = doc(collection(db_firebase.db_firebase, "users"), userUID);
             await updateDoc(querySnapshot, {
                 job_id: arrayUnion(id)
-            }); // Reference to the user's document
+            }); 
+            // Reference to the user's document
             //alert("Document written successfully");
         } catch (e) {
             alert("Error adding document: " + e);
