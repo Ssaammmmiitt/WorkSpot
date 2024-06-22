@@ -4,7 +4,6 @@ import React, { useEffect, useState, useMemo } from 'react';
 import PageHeader from '../Components/Header/PageHeader';
 import salariesData from '../../Public/salaries.json';
 import 'animate.css';
-import { Link } from 'react-router-dom';
 import { Link, Navigate, useHref } from 'react-router-dom';
 import { doc, documentId } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
@@ -78,7 +77,7 @@ const Salary = () => {
                     {memoizedFilteredSalaries.map((data) => (
                         data.salary !== " Salary 0.00 per month" && (
                             <button onClick={() => {navigate(`/app`)}}
-                             className='text-black'></button>
+                             className='text-black'>
                             <div key={data.id} className='shadow-lg px-6 py-8 rounded-lg transition-transform transform hover:scale-105'>
                                 <h4 className='font-semibold text-xl'>{data.title}</h4>
                                 <p className='my-2 font-medium text-[#00006f] text-lg'> Salary : {data.salary}</p>
