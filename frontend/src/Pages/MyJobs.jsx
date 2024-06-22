@@ -15,51 +15,54 @@ import { onAuthStateChanged } from "firebase/auth";
 import { Firestore } from "firebase/firestore";
 import { updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
 
 const MyJobs = () => {
-  const navigate = useNavigate();
-  const [user, setUser] = useState(getAuth().currentUser);
-  const auth = getAuth();
-  const [userJobs, setUserJobs] = useState([]);
-  const [jobs, setJobs] = useState(jobsdata);
-  const [searchText, setSearchText] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [fetchError, setFetchError] = useState(null);
-  const [data, setData] = useState([]);
+    const navigate = useNavigate();
+    const [user, setUser] = useState(getAuth().currentUser);
+    const auth = getAuth();
+    const [userJobs, setUserJobs] = useState([]);
+    const [jobs, setJobs] = useState(jobsdata);
+    const [searchText, setSearchText] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [fetchError, setFetchError] = useState(null);
+    const [data, setData] = useState([]);
+    const cookies = new Cookies();
 
-  // useEffect left unchanged as per your request.
-  // useEffect(()=>{
-  //     setIsLoading(true);
-  //     fetch()
-  // },[])
-  const getJobs = async () => {
-    const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
-      if (user) {
-        console.log(db_firebase);
-        const userDoc = await getDocs(
-          collection(db_firebase.db_firebase, `users`)
-        );
-        let data = userDoc.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-        data = data.filter((doc) => doc.id === user.uid);
-        data = data[0];
-        setData(data);
-        console.log(data.job_id);
-        const userjobIds = data.job_id.map((id) => parseInt(id, 10));
-        console.log(userjobIds);
-        const jobDetails = jobsdata.filter((job) =>
-          userjobIds.includes(job.id)
-        );
-        console.log(jobDetails);
-        setUserJobs(jobDetails);
-      } else {
-        setUser(null);
-      }
-    });
-    return unsubscribe;
-  };
-  useEffect(() => {
-    getJobs();
-  }, []);
+    // useEffect left unchanged as per your request.
+    // useEffect(()=>{
+    //     setIsLoading(true);
+    //     fetch()
+    // },[])
+    const change = cookies.get("token");
+    const getJobs = async () => {
+        const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+            if (user) {
+                console.log(db_firebase);
+                const userDoc = await getDocs(
+                    collection(db_firebase.db_firebase, `users`)
+                );
+                let data = userDoc.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+                data = data.filter((doc) => doc.id === user.uid);
+                data = data[0];
+                setData(data);
+                console.log(data.job_id);
+                const userjobIds = data.job_id.map((id) => parseInt(id, 10));
+                console.log(userjobIds);
+                const jobDetails = jobsdata.filter((job) =>
+                    userjobIds.includes(job.id)
+                );
+                console.log(jobDetails);
+                setUserJobs(jobDetails);
+            } else {
+                setUser(null);
+            }
+        });
+        return unsubscribe;
+    };
+    useEffect(() => {
+        getJobs();
+    }, [change]);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];

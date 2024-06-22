@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const axios = require('axios');
 const { populate } = require('./models/userModel');
 const { get } = require('http');
@@ -15,7 +14,6 @@ async function scraperJob() {
     let dataInternsathi = async () => { return await Internsathi() };
     let dataVocalPanda = async () => { return await VocalPanda() };
     finalData = [await dataInternsathi(), await dataVocalPanda()];
-
     if (fs.writeFileSync(path.join(__dirname, '..', 'frontend', 'Public', 'jobListings.json'), JSON.stringify(finalData.flat(), null, 2), 'utf-8', { flag: 'wx' })) {
         getEstimatedSalary();
     }
@@ -53,7 +51,7 @@ async function Internsathi() {
         let data = jobListingsData.map(job => ({
             id: id++,
             companyName: job.Creator ? job.Creator.companyName : "N/A",
-            jobTitle: job.title.split('-').join(' ').replace(/ID\d+/g, '').trim(),
+            jobTitle: job.title.split('-').join(' ').replace(/ID\d+/g, '').trim().replace(/\d+ID/g, '').trim(),
             jobSector: job.sector,
             jobCategory: job.opportunityType || "N/A",
             jobLocation: job.jobLocation,
@@ -191,6 +189,7 @@ async function VocalPanda() {
 
 }
 
+//scraperJob();
 
 module.exports = scraperJob;
 

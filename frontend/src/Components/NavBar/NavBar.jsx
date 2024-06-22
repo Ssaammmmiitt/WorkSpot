@@ -6,18 +6,18 @@ import search from "../../Assets/search.json";
 import Lottie from "lottie-react";
 import { BiLogOut } from "react-icons/bi";
 import { useAuth } from "../../firebase/AuthProvider";
-import { getAuth } from "firebase/auth";
 import { FaChevronDown } from "react-icons/fa";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, getAuth } from "firebase/auth";
 import { db_firebase } from "../../firebase/firebase.config";
 import { collection, getDocs } from "firebase/firestore";
+import Cookies from "universal-cookie";
+
 
 
 const NavBar = () => {
+  const cookies = new Cookies();
+  const token = cookies.get("token");
   let { user, logout } = useAuth();
-  if (user) {
-    console.log(user);
-  }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(user != null); // Set initial state to false for demonstration
   const [isOpen, setIsOpen] = useState(false);
@@ -25,90 +25,26 @@ const NavBar = () => {
   const [firstName, setFirstName] = useState("");
   const [data, setData] = useState([]);
   const [users, setUser] = useState(null);
+
   //session check
-  // useEffect(() => {
-  //   const idToken = localStorage.getItem('idToken');
-  //   const tokenExpiration = localStorage.getItem('tokenExpiration');
-  //   const now = new Date().getTime();
+  useEffect(() => {
+    if (token && user) {
+      setIsLoggedIn(true);
+    }
+  }, [token, user]);
 
-  //   if (idToken === user && tokenExpiration > now) {
-  //     setIsLoggedIn(!isLoggedIn);
-  //   }
 
-  // }, []);
-
-  // useEffect(() => {
-  //   if (user) {
-  //     if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
-  //       const result = getAuth().currentUser;
-  //       if (result.displayName !== null && result.photoURL !== null) {
-  //         setPhotoUrl(result.photoURL);
-  //         setFirstName(result.displayName.split(" ")[0]);
-  //       }
-  //       else {
-  //         const userDoc = data;
-  //         setPhotoUrl(userDoc.photoURL);
-  //         setFirstName(userDoc.displayName.split(" ")[0]);
-  //       }
-  //     }
-  //   }
-  // }, [user]);
-
-  //   useEffect(() => {
-  //     const getJobs = async () => {
-  //         const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
-  //             if (user) {
-  //                 console.log(db_firebase);
-  //                 const userDoc = await getDocs(collection(db_firebase, "users"));
-  //                 console.log(userDoc);
-  //                 let data = userDoc.docs.map( doc => ({ ...doc.data(), id: doc.id }));
-  //                 data=data.find((doc)=>doc.id===user.uid);
-  //                 console.log(data)
-  //                 setData(data);
-
-  //             } else {
-  //                 setData(null);
-  //             }
-  //         });
-
-  //         return unsubscribe;
-  //     };
-  //     getJobs();
-  // }, []);
-
-  // const getJobs = async () => {
-  //   const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
-  //     if (user) {
-  //       console.log(db_firebase);
-  //       const userDoc = await getDocs(collection(db_firebase, "users"));
-  //       console.log(userDoc);
-  //       let data1 = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-  //       data1 = data1.find((doc) => doc.id === user.uid);
-  //       console.log(data1)
-  //       setData(data1);
-
-  //     } else {
-  //       setData(null);
-  //     }
-  //   });
-
-  //   return unsubscribe;
-  // };
-
-  // useEffect(() => {
-  //   getJobs();
-  // }, []);
   useEffect(() => {
     const getJobs = async () => {
-      const unsubscribe = onAuthStateChanged(getAuth(), async (user) => {
+      const unsubscribe = onAuthStateChanged(getAuth(), async (user1) => {
 
-        if (user) {
-          if (user.providerData[0].providerId === "password") {
+        if (user1) {
+          if (user1.providerData[0].providerId === "password") {
             console.log(db_firebase);
             const userDoc = await getDocs(collection(db_firebase, `users`));
             console.log(userDoc);
             let data = userDoc.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-            data = data.filter((doc) => doc.id === user.uid);
+            data = data.filter((doc) => doc.id === user1.uid);
             data = data[0];
             console.log(data.job_id);
             setUser(data);
@@ -117,7 +53,7 @@ const NavBar = () => {
             setFirstName(data.firstname);
             console.log(data.photoURL);
           } else {
-            if (user.providerData[0].providerId === "google.com" || user.providerData[0].providerId === "github.com") {
+            if (user1.providerData[0].providerId === "google.com" || user1.providerData[0].providerId === "github.com") {
               const result = getAuth().currentUser;
               console.log(result);
               if (result.displayName !== null && result.photoURL !== null) {
@@ -130,8 +66,6 @@ const NavBar = () => {
       });
       return unsubscribe;
     };
-
-
     getJobs();
   }, []);
 
@@ -191,24 +125,25 @@ const NavBar = () => {
     }
   };
 
-  const onSignOut = (e) => {
+  const onSignOut = async (e) => {
     e.preventDefault();
-    Swal.fire({
+    const result = await Swal.fire({
       title: "Do you want to SignOut? This will take you to the login page",
       showCancelButton: true,
       confirmButtonText: "SignOut",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        logout();
-        setData(null);
-        user = null;
-        setIsLoggedIn(false);
-        localStorage.removeItem('idToken');
-        localStorage.removeItem('tokenExpiration');
-        getAuth().signOut();
-        NavBar();
-      }
     });
+    if (result.isConfirmed) {
+      logout().then(() => {
+        console.log("logout successful");
+      }).catch((error) => {
+        console.log("logout failed", error);
+      });
+      cookies.remove("token");
+      setUser(null);
+      setData(null);
+      setIsLoggedIn(false);
+      user = null;
+    }
   };
 
   return (
@@ -298,7 +233,7 @@ const NavBar = () => {
                         </li>
                         <li>
                           <Link
-                            onClick={[(e) => onSignOut(e), closeDropdown]}
+                            onClick={e => onSignOut(e).then(closeDropdown)}
                             to="/login"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
@@ -385,7 +320,7 @@ const NavBar = () => {
               </li>
               <li className="text-white">
                 <Link
-                  onClick={(e) => onSignOut(e)}
+                  onClick={e => onSignOut(e)}
                   to="/login"
                   className="text-white block text-center md:text-left"
                 >
@@ -416,7 +351,7 @@ const NavBar = () => {
             </>}
           </ul>
         </div>
-      </header>
+      </header >
     </>
   );
 };
